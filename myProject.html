@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>创新学堂</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+    <link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+    <script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+    <script src="resource/js/urming.min.js?__rver=2015061211"></script>
+    <script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="myProject">
+    <div data-role="header"  >
+        <h1>项目成员</h1>
+        <a href="#" class="navigateBackBtn ui-icon-back ui-btn-icon-notext ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-notext"></a>
+    </div>
+    <div data-role="content" >
+        <div class="tab-bar-head ui-grid-a" style = "display:none" >
+            <div class="ui-block-a sel">我的成员</div>
+            <div class="ui-block-b">
+                成员申请
+                <span class="is_tips"></span>
+            </div>
+        </div>
+        <!--
+        <div class="loading-area groupList"></div>
+        -->
+        <ul data-role="listview" data-theme="c" class="list-items ui-listview ui-group-theme-c groupList"></ul>
+        <script id="user_item_tpl" type="text/html">
+            <li class="custom-item-li-cls userItem _tpl-type" data-icon="false" data-userid="_tpl-id" userId ="_tpl-userId" >
+                <a class="custom-item-cls vbt vr ui-link">
+                    <img src="_tpl-img">
+                    <div class="">
+                        <div class="vTitle ellipsis">
+                            <span class="username">_tpl-userName</span>
+                            <span class="mark sex _tpl-sex"></span>
+                            <!--<span class="mark _tpl-idcardValidated _tpl-userType"></span>-->
+                            <!--
+                        <span class="mark _tpl-isMoneyGuaranteed"></span>
+                        -->
+                            <div class="user-prvalue">_tpl-prvalue</div>
+                        </div>
+                        <div class="user-enterprise">
+                            _tpl-institutionUserName
+                        </div>
+                        <div class="user-tags">
+                            _tpl-tag
+                        </div>
+                        <div class="release do_btn" act = "_tpl-release">
+                            _tpl-releaseContent
+                        </div>
+                        <div class="allow do_btn" act = "allow">
+                            通过
+                        </div>
+                        <div class="reject do_btn" act = "reject">
+                            拒绝
+                        </div>
+                        <div class="num" >
+                            成员: _tpl-num人
+                        </div>
+                    </div>
+                </a>
+            </li>
+        </script>
+    </div>
+</div>
+</body>
+</html>

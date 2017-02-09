@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+<!-- 	<script src="http://api.map.baidu.com/api?type=quick&ak=7E2819ade2e2fb1ee1594a3af867de10"></script> -->
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="liveCast" data-inline="false" data-ajax="false">
+	<script src="http://qzonestyle.gtimg.cn/open/qcloud/video/h5/h5connect.js" charset="utf-8" ></script>
+    <link rel="stylesheet" href="./resource/css/liveCast.css"/>
+	<div data-role="header" class="vrHeader">
+		<a class="ui-btn ui-icon-back navigateBackBtn  ui-btn-icon-notext">返回</a>
+		<h1>直播课堂</h1>
+	</div>
+	<div data-role="content" class="content_box">
+        <div>
+            <iframe border="none" src='http://e.vhall.com/webinar/inituser/648616531?email=test@vhall.com&name=visitor&k="aaa"' height="200" style="margin:0 auto" id="play"></iframe>
+        </div>
+        <!--<div id="up">隐藏直播，参与互动</div>-->
+        <div class="tab-bar ui-grid-b" id="tab_box">
+            <div class="ui-block-a sel"><a>问题</a></div>
+            <div class="ui-block-b"><a>服务</a></div>
+            <div class="ui-block-c"><a>需求</a></div>
+        </div>
+        <div>
+            <iframe  id="EuM" border="none"  height="640" src = 'http://192.168.50.144:80/liveList.html?orderType=4&area1=中国&pageSize=20&offset=0&longitude=116.319784&latitude=40.00496&searchKind=question&categoryParentId=5&catId=5' >
+            </iframe>
+        </div>
+        <script>
+            //src="http://m.edu.euming.com/mine.html"
+            //src = 'http://192.168.50.144:80/liveList.html?orderType=4&area1=中国&pageSize=20&offset=0&longitude=116.319784&latitude=40.00496&searchKind=question&categoryParentId=5&catId=5'
+           // $('.ui-footer').remove();
+            window.onload = function(){
+               // $('.ui-footer').remove();
+            }
+            $(function(){
+                longitude = dmJs.params.geolocation.longitude? dmJs.params.geolocation.longitude :116.319784;
+                latitude = dmJs.params.geolocation.latitude? dmJs.params.geolocation.latitude :40.00496;
+
+                //console.log(mainJs.parseUrlSearch());
+               // var serId = 16461;
+                //&relatedServiceId=16461
+                var srcArr=[
+                    "orderType=4&area1=中国&pageSize=20&offset=0&longitude="+ longitude +"&latitude="+ latitude +"&searchKind=question&categoryParentId=5&catId=5",
+                    "orderType=4&area1=中国&pageSize=20&offset=0&longitude="+ longitude +"&latitude="+ latitude +"&catId=1&categoryParentId=1&searchKind=services",
+                    "orderType=4&area1=中国&pageSize=20&offset=0&longitude="+ longitude +"&latitude="+ latitude +"&catId=2&categoryParentId=2&searchKind=wants"
+                ];
+                $('#EuM').attr('src','http://192.168.50.144:80/liveList.html?'+srcArr[0]);
+                //EuM.src = 'http://192.168.50.188:8080/edu/liveList.html?'+srcArr[0];
+                $('.ui-block-a').on('vclick',function(){
+                    $('.tab-bar div').removeClass('sel');
+                    $(this).addClass('sel');
+                    $('#EuM').attr('src','http://192.168.50.144:80/liveList.html?'+srcArr[0]);
+                })
+                $('.ui-block-b').on('vclick',function(){
+                    $('.tab-bar div').removeClass('sel');
+                    $(this).addClass('sel');
+                    $('#EuM').attr('src','http://192.168.50.144:80/liveList.html?'+srcArr[1]);
+                })
+                $('.ui-block-c').on('vclick',function(){
+                    $('.tab-bar div').removeClass('sel');
+                    $(this).addClass('sel');
+                    $('#EuM').attr('src','http://192.168.50.144:80/liveList.html?'+srcArr[2]);
+                })
+
+               /* $('#tab_box div').each(function(i,item ){
+                    $(item).on('vclick',function(){
+                        $('#EuM').attr('src','http://192.168.50.188:8080/edu/liveList.html?'+srcArr[i]);
+                        //EuM.src = 'http://192.168.50.188:8080/edu/liveList.html?'+srcArr[i];
+                        console.log(i,item)
+                        console.log( $('#EuM').attr('src'),srcArr[i])
+                        $('#tab_box div').removeClass('sel');
+                        $(this).addClass('sel');
+                    })
+                })*/
+            })
+
+
+            var iw = $('html').width()>600? 480:$('html').width();
+           /* var eh =EuM.contentWindow.document.getElementsByTagName('html')[0] ;
+            var h = $(eh).height();
+            console.log(h)*/
+            // $('html').height()
+            var actId = mainJs.parseUrlSearch().actId ? mainJs.parseUrlSearch().actId : 648616531;
+            //$('#play').attr('src','http://e.vhall.com/webinar/inituser/'+ actId+'?email=test@vhall.com&name=visitor&k="aaa"');
+            $('iframe').width(iw);
+            //$('#play').height(iw*3/4);
+
+            var onOff = true;
+            //console.log(attt)
+          /*  $('#up').on('vclick',function(){
+                onOff =!onOff;
+                $(this).html(onOff ? '隐藏直播，参与互动':'点击观看直播')
+                setTimeout(function(){
+                    if(onOff){
+                        $('#play').height(240);
+                        //$('#play').show();
+                        $('#play').css('top','0');
+                        $('#EuM').height(ih-230);
+                    }else{
+                        $('#play').height(0);
+                        //$('#play').hide();
+                        $('#play').css('top','-10px');
+                        $('#EuM').height(ih-10);
+                    }
+                },300)
+
+            })*/
+
+            $('#EuM').load(function(){
+                var iframeDoc =  EuM.contentWindow.document;
+                console.log(iframeDoc)
+                $(iframeDoc).find('div[data-role="page"]').on('vclick',function(){
+                    alert(1)
+                    console.log('试试')
+                })
+
+               //$('.ui-footer').remove();
+
+                /*var eh =EuM.contentWindow.document.getElementsByTagName('html')[0] ;
+                var h = $(eh).height();
+                console.log(h)
+                $('#EuM').height(h);*/
+            })
+
+        </script>
+        <!--<script>
+            $(function(){
+                var  doc = document.getElementById("playIframe").contentDocument;
+                $(doc).find('.toapp');
+                console.log($(doc).find('.toapp'))
+                $('#playIframe').load(function(){
+
+
+
+                   /* var $iframe = $(this),
+                        contents = $iframe.context;
+                    console.log($(contents).find('html'))*/
+                   // $contents.find('a[downloadurl]').hide()
+                })
+            })
+           // $("#playIframe").contents().find("a[downloadurl]").hide();
+        </script>-->
+    <!--<div class="svrUserFooter ui-footer ui-footer-fixed">
+		</div>-->
+		<!--<script id="contract_footer_tpl" type="text/html">
+			<div>
+				<div class="svrUserName">_tpl-realname</div>
+				<div class="contactPhone">_tpl-contactPhone</div>
+			</div>
+		</script>-->
+
+	</div>
+</div>
+
+</body>
+</html>

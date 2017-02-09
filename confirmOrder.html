@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script type="text/javascript" src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script type="text/javascript" src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script type="text/javascript" src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="confirmOrder" >
+  <div data-role="header">
+    <h1>订单支付</h1>
+	<a class="ui-btn ui-icon-back ui-btn-icon-notext navigateBackBtn">返回</a>
+  </div>
+  <div data-role="content">
+	<div>
+		<ul data-role="listview">
+			<li id="paySvrName">加载中...</li>
+			<li>单价：<div class="orderItem" id="confirmOrderUnitPrice">￥<span>--</span>元</div></li>
+			<li>数量：<div class="orderItem" id="payTotalNum">x<span>--</span></div></li>
+		</ul>
+		<div class="font-gray">结算信息</div>
+		<ul data-role="listview">
+			<li>总价：<div class="orderItem payMoney" id="payTotalCost">￥<span>--</span>元</div></li>
+			<li id="payByBalanceLi">
+				<div class="ui-grid-a">
+					<div class="ui-block-a">可用：</div>
+					<div class="ui-block-b">
+						<div class="orderItem vRadio" id="payByBalance">
+							<div id="userPayBalance">余额<span>---</span>元</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="ui-grid-a virtualcurr">
+					<div class="ui-block-a"></div>
+					<div class="ui-block-b">
+						<div class="orderItem vRadio" id="payByVirtualcurr">
+							<div id="userPayVirtualcurr">金币<span>---</span>枚</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>还需支付：<div class="orderItem payMoney" id="payNeed">￥<span>--</span>元</div></li>
+		</ul>
+		<div id="payNeedOtherWay" class="payment-method">
+			<div class="font-gray">选择支付方式</div>
+			<ul data-role="listview" class="vRadioGrp">
+				<li class="payType alipaywap vRadio">
+					<img src="resource/images/paytype-alipay.png">
+					<h2>支付宝网页支付</h2>
+					<p>信用卡，储蓄卡快捷支付及支付宝支付</p>
+<!-- 					<div id="selPayTypeAlipaywap" class=""></div> -->
+				</li>
+				<li class="payType WxPay vRadio" >
+					<img src="resource/images/paytype-WxPay.png">
+					<h2>微信支付</h2>
+					<p>信用卡，储蓄卡快捷支付及微信支付</p>
+			<!-- 		<div id="selPayTypeWxPay" class="vRadio"></div> -->
+				</li>
+				<li class="payType scholarshipPay vRadio" id="scholarshipPay">
+					<img src="resource/images/paytype-scholarshipPay.png">
+					<h2>奖学金选课</h2>
+					<p>不可使用混合支付</p>
+				</li>
+				<!-- 注释掉中国银联支付   modify by luozhibo
+				<li class="payType union vRadio" >
+					<img src="resource/images/paytype-union.png">
+					<h2>银联手机支付</h2>
+					<p>支持各大银行信用卡、储蓄卡在线支付</p>
+				-->
+			<!-- 		<div id="selPayTypeUnion" class="vRadio"></div> -->
+			<!-- 注释掉中国银联支付   modify by luozhibo
+				</li>
+			-->
+			</ul>
+			<form autocomplete="off" class="vItemTable layout-2 vForm" id="recharge-form" style="margin-bottom: 1em;display:none">
+				<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input style="display: none" name="cardId"></div>
+				<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input style="display: none" name="secretKey"></div>
+				<div class="vTr" style="padding: 0 0 0 4em;">
+					<div class="vTh" style="width:5em;">卡号</div>
+	
+					<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="text" autocomplete="off" value="" disableautocomplete="" name="cardId" autofocus="" placeholder="请输入奖学金卡号" maxlength="120"></div>
+				</div>
+				<div class="vTr" style="padding: 0 0 0 4em;">
+	
+					<div class="vTh " style="width:5em;">密码</div>
+					<div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset"><input type="password" name="secretKey" value="" disableautocomplete="" autocomplete="off" placeholder="请输入奖学金密码" maxlength="120"></div>
+				</div>
+			</form>
+		</div>
+		<a class="vbt submit" id="toPayBtn">去支付</a>
+        <br/>
+
+        <div class="font-gray">
+            <span class="font-red1">注：</span>使用余额支付失败时，系统会在45分钟内把资金重新返回到您的账户中。
+        </div>
+	</div>
+  </div>
+</div>
+
+</body>
+</html>

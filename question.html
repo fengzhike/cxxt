@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+	<script src="resource/js/want/want.js?__rver=2015061211"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="question" >
+	<div data-role="header" >
+		<a class="navigateBackBtn ui-icon-back ui-btn-icon-notext ui-btn">返回</a>
+		<h1><span class="prePageTitle"></span>详情</h1>
+	</div>
+	<div data-role="content">
+        <div id ="storeResult">收藏成功</div>
+		<div class=" sec1">
+			<div class="vt" id="svr_name_ctr">
+                    <div id="svrName">
+
+                    </div>
+					<!-- <a class="btn-blue ui-btn ui-mini ui-corner-all"></a> -->
+			</div>
+			<div class="user-line">
+				<div class="question_footer clearFix">
+	                <div class="user-info" >
+	                    <img alt="">      
+	                    <span class="userName"></span>
+	                </div>
+	                <time class="question_time"></time>
+	            </div>
+			</div>
+		</div>
+		<div class=" sec2">
+			<div class="ct font-gray"></div>
+		</div>
+		<nav class="question_tag_time detial clearFix">
+            <span class="question_tag"></span>
+            <span class="price font-gray custom-item-price-cls"></span>
+            <time class="question_r_num"> </time>
+        </nav>
+		
+		<div id="answer"></div>
+	</div>
+	<div class="theme-blue ui-footer ui-footer-fixed doAnswer">
+		回答
+	</div>
+
+	<script id="answer_item_tpl" type="text/html">
+		<div class="answer-items" data-id="_tpl-id">
+			<div class="answerUser clearFix">
+				<div class="profile-img">
+					<img src="_tpl-profileImageUrl" alt="">
+				</div>
+				<div class="user-data">
+					<span>_tpl-realname</span>
+					<span>_tpl-creTime</span>
+				</div>
+				<span class="best-answer-ico" isShow = "_tpl-isShow"></span>
+			</div>
+			<div class="answerDesc">_tpl-answerDesc</div>
+			<div class="answerPic">_tpl-answerPic</div>
+			<div class="pick-wrap">
+				<a class="btn-blue ui-btn ui-corner-all pick" data-serviceVersionID="_tpl-serviceVersionID" data-serviceID="_tpl-serviceID"><span>打赏</span></a>
+			</div>
+			
+			<span class="best-answer">_tpl-mark</span>
+		</div>
+	</script>
+
+	<script id="paper_tpl" type="text/html">
+		<div class="div_paper">
+			<a class="btn3 ui-corner-all pagePre btn-page _tpl-hasPre" data-page-num="_tpl-pagePre" action="pageNav">上一页</a>
+			<span class="pager-current">_tpl-pageCurrentTotal</span>
+			<a class="btn3 ui-corner-all pageNext btn-page _tpl-hasNext" data-page-num="_tpl-pageNext" action="pageNav">下一页</a>
+		</div>
+	</script>
+
+	<script id="contract_footer_tpl" type="text/html">
+        <!--<div class="svrUserFooter ui-footer ui-footer-fixed">-->
+            <div>
+                <div class="svrUserName">_tpl-realname</div>
+                <div class="contactPhone">_tpl-contactPhone</div>
+            </div>
+    </script>
+</div>
+</body>
+</html>

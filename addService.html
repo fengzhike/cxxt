@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="addService" noRightTopMenu>
+    <script>
+        var $oHtml = $('#addService').parent().parent();
+        var iW = $('#addService').width();
+        $oHtml.css('font-size',iW/16)
+    </script>
+	<div data-role="header" class ="pub_header">
+		<a class="ui-btn abortPublish     ui-btn-icon-notext"> </a>
+		<h1></h1>
+        <p class="submit">发布</p>
+	</div>
+	<div data-role="content" class="add_content">
+        <div class="vForm-1">
+        <ul class="add_form">
+            <li class="clearFix">
+                <div class="title_l service_name_l"><strong>标 题</strong></div>
+                <div class="con_r">
+                    <input type="text" class="serviceName"   id="publish_title" placeholder="限2字以上，30字以内"/>
+                </div>
+            </li>
+            <li class="clearFix">
+                <div class="title_l"><strong>持股人数</strong></div>
+                <div class="con_r unit">
+                    <input id="publish_maxBuyerCount"  type="number" placeholder="最多199人购买" maxlength="3"/>
+                    <span class="title_r">人</span>
+                </div>
+            </li>
+            <li class="clearFix">
+                <div class="title_l" ><strong>分 类</strong></div>
+                <div class="con_r cat toSelCategories">
+                    <div class="vCt">请选择</div>
+
+                </div>
+            </li>
+            <li class="clearFix">
+                <div class="title_l"><strong>标 签</strong></div>
+                <div class="con_r toSelTag">
+                    <div class="tags vCt">利于查找和管理哦~例:创新、实践</div>
+                </div>
+            </li>
+            <li class="clearFix">
+                <div class="title_l"><strong>项目价值</strong></div>
+                <div class="con_r worth unit">
+                    <input id="publish_worth" type="number" placeholder="项目预估价值" maxlength="12">
+                    <span class="title_r">元</span>
+                </div>
+            </li>
+            <li class="clearFix price">
+                <div class="title_l"><strong>价 格</strong></div>
+                <div class="con_r">
+                    <input type="number" id = "price" placeholder="仅限数字" oninput="viewJs.priceInput(this);" maxlength="6"/>
+                    <span class="title_r">元/</span>
+                    <input id = "publish_unit" type="text" placeholder="次、个、节"/>
+                </div>
+            </li>
+            <li class="clearFix ">
+                <div class="title_l"><strong>发售股数</strong></div>
+                <div class="con_r totalNum unit">
+                    <input id="publish_totalNum" type="number" maxlength="12" placeholder="项目发售股数">
+                    <span class="title_r">股</span>
+                </div>
+            </li>
+            <li class="clearFix ">
+                <div class="title_l"><strong>最多购买</strong></div>
+                <div class="con_r minSingleSaleCount unit">
+                    <input id="publish_maxSingleSaleCount" type="number" maxlength="12" placeholder="单次最多购买">
+                    <span class="title_r">股</span>
+                </div>
+            </li>
+            <li class="clearFix ">
+                <div class="title_l"><strong>最少购买</strong></div>
+                <div class="con_r maxSingleSaleCount unit">
+                    <input id="publish_minSingleSaleCount" type="number" maxlength="12" placeholder="单次最少购买">
+                    <span class="title_r">股</span>
+                </div>
+            </li>
+            <li class="clearFix">
+                <div class="title_l"><strong>开始时间</strong></div>
+                <div class="con_r startTime">
+                    <input type="datetime-local" id="publish_startTime" class="endTime ellipsis" placeholder="请输入开始时间">
+                </div>
+            </li>
+            <li class="clearFix">
+                <div class="title_l"><strong>截止时间</strong></div>
+                <div class="con_r endTime">
+                    <input type="datetime-local" id="publish_endTime" class="endTime ellipsis" placeholder="请输入日期时间">
+                </div>
+            </li>
+            <li class="clearFix connect">
+                <div class="title_l"><strong>联系方式</strong></div>
+                <div class="con_r">
+                    <input id = "publish_contactContent" type="text" placeholder="电话、邮箱、微信"/>
+                    <select name="con_type" id="publish_contactType">
+                        <option value="0" selected>电话</option>
+                        <option value="1">邮箱</option>
+                        <option value="2">微信</option>
+                    </select>
+                </div>
+            </li>
+            <li class="clearFix dec">
+                <div class="title_l"><strong>描 述</strong></div>
+                <div class="con_r toaddServiceWantDesc no-float">
+                    <div class="vCt">说点啥吧，让大家了解你的服务，增强效果！10字以上哦</div>
+                </div>
+            </li>
+            <li>
+                <div class="cameraCtr">
+                    <div class="camera">
+                        <div class="take-pic-ctr">
+                            <canvas class="camera-compress"></canvas>
+                        </div>
+                        <div id="cameraContainer">
+                            <a id="cameraBtn">
+                                <div id="cameraBtn-desc">添加图片</div>
+                            </a>
+                            <input id="take-pic" type="file" accept="image/png,image/jpeg" capture="camera">
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="clearFix">
+                <div class="title_l"><strong>备 注</strong></div>
+                <div class="con_r">
+                    <input id="addHide" type="text" placeholder="选填,链接或文字，购买后可见"/>
+                </div>
+            </li>
+        </ul>
+        <div class="is_classmate">
+            <label><input type="checkbox" id="show_check"/><span>仅同学可见</span></label>
+        </div>
+        <div id="responseMess" style="display: none;">
+            <label>
+                <input type="checkbox" checked><span>响应信息在服务市场所有人可见并购买</span>
+            </label>
+
+        </div>
+        <!--<div class="submit_wrap">
+            <p class="submit">确定发布</p>
+        </div>-->
+        </div>
+	</div>
+	<script id="addLinkDescTpl" type="text/html">
+		<div id="toAddDescLink" class="ui-page fullScreen vChild" >
+			<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+				<a class="ui-btn ui-icon-back ui-btn-icon-notext ui-btn-left cancel-add-link" >返回</a>
+				<h1 class="ui-title" role="heading" aria-level="1">描述</h1>
+				<a class="ui-btn add-link ui-btn-right">确定</a>
+			</div>
+			<div class="content" style="padding: 1em">
+				<div class="vItemTable layout-2 vForm">
+					<div class="vTr">
+						<div class="vTh" style="width: 6.7em;">链接名称</div>
+						<input type="text" class="lnk-name" autofocus placeholder="请输入链接名称" maxlength="500">
+					</div>
+					<div class="vTr">
+						<div class="vTh " style="width: 6.7em;">链接地址</div>
+						<input type="text" class="lnk-value"  placeholder="请输入链接地址" maxlength="500">
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+</div>
+
+</body>
+</html>

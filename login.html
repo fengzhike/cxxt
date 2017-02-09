@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="signIn">
+	<div data-role="header"  >
+		<h1>登录</h1>
+		<a href="#" class="navigateBackBtn ui-icon-back ui-btn-icon-notext ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-notext"></a>
+	</div>
+	<div data-role="content" >
+		<form id="loginFrom">
+			<input type="text" name="loginName" id="loginName" data-format="number" maxlength="20" placeholder="请输入您的手机号/用户名" autofocus>
+
+			<input type="password" name="password"  placeholder="请输入您的密码" id="password">
+			<div style="height:22px;">
+			<a class="toResetPwd" style="float:right;cursor: pointer;color:rgb(3, 122, 253)">忘记密码？</a>
+			<a id="registerBtn" style="float:right;cursor: pointer;color:rgb(3, 122, 253);margin-right:10px;">免费注册</a>
+			</div>
+			<a id="signInBtn" class ="ui-btn-active ui-state-persist" style="border-color:#197EEE;background:#197EEE" data-theme="b" data-role="button">登录</a>	
+			<input type="hidden" name="code" id="code">
+			<input type="hidden" name="systemType" id="systemType">
+			
+			<div id="otherMembers" class="horizontal-line-on-centered-text-container" style="margin-top:50px;display:none;">
+				<span class="horizontal-line-on-centered-text" style="width:37%;"><small>使用第三方账号登录</small></span>
+			</div>
+			
+			<div align="center" style="margin-top:10px;">
+				<a id="signInBtnWx" style="display:none;"><img src="resource/images/paytype-WxPay.png"/></a>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>

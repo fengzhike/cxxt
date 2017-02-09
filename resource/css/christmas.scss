@@ -1,0 +1,80 @@
+#christmas{
+  .ui-content{
+    padding: 0px;
+    background-image: url("../images/christmas/christmas-bg.jpg");
+    background-size: cover;
+    .christmas-form{
+      margin: 300px 20px 0px;
+      padding: 10px;
+      background-color: #EFCEA3;
+      border-radius: 10px;
+      .field-contain{
+        padding: 0;
+      }
+      .christmasExplain{
+        text-align: center;
+        font-size: 12px;
+        color: #197EEE;
+        margin-top: 10px;
+      }
+      #match_school_list{
+        position: absolute;
+      }
+    }
+    .explain{
+      margin: 2em 0px;
+      color: #fff;
+      text-align: center;
+    }
+    .copyright{
+      padding-bottom: 1em;
+      >div{
+        text-align: center;
+      }
+      img{
+        width: 70%;
+      }
+    }
+  }
+}
+#christmasQuestion{
+  .ui-content{
+    padding: 0px;
+    background-image: url("../images/christmas/christmasQuestion-bg.jpg");
+    background-size: cover;
+    padding: 110px 10px 10px;
+    font-size: smaller;
+    textarea{
+      height: 65px;
+    }
+    .explain{
+      margin: 2em 0px;
+      color: #fff;
+      text-align: center;
+    }
+    .copyright{
+      padding-bottom: 1em;
+      >div{
+        text-align: center;
+      }
+      img{
+        width: 70%;
+      }
+    }
+  }
+}
+#christmasExplain{
+  .ui-content{
+    padding: 0px;
+    >img{
+      width: 100%;
+    }
+    .submit{
+      position: absolute;
+      bottom: 0em;
+      border-style: hidden;
+      width: 100%;
+      height: 20%;
+    }
+  }
+}

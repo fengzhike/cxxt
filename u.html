@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/js/user/u.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="u">
+	<div data-role="header" >
+		<a class="ui-btn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+		<h1><span class="user-type"></span>详情</h1>
+	</div>
+	<div data-role="content">
+		<div class="uInfo sec1" style="height:72px;">
+			<div class="left">
+				<img alt="用户头像">
+			</div>
+			<div class="right">
+				<div class="line1">
+					<span class="username"></span>
+					<span class="mark sex"></span>
+					<span class="mark idcardValidated"></span>
+					<!--
+					<span class="mark bank"></span>
+					-->
+				</div>
+				<div class="user-rank" style="margin-top: 10px;"></div>
+				<div class="line2"><div class="fans-num"></div></div>
+			</div>
+		</div>
+		<a class="myEnterprise" child="u" style="margin-bottom: 1em;">
+			<span>所属公众号</span>
+			<span><img/><span class="institutionUserName"></span></span>
+		</a>
+		<div class="uInfo sec2">
+			<div class="vt"> 服务指数 </div>
+			<div class="ct"></div>
+		</div>
+		<div class="uInfo sec3">
+			<div class="vt"><span class="user-type"></span>介绍</div>
+			<div class="ct font-gray"></div>
+		</div>
+		<div class="uInfo sec4 svrGrade">
+			<span class="star"><div class="starImg empty"></div><div class="starImg empty"></div><div class="starImg empty"></div><div class="starImg empty"></div><div class="starImg empty"></div></span>
+			<span class="score">0</span>
+			<span class="reviewNumbers">0人评价</span>
+		</div>
+		<div class="uInfo sec7">
+			<div class="vt"><span class="teacher-label">签约师资</span><span class="teacherCount"><span></span>人</span></div>
+			<div class="ct ">
+				<div class="col-6-imgs" id="teacherCtr-users" style="text-align: left;padding:0px">
+				</div>
+			</div>
+		</div>
+		<div class="uInfo sec5">
+			<!--<div class="vt">所售服务(<span class="count">0</span>)</div>-->
+			<div class="ct detail">
+			</div>
+		</div>
+		<div class="uInfo sec6">
+			<!--<div class="vt">所需服务(<span class="count">0</span>)</div>-->
+			<div class="ct detail"></div>
+		</div>
+        <div id="not_publish_container" class="not_found_container">
+            <!--<div class="not-found-icon"></div>-->
+            <div class="not_found_tip">尚未发布任何信息</div>
+        </div>
+	</div>
+    <script type="text/html" id="userSvr_tpl">
+            <a class="custom-item-cls vbt vr ui-link service" data-serviceID="_tpl-id">
+                <div>
+                    <img src="_tpl-serviceVersion.picUrl">
+                </div>
+                <div>
+                    <div class="custom-item-name-cls">_tpl-serviceVersion.serviceName</div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a price-color">￥_tpl-serviceVersion.newPrice</div>
+                        <div class="ui-block-b custom-item-username-cls">_tpl-serviceVersion.userByUserId.realname</div>
+                        <div class="ui-block-a"><img src="resource/images/watch-num.png" style="width: 16px;height: 16px;margin: -5px 3px 0px 2px;">_tpl-watchNumber</div>
+                        <div class="ui-block-b">_tpl-serviceVersion.distance</div>
+                    </div>
+                </div>
+            </a>
+    </script>
+</div>
+</body>
+</html>

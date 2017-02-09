@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/js/user/mine.js?__rver=2016031600"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="mine" no-footer>
+	<link rel="stylesheet" href="resource/css/mine.css?__rver=2015061211">
+	<div data-role="header" >
+		<a class="ui-btn  ui-icon-back ui-btn-icon-notext">返回</a>
+		<h1>我的</h1>
+	</div>
+	<div data-role="content">
+		<div class="myInfo sec sec1" style="margin: 0">
+			<div class="signInDiv"  id="loginUser-user">
+				<a class="vbt vr icon-right toAccountManage" child="account">
+					<div class="block left">
+						<img class="myPic"/>
+					</div>
+					<div class="block right"  style="line-height: 30px">
+						<div class="myName">
+							<span class="name"></span>
+							<span class="mark sex"></span>
+							<span class="mark idcardValidated"></span>
+							<!--
+							<span class="mark bank"></span>
+							-->
+						</div>
+						<span class="user-rank" style="color: #2e8ad4;display: inline-block"></span>
+						<div class="myBalance">
+							金额：<span></span>元&nbsp;金币：<span></span>枚
+						</div>
+					</div>
+				</a>
+				<input id="userTile-file" type="file" accept="image/png,image/jpeg" capture="camera">
+			</div>
+			<div class="signoutDiv">
+				<a class="vbt vr icon-right toLogin">
+					<div class="block left">
+						<img class="myPic" src="resource/images/404-user.png">
+					</div>
+					<div class="block right">
+						点击登录
+					</div>
+				</a>
+			</div>
+			<a class="vbt vr icon-left" child="myQuestions">
+				<span></span>
+			</a>
+			<a class="myEnterprise" child="u">
+				<span>所属公众号</span>
+				<span><img/><span class="institutionUserName"></span></span>
+			</a>
+			<div class="btn-grp-1 ui-grid-b" style="color:#000102;">
+				<a child="userKPI" class="ui-block-a" style="padding:.3em 0">绩效指标</a>
+				<a child="five-color"  class="ui-block-b" style="padding:.3em 0">五色思维</a>
+				<a child="myDiplomas" class="ui-block-c" style="padding:.3em 0">成绩证书</a>
+			</div>
+			<!--
+			<div class="btn-grp-1 ui-grid-b">
+                <a action="myStore" class="btn-block ui-block-a"><div class="num">0</div><div>收藏</div></a>
+                <a action="myFollow"  class="btn-block ui-block-b"><div class="num">0</div>关注</a>
+                <a action="myFans" class="btn-block ui-block-c"><div class="num">0</div>粉丝</a>
+			</div>
+            <script id="btn-grp-1_tpl" type="text/html">
+                <a action="myStore" class="btn-block ui-block-a _tpl-myStoreNone"><div class="num">_tpl-myStoreNum</div><div>收藏</div></a>
+                <a action="myFollow"  class="btn-block ui-block-b _tpl-myFollowNone"><div class="num">_tpl-myFollowNum</div>关注</a>
+                <a action="myFans" class="btn-block ui-block-c _tpl-myFansNone"><div class="num">_tpl-myFansNum</div>粉丝</a>
+            </script>
+            -->
+		</div>
+		<div class="myBuySvrs sec sec2 ">
+           <!-- <a class="vbt vr toMyOrders icon-left" child="myOrders">
+                <div class="vbt vbr icon-right">我的订单</div>
+            </a>-->
+            <a class="vbt vr toMyOrders icon-left" child="buyorder">
+                <div class="vbt vbr icon-right">我买入的</div>
+            </a>
+            <a class="vbt vr toMyOrders icon-left" child="saleorder">
+                <div class="vbt vbr icon-right">我卖出的</div>
+            </a>
+            <a class="vbt vr toMyLessons icon-left" child="myLessons">
+                <div class="vbt vbr icon-right">我的课程</div>
+            </a>
+			<!--
+			<a class="vbt vr toMyOrders icon-left" style="border-bottom: 1px solid #cccccc;" child="myOrders">
+                <div class="vbt vbr icon-right">购买的服务</div>
+			</a>
+			<a class="vbt vr toMyOrders icon-left" style="border-bottom: 1px solid #cccccc;" child="myCourseOrders">
+                <div class="vbt vbr icon-right">学习的课程</div>
+			</a>
+			<a class="vbt vr toMyOrders icon-left" child="myActivityOrders">
+                <div class="vbt vbr icon-right">参加的活动</div>
+			</a>
+			-->
+		</div>
+        <div class="myBuySvrs sec sec3">
+            <a class="vbt vr toPublishSvrs icon-left" child="myServices">
+                <div class="vbt vbr icon-right">发布的服务</div>
+            </a>
+			<!--
+			<a class="vbt vr toPublishSvrs icon-left" child="myCourses">
+				<div class="vbt vbr icon-right">发布的课程</div>
+			</a>
+			-->
+			<a class="vbt vr toPublishSvrs icon-left" child="myActivities">
+				<div class="vbt vbr icon-right">发布的活动</div>
+			</a>
+			<a class="vbt vr toPublishSvrs icon-left" child="myCrowdfunding">
+				<div class="vbt vbr icon-right">发布的融资</div>
+			</a>
+            <a class="vbt vr toPublishWants icon-left" child="myWants">
+                <div class="vbt vbr icon-right">发布的需求</div>
+            </a>
+            <a class="vbt vr toPublishQuestions icon-left" child="myQuestions">
+                <div class="vbt vbr icon-right">发布的问题</div>
+            </a>
+        </div>
+		<!--
+		<div class="myStoreSvrs sec sec4">
+			<a class="vbt vr toRecommendedServices icon-left" child="recommend">
+                <div class="vbt vbr icon-right">推荐的服务</div>
+			</a>
+		</div>
+		<div class="myStoreSvrs sec sec5">
+			<a class="vbt vr toMyInvitation icon-left" child="myInvitations">
+                <div class="vbt vbr icon-right">我的邀请</div>
+			</a>
+		</div>
+        <div class="myStoreSvrs sec sec5" style="margin-bottom: 0;">
+            <a class="vbt vr toUserKPI icon-left" child="userKPI" style="border-bottom: 1px solid #ccc">
+                <div class="vbt vbr icon-right">绩效指标</div>
+            </a>
+			<a class="vbt vr five-color-icon icon-left" child="five-color">
+				<div class="vbt vbr icon-right">五色思维</div>
+			</a>
+			<a class="vbt vr toPublishDiplomas icon-left" child="myDiplomas">
+				<div class="vbt vbr icon-right">证书</div>
+			</a>
+        </div>
+        -->
+		<div class="myBuySvrs sec sec2 ">
+			<a class="vbt vr toMyTeachers icon-left" child="myTeachers">
+				<div class="vbt vbr icon-right">我的师资</div>
+			</a>
+			<!--
+            <a class="vbt vr toMyTeachers icon-left" child="myGroup1">
+                <div class="vbt vbr icon-right">我的团队</div>
+            </a>
+            -->
+		</div>
+		<div class="myStoreSvrs sec sec3">
+            <a class="vbt vr toPublishSvrs icon-left" child="mygroup" style = "display:none">
+                <div class="vbt vbr icon-right mygroup">我的公众号</div>
+            </a>
+            <a class="vbt vr toPublishSvrs icon-left" child="myProject">
+                <div class="vbt vbr icon-right myProject">我的项目组</div>
+            </a>
+			<a class="vbt vr toPublishSvrs icon-left" child="follow">
+				<div class="vbt vbr icon-right">我的关注</div>
+			</a>
+			<a class="vbt vr toPublishSvrs icon-left" child="fans">
+				<div class="vbt vbr icon-right">我的粉丝</div>
+			</a>
+			<a class="vbt vr toPublishWants icon-left" child="favorite">
+				<div class="vbt vbr icon-right">我的收藏</div>
+			</a>
+            <!--<a class="vbt vr toPublishWants classMate icon-left">
+                <div class="vbt vbr icon-right  classMateOnOff">仅看同学 <span>关</span></div>
+            </a>-->
+		</div>
+		<div class="myStoreSvrs sec sec5" style="margin-bottom: 0;display:none;">
+			<a class="vbt vr scan icon-left" style="border-bottom: 1px solid #ccc">
+				<div class="vbt vbr icon-right">扫一扫</div>
+			</a>
+		</div>
+	</div>
+	<div data-role="footer" data-position="fixed" data-theme="f">
+		<div class="h-menu" style="">
+			<a class="icon-btn btn-pos-top icon-home ui-link" action="home">首页</a>
+			<a class="icon-btn btn-pos-top icon-found ui-link" action="menu-found">周围<span class="remind" style = "display:none"></span></a>
+			<a class="icon-btn icon-publish ui-link" action="menu-publish"></a>
+			<a class="icon-btn btn-pos-top icon-calendar ui-link " action="menu-calendar">日程</a>
+			<a class="icon-btn btn-pos-top icon-user-center ui-link activated" action="user-center">我的</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

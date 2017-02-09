@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>创新学堂</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+    <link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+    <script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+    <script src="resource/js/urming.min.js?__rver=2015061211"></script>
+    <script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script src="resource/js/user/selectVeifyType.js?__rver=2015061211"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="selectVeifyType">
+    <div data-role="header"  class="vrHeader">
+        <a	class="ui-btn backBtn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+        <h1>选择认证类型</h1>
+    </div>
+    <div data-role="content">
+        <div id="userVerifyType">
+            <a class="vbt vr" id="person" data-user-type="person">个人认证</a>
+            <a class="vbt vr" id="teacher" data-user-type="teacher">教师认证</a>
+            <a class="vbt vr" id="enterprise" data-user-type="enterprise">公众号认证</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

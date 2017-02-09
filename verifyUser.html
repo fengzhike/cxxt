@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="verifyUser">
+	<div data-role="header"  class="vrHeader">
+		<a	class="ui-btn backBtn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a> 
+		<h1><span class="verify-person">个人身份</span><span class="verify-teacher">师资</span><span class="verify-enterprise">公众号</span>认证</h1>
+	</div>
+	<div data-role="content">
+		<div class="font-gray">
+			<span class="verify-person">个人身份</span><span class="verify-teacher">完成师资</span><span class="verify-enterprise">公众号</span>认证后，您
+			<span class="verify-person">的名字旁将显示认证徽标，会提高用户对您的信任程度。如:</span>
+			<span class="verify-teacher">可通过创新港平台进行自助开设课程，并获得师资认证专有徽标。</span>
+			<span class="verify-enterprise">的公众号名称旁将显示认证徽标，会提高用户对您的信任程度。如:</span>
+		</div>
+		<h3>
+            <span class="verify-person">李小明</span><span class="verify-enterprise">慈济慈善事业基金会</span>
+			<span class="mark idcardValidated person verify-person"></span>
+			<span class="mark idcardValidated enterprise verify-enterprise"></span>
+		</h3>
+		<div class="vForm-3 fieldContainer verify-person verify-teacher">
+				<input type="text" placeholder="姓名" maxlength="40" name="name">
+				<input type="text" placeholder="身份证号" maxlength="18" name="num">
+		</div>
+		<div class="vForm-3 fieldContainer verify-enterprise">
+				<input type="text" maxlength="40" placeholder="公众号名称"  name="name">
+				<input type="text" placeholder="营业执照编号（没有可不填）"  name="num">
+		</div>
+		<p style="text-align: center"><small><span class="verify-person verify-teacher">身份证照片(请提供示例中本人持身份证的图片)</span>
+            <span class="verify-enterprise">上传营业执照或加盖单位公章的证明文件</span></small></p>
+		<div id="ID-photo-example" class="font-gray">示例</div>
+		<div id="addIDPhotoCtr">
+			<a id="addIDPhotoBtn" class="ui-link">
+				<div id="addIDPhoto-desc">添加图片</div>
+			</a>
+			<input id="addIDPhoto" type="file" accept="image/png,image/jpeg" capture="camera">
+		</div>
+		<a class="vbt submit">提交</a>
+	</div>
+</div>
+</body>
+</html>

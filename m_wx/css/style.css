@@ -1,0 +1,48 @@
+#tinybox {
+	position:absolute; 
+	display:none; 
+	padding:0px; 
+	background:#fff url(images/preload.gif) no-repeat 50% 50%; 
+	border:0px solid #e3e3e3; 
+	z-index:2000
+}
+#tinymask {
+	position:absolute; 
+	display:none; 
+	top:0; 
+	left:0; 
+	height:100%; 
+	width:100%; 
+	background:#000; 
+	z-index:1500
+}
+#tinycontent {
+	background:#fff
+}
+
+
+#footer {
+	height: 60px;
+	background-color: #f5f5f5;
+}
+#cn {
+	padding-top:5px;
+  	text-align:center;
+}
+
+.col-left{
+	 width: 50%;
+}
+.col-right{
+	 width: 50%;
+}
+
+
+
+
+    #middle{
+    	padding-top:8px;
+    }
+    #download{
+    	padding-top:40px;
+    }

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>创新学堂</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+    <link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+    <script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+    <script src="resource/js/urming.min.js?__rver=2015061211"></script>
+    <script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script src="resource/js/user/signup.js?__rver=2016031711"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="signup">
+    <div data-role="header" >
+        <a class="ui-btn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+        <h1>报名申请</h1>
+    </div>
+    <div data-role="content" class="content">
+
+    </div>
+    <script id="paper_tpl" type="text/html">
+        <div class="pager-nav">
+            <a class="btn3 ui-corner-all pagePre btn-page _tpl-hasPre" data-page-num="_tpl-pagePre"
+               action="pageNav">上一页</a>
+            <span class="pager-current">_tpl-pageCurrentTotal</span>
+            <a class="btn3 ui-corner-all pageNext btn-page _tpl-hasNext" data-page-num="_tpl-pageNext" action="pageNav">下一页</a>
+        </div>
+    </script>
+    <script id="want_open_tpl" type="text/html">
+        <div data-item-id="_tpl-id" catId="_tpl-catId" class="vbt vr want _tpl-status" tab="1" action="wantDetail">
+            <div class="row">
+                <div class="name ellipsis">_tpl-name</div>
+                <div class="price">悬赏金：￥_tpl-price</div>
+            </div>
+
+            <div class="row">
+                <a class="btn4 ui-corner-all" action="edit" catId="_tpl-catId" param="_tpl-id">编辑</a>
+                <!--
+                <a class="btn4 ui-corner-all _tpl-btnCls" action="close" param="_tpl-id">关闭</a>
+                -->
+            </div>
+            <div class="watermark staus _tpl-status">
+
+            </div>
+        </div>
+    </script>
+    <script id="want_close_tpl" type="text/html">
+        <div data-item-id="_tpl-id" catId="_tpl-catId" class="vbt vr want" tab="2" action="wantDetail">
+            <div class="row">
+                <div class="name ellipsis">_tpl-name</div>
+                <div class="price">悬赏金：￥_tpl-price</div>
+            </div>
+            <div class="row">
+                _tpl-responseNumber回答
+                <!--
+                <a class="btn4 ui-corner-all" action="edit" catId="_tpl-catId" param="_tpl-id">编辑</a>
+                <a class="btn4 ui-corner-all" action="reopen" param="_tpl-id">重新打开</a>
+                -->
+            </div>
+        </div>
+    </script>
+</div>
+</body>
+</html>

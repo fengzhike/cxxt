@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script type="text/javascript" src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script type="text/javascript" src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script type="text/javascript" src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="orderDetail">
+	<div data-role="header" >
+		<a class="ui-btn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+		<h1>订单详情</h1>
+	</div>
+	<div data-role="content">
+		<div class="order-card-ct" id="order-card-ct" style="display:none;">
+			<div class="order-card">
+				<div class="card-line card-line-top">
+					<div class="order-card-no ellipsis">...</div>
+					<span class="order-card-status">...</span>
+				</div>
+				<div class="card-line card-line-center">
+					<div class="order-card-title ellipsis">...</div>
+					<div class="order-card-price">...</div>
+				</div>
+				<div class="card-line card-line-bottom">
+					<div class="order-card-user ellipsis">...</div>
+					<span class="order-card-phone">...</span>
+				</div>
+			</div>
+		</div>
+		<div id="customer-info" style="display: none">
+			<div class="sec sec1">
+				<div class="svrShortcut">
+
+				</div>
+				<div class="order">
+				</div>
+				<div class="seller">
+				</div>
+			</div>
+			<div class="sec sec2">
+			</div>
+		</div>
+		<div class="sec sec3">
+
+			<div class="svrUser info" style="display: none">
+				<div class="svrVTitle">
+					<span class="prePageTitle">授课教师</span>
+				</div>
+				<a class="svrUserInfo vbt vr">
+					<img>
+					<div class="v-icon-right"></div>
+					<div class="userDetail">
+						<div>
+							<div class="svrUserName">
+							</div>
+							<div class="user-rank"></div>
+							<div class="svrUserTages">
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+			<div class="sec sec2">
+			</div>
+			<div class="vTitle">
+				服务描述
+			</div>
+			<div class="ct vc">
+			</div>
+			<div class="vTitle" id="hiTitle">
+				提取信息
+			</div>
+			<div class="hi vc">
+			</div>
+		</div>
+
+	</div>
+	<script type="text/html" id="order-card-tpl">
+		<div class="order-card" data-serviceID="_tpl-serviceID" data-catId="_tpl-catId">
+			<div class="card-line card-line-top">
+				<div class="order-card-no ellipsis">订单号:_tpl-code</div>
+				<span class="order-card-status">_tpl-statusTxt</span>
+				<img src="resource/images/arrow-right-margin.png" style="position:absolute;margin-top:1.6em;right:2em"/>
+			</div>
+			<div class="card-line card-line-center">
+				<div class="order-card-title ellipsis">_tpl-serviceName</div>
+				<div class="order-card-price">￥_tpl-price</div>
+				<div class="order-card-title" id="order-card-startTime">开始时间：2015-01-10 19:00:00</div>
+				<div class="order-card-title" id="order-card-endTime">结束时间：2015-01-10 19:00:00</div>
+			</div>
+			<div class="card-line card-line-bottom" style="font-size: 18px;line-height: 30px;">
+				<div class="order-card-user ellipsis">_tpl-realname</div>
+				<span class="order-card-phone">_tpl-contactContent</span>
+			</div>
+
+		</div>
+		<a class="btn1 _tpl-actionCls" order-card-btn>_tpl-actionStatus</a>
+	</script>
+</div>
+</body>
+</html>

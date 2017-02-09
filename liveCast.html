@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+<!-- 	<script src="http://api.map.baidu.com/api?type=quick&ak=7E2819ade2e2fb1ee1594a3af867de10"></script> -->
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="liveCast" data-inline="false" data-ajax="false" noRightTopMenu>
+	<script src="http://qzonestyle.gtimg.cn/open/qcloud/video/h5/h5connect.js" charset="utf-8" ></script>
+    <link rel="stylesheet" href="./resource/css/liveCast.css"/>
+	<div data-role="header" class="vrHeader">
+        <span class="back">回互动</span>
+		<h1>直播课堂</h1>
+	</div>
+	<div data-role="content" class="content_box">
+        <section style="position:relative;">
+            <div class="play_box scroll-wrapper" style="z-index: 1;position: relative;">
+                <iframe id="liveID" frameborder="0"  height="200" style="margin:0 auto" ></iframe>
+            </div>
+            <!--<span id="back" style = 'position:absolute;bottom:10px;right:100px;z-index: 5;color:red;'>查看互动内容</span>-->
+        </section>
+
+        <!--<div class="control ui-grid-a">
+            <div class="ui-block-a action">互动</div>
+            <div class="ui-block-b">项目</div>
+        </div>-->
+        <div class="interact_box scroll-wrapper">
+            <iframe id="cast" frameborder="0" id="interact" height = '300'></iframe>
+        </div>
+        <script>
+            /*function liveCastInit(){
+                alert(1)
+            }*/
+            //liveCastInit()
+                setTimeout(function(){
+                    var liveID = mainJs.parseUrlSearch().actId? mainJs.parseUrlSearch().actId: 571404717,
+                        serviceID = mainJs.parseUrlSearchTop().serviceID?mainJs.parseUrlSearchTop().serviceID:16461;
+                    //console.log(liveID)
+                    $('#liveID').attr('src','http://e.vhall.com/webinar/inituser/'+liveID +'?email=test@vhall.com&name=visitor&k="aaa"');
+                },50)
+
+                var origin = window.location.origin;
+                var regExp = /188:8080/,
+                        regExpL = /localhost/;
+
+                if(regExp.test(origin)){
+                    origin += '/edu'
+                }
+                if(regExpL.test(origin)){
+                    origin += '/edu'
+                }
+                $('#cast').attr('src',origin+"/interact.html")
+                //
+                var iw = $('html').width()>600? 480:$('html').width();
+                $('iframe').width(iw);
+
+
+                $('.back').on('vclick',function(){
+                    // window.location = location;
+                    $('#cast').attr('src',origin+"/interact.html");
+                })
+
+                var testTimer0 = setInterval(function() {
+                    if(!mainJs.parseUrlSearchTop().actId){
+
+                        //console.log($('#liveID').attr('src'))
+                        $('#liveID').attr('src','');
+                        clearInterval(testTimer0);
+
+                        return;
+                    }
+                },500);
+
+
+
+            //alert(1)
+        </script>
+    </div>
+
+</div>
+
+</body>
+</html>

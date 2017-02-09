@@ -1,0 +1,15 @@
+@charset "UTF-8";
+#diploma .ui-content {
+  background-image: url("../images/diploma-bg.jpg");
+  background-size: 100% 100%;
+  padding: 60% 18% 0 20%;
+  line-height: 150%;
+  height: 30em; }
+#diploma span {
+  font-family: KaiTi;
+  text-decoration: underline; }
+#diploma #rank {
+  font-family: '微软雅黑','Helvetica Neue',arial,Lato,sans-serif;
+  text-decoration: none; }
+
+/*# sourceMappingURL=diploma.css.map */

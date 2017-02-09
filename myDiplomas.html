@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>创新学堂</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+    <link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+    <script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+    <script src="resource/js/urming.min.js?__rver=2015061211"></script>
+    <script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="myDiplomas">
+    <div data-role="header"  >
+        <h1>证书</h1>
+        <a href="#" class="navigateBackBtn ui-icon-back ui-btn-icon-notext ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-notext"></a>
+    </div>
+    <div data-role="content" >
+        <div class="loading-area diplomaList"></div>
+        <div class="pager-nav"></div>
+        <script id="diploma_item_tpl" type="text/html">
+            <div class="vbt vr svrItem" action="_tpl-action" param="id=_tpl-id">
+                <div class="left-block">
+                    <img src="_tpl-img"></div>
+                <div class="right-row">
+                    <div class="name">_tpl-name</div>
+                    <div class="endTime">完成时间：_tpl-endTime</div>
+                </div>
+            </div>
+        </script>
+        <script id="paper_tpl" type="text/html">
+            <a class="btn3 ui-corner-all pagePre btn-page _tpl-hasPre"  data-page-num="_tpl-pagePre" action="pageNav">上一页</a>
+            <span class="pager-current">_tpl-pageCurrentTotal</span>
+            <a class="btn3 ui-corner-all pageNext btn-page _tpl-hasNext" data-page-num="_tpl-pageNext" action="pageNav">下一页</a>
+        </script>
+    </div>
+</div>
+</body>
+</html>

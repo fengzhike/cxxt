@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head lang="UTF-8">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <link href="css/help.css" rel="stylesheet">
+
+</head>
+<body>
+
+<section>
+    <div class="scroller" id="section">
+        <div>
+            <div class="q-title">1.使用创新学堂能做什么?</div>
+            <div class="q-content">创新学堂是面向学生创新创业教育的互联网实训平台应用，在这里学生可以在共享开源课程、网上互动交流学习的同时，免费发布、查询、浏览服务与需求，进行真实的交易，应聘真实工作岗位，获得真实企业与投资人的关注。</div>
+            <div class="q-img close">
+                <img data-src="img/about1.jpg" maxwidth="100%" height="auto" alt="pic" src="img/about1.jpg">
+            </div>
+            <div class="q-btn">查看图示</div>
+        </div>
+        <div>
+            <div class="q-title">2.使用创新学堂是否收费?</div>
+            <div class="q-content">创新学堂对学生用户不收取管理服务费，对企业与机构用户收取一定的管理与信息服务费，具体条款以用户协议为准。</div>
+            <div class="q-img close">
+                <!--<img data-src="http://ufosdk.baidu.com/Public/img/yonghufankui_map02.jpg" width="100%" height="auto" alt="pic">-->
+            </div>
+            <!--<div class="q-btn">查看图示</div>-->
+        </div>
+        <div>
+            <div class="q-title">3.如何注册创新学堂帐号?</div>
+            <div class="q-content">点击【我的】，进入【我的】页面，点击上方【登录】，进入【登录/注册】界面，点击进入注册页面，按照要求如实填写信息，即可完成创新学堂帐号的注册，目前平台支持手机号注册与微信注册。</div>
+            <div class="q-img close">
+                <img data-src="img/about2.jpg" width="100%" height="auto" alt="pic" src="img/about2.jpg">
+            </div>
+             <div class="q-btn">查看图示</div>
+        </div>
+        <div>
+            <div class="q-title">4.个人能力（PR）值是什么?</div>
+            <div class="q-content">PR值是指用户在某服务标签下的个人能力值。能力值越高，服务可获得更大的购买几率及招聘企业的关注度越高。</div>
+            <div class="q-img close">
+                <img data-src="img/about3.jpg" width="100%" height="auto" alt="pic" src="img/about3.jpg">
+            </div>
+            <div class="q-btn">查看图示</div>
+        </div>
+        <div>
+            <div class="q-title">5.什么是经营绩效指标?</div>
+            <div class="q-content">绩效指标包括当月收入，累计收入，资产收益率（月），服务分数，发布数量，购买服务数量等，学员可以通过实践理解绩效指标的各项内容，学会管理自己的财富，提升创业能力。</div>
+            <div class="q-img close">
+                <img data-src="img/about4.jpg" width="100%" height="auto" alt="pic" src="img/about4.jpg">
+            </div>
+            <div class="q-btn">查看图示</div>
+        </div>
+        <div>
+            <div class="q-title">6.什么是五色思维评价?</div>
+            <div class="q-content">五色思维是生命思维，批判思维，美学思维，经济思维，设计思维五类创创新思维。通过学习实践互动，创新学堂通过大数据分析出人的五色思维相对分数作为人才评价参考。“近朱者赤“，你与其他师生在创新学堂互动越多，这些师生思维能力越强，你的思维评价也会越高。</div>
+            <div class="q-img close">
+                <img data-src="img/about5.jpg" width="100%" height="auto" alt="pic" src="img/about5.jpg">
+            </div>
+            <div class="q-btn">查看图示</div>
+        </div>
+        <!--
+        <div class="qust">
+            <div class="qust-tit">是否解决了你的问题：</div>
+            <div class="qa-select">
+                <a href="solve://" id="solved" class="solved">解决了</a>
+                <a id="nsolved" class="nsolved">没有，我要反馈</a>
+            </div>
+        </div>
+		-->
+    </div>
+</section>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/common.js"></script>
+
+<script>
+    $(function () {
+        var faqid = $_GET('faq_id');
+        var os = $('#os').val();
+
+        // åˆå§‹åŒ–iscroll
+        // var myscroll;
+        // function loaded() {
+        //     // å…¨éƒ¨Domèµ„æºåŠ åœ¨å®Œæ¯•çš„æ—¶å€™å†åˆå§‹åŒ–iscroll
+        //     setTimeout(function () {
+        //         myscroll = new iScroll('section');
+        //     }, 100);
+        // }
+        // window.addEventListener('load', loaded, false);
+
+
+        $('.q-btn').click(function () {
+            var $this = $(this);
+            if ($this.prev().hasClass('close')) {
+                $this.prev().removeClass('close').addClass('open');
+                var img = $this.prev().find('img');
+                img.attr({
+                    'src': img.data('src')
+                });
+                $this.text('收起图示');
+                // myscroll.refresh();
+            }
+            else {
+                $this.prev().removeClass('open').addClass('close');
+                $this.text('收起图示');
+                // myscroll.refresh();
+            }
+        });
+    });
+    $('#solved').bind('touchstart', function () {
+        $(this).addClass('solved-click');
+    })
+            .bind('touchend', function() {
+                $(this).removeClass('solved-click');
+            });
+    $('#nsolved').bind('touchstart', function () {
+        $(this).addClass('nsolved-click');
+    })
+            .bind('touchend', function() {
+                $(this).removeClass('nsolved-click');
+            });
+</script>
+
+</body>
+</html>

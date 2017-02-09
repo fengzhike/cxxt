@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+<!-- 	<script src="http://api.map.baidu.com/api?type=quick&ak=7E2819ade2e2fb1ee1594a3af867de10"></script> -->
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="funding" data-inline="false" data-ajax="false">
+	<script src="http://qzonestyle.gtimg.cn/open/qcloud/video/h5/h5connect.js" charset="utf-8" ></script>
+	<div data-role="header" class="vrHeader">
+		<a class="ui-btn ui-icon-back navigateBackBtn  ui-btn-icon-notext">返回</a>
+		<h1>项目详情</h1>
+	</div>
+	<div data-role="content">
+		<div >
+			<div class="servicePicsCtr">
+				<div class="servicePics">
+                   <!-- <div class="focus" id="focus">
+                        <div class="hd">
+                            <ul>
+                                <li class="on">1</li>
+                            </ul>
+                        </div>
+                        <div class="bd">
+                            <ul>
+                                <li class="pic_list" datas ='1' >
+                                    <img src= './resource/images/defaultImg/course.png' />
+                                </li>
+                            </ul>
+                        </div>
+                    </div>-->
+				</div>
+                <div class="mes_mask">
+                    <time><i class="time_num"> </i></time>
+                </div>
+			</div>
+			<div class="buySvrCtr svrVTitle">
+				<span id="svrNewPrice" > <mark></mark> 元/股</span>
+				 <a href="#" data-role="button"  class="buySvrBtn">支持</a>
+			</div>
+		</div>
+
+		<div class="tab-bar ui-grid-b" style="margin-top: 1em;">
+			<div class="action ui-block-a btn-tab sel" action="info" tab="info"><a class="icon-btn btn-no-text ui-link">项目简介</a></div>
+			<div class="action ui-block-b btn-tab" action="pro_prograss" tab="chapter" style="position: relative"><a class="icon-btn btn-no-text ui-link">项目进展</a><span class="msg_num" style="margin-left: 0em;position: absolute;color: white;"></span></div>
+			<div class="action ui-block-c btn-tab" action="support" tab="wants" style="position: relative"><a class="icon-btn btn-no-text ui-link">支持</a><span class="msg_num" style="margin-left: 0em;position: absolute;color: white;"></span></div>
+		</div>
+		
+		<div class="svrFUndingInfo info" style = 'display:block'>
+            <div class="infoTitle clearFix">
+                <h2 id="service_name"> </h2>
+                <div class="det_left">
+                    <em class="list_left_icon"></em>项目价值：<i class="worth">0 </i> 元
+                </div>
+            </div>
+            <div class="progress_detial">
+                <div class="grun">
+                    <span class="done"></span>
+                    <em class="done_bar">0%</em>
+                </div>
+                <div class="moneyCount clearFix">
+                    <p class="sale_money"><i>完成融资：</i> <span>0</span>元</p>
+                    <p class="total_money"><i>发行股值：</i> <span>0</span>元</p>
+                </div>
+            </div>
+            <ul class="clearFix circles">
+                <li class="view_num">
+                    <canvas class="process" width="80px" height="80px"></canvas>
+                    <span>浏览人数</span>
+                    <i></i>
+                </li>
+                <li class="svrLastNum">
+                    <canvas class="process" width="80px" height="80px"></canvas>
+                    <span>剩余股数</span>
+                    <i></i>
+                </li>
+                <li class="selfTotalNum">
+                    <canvas class="process" width="80px" height="80px">0股</canvas>
+                    <span>当前持股</span>
+                    <i></i>
+                </li>
+            </ul>
+
+		</div>
+		<div style = 'display:block' class="svrUser info">
+			<div class="svrVTitle">
+				<span class="prePageTitle">项目发起人</span>
+			</div>
+			<a class="svrUserInfo vbt vr">
+				<img src = 'http://cdnimg2.edu.euming.com/pkuie/userInfo/upload/20150325/u_1427259895193_384943-1.jpg'>
+				<div class="v-icon-right"></div>
+				<div class="userDetail">
+					<div>
+						<div class="svrUserName">
+                            创新学堂
+						</div>
+						<div class="user-rank"></div>
+						<div class="svrUserTages">
+						</div>
+						
+					</div>
+
+				</div>
+				
+			</a>
+		</div>
+		<div style = 'display:block' class="svrBottomSec info">
+			<div class="svrDetail">
+				<div class="svrVTitle">
+					项目详情
+				</div>
+				<div class="svrVoice">
+				</div>
+				<div class="serviceDesc">
+				</div>
+			</div>
+			<div class="svrReport font-gray">
+				<a class="vbt reportBt">举报</a>
+			</div>
+		</div>
+
+
+		<div id="pro_prograss" style="display:none">
+            <div class="add_pro" style = 'display:none'>
+                <button >添加新进展</button>
+            </div>
+
+            <section class="timeline">
+               <ul class="progress_box">
+
+               </ul>
+            </section>
+        </div>
+		<script id="pro_progress_htl" type="text/html">
+            <li>
+                <span class="dot"></span>
+                <time>2013-12-4</time>
+                <p>完成初步首轮融资3000W</p>
+                <nav class="pic_box">
+                    <div class="prograss_pic">
+                        &nbsp;<img src= './resource/images/defaultImg/course.png'  alt=""/>
+                    </div>
+                </nav>
+            </li>
+		</script>
+
+		<div id="result_not_found_container" class="not_found_container">
+			<div class="not-found-icon"></div>
+			<!--<div id="result_not_found_tip" class="not_found_tip"></div>-->
+		</div>
+		<div id="support" style="display: none">
+			<ul class="supportor">
+
+            </ul>
+		</div>
+		<script id="recommendWant_item_tpl" type="text/html">
+			<li class="custom-item-li-cls wantItem action" action="want"data-icon="false" data-wantId="_tpl-id">
+				<a class="vbt vr ui-link"><div>
+					<span class="wantName">_tpl-wantName</span>
+					<span class="userName">_tpl-username</span>
+					<div><span class="price font-gray">预算：<span class="font-blue">_tpl-price</span>元</span>
+						<span class="distance font-gray">_tpl-distance</span></div>
+				</div></a>
+			</li>
+		</script>
+		<script id="paper_tpl" type="text/html">
+			<div class="div_paper">
+				<a class="btn3 ui-corner-all pagePre btn-page _tpl-hasPre" data-page-num="_tpl-pagePre" action="pageNav">上一页</a>
+				<span class="pager-current">_tpl-pageCurrentTotal</span>
+				<a class="btn3 ui-corner-all pageNext btn-page _tpl-hasNext" data-page-num="_tpl-pageNext" action="pageNav">下一页</a>
+			</div>
+		</script>
+        <script id="fundingPic" type="text/html">
+            <div class="focus" id="focus">
+               <div class="hd">
+                   <ul>
+                       <li class="on">1</li>
+                       <li>2</li>
+                       <li>3</li>
+                   </ul>
+               </div>
+               <div class="bd">
+                   <ul>
+                       <li class="pic_list" datas ='1' >
+                          <img src= ./resource/images/defaultImg/course.png />
+                       </li>
+                       <li class="pic_list" datas ='2' >
+                           <img src= ./resource/images/defaultImg/course.png />
+                       </li>
+                       <li class="pic_list" datas ='3' >
+                           <img src= ./resource/images/defaultImg/course.png />
+                       </li>
+                   </ul>
+               </div>
+            </div>
+        </script>
+
+		<div class="svrUserFooter ui-footer ui-footer-fixed">
+		</div>
+		<script id="contract_footer_tpl" type="text/html">
+			<div>
+				<div class="svrUserName">_tpl-realname</div>
+				<div class="contactPhone">_tpl-contactPhone</div>
+			</div>
+		</script>
+
+	</div>
+</div>
+</body>
+</html>

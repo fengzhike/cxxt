@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+    <script src="resource/js/common/uploadAvatar.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="joinEnterprise">
+	<div data-role="header"  class="vrHeader">
+		<a	class="ui-btn backBtn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+		<h1><span class="type"></span>邀请</h1>
+	</div>
+	<div data-role="content">
+		<div>
+			<div style="padding: 10px 0;font-size: 20px;font-weight: bold;"><span class="userInfoName"></span>您好：</div>
+			<div>
+				<p style="text-indent: 2em;">我们诚挚的邀请您加入我们，一起在创新学堂中共同成长。</p>
+				<p class="invitecontent" style="text-indent: 2em;"></p>
+			</div>
+		</div>
+		<div class="ui-footer ui-footer-fixed">
+			<a class="svrUserInfo vbt vr" style="border-top: 1px solid #cccccc;">
+				<img style="margin-top: 7px;">
+				<div class="v-icon-right"></div>
+				<div class="userDetail">
+					<div>
+						<div class="svrUserName">
+							<span class="userName"></span>
+							<span class="mark idcardValidated enterprise"></span>
+						</div>
+						<div class="user-rank"></div>
+						<div class="svrUserTages">
+						</div>
+					</div>
+				</div>
+			</a>
+			<div class="ui-grid-a v-tabs">
+				<div class="ui-block-a v-tab" style="padding: 15px 0;text-align: center;background-color: #197eee;color: aliceblue;border-right: 1px solid #cccccc;" data-action="rejectTeacherInvite">
+					暂不加入
+				</div>
+				<div class="ui-block-b v-tab" style="padding: 15px 0;text-align: center;background-color: #197eee;color: aliceblue;" data-action="agreeTeacherInvite">
+					接收邀请
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>

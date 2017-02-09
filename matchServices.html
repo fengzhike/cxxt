@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>创新学堂</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1"/>
+    <link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+    <script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+    <script src="resource/js/urming.min.js?__rver=2015061211"></script>
+    <script src="resource/js/search/matchServices.js?__rver=2015061211"></script>
+    <script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="matchServices">
+    <div data-role="header">
+        <a class="ui-btn ui-icon-back ui-btn-icon-notext navigateBackBtn ">返回</a>
+
+        <h1>匹配服务</h1>
+    </div>
+    <div data-role="content">
+        <!-- 	<div > -->
+        <ul data-role="listview" id="matchServicesList" data-theme="c">
+        </ul>
+        <!-- 	</div> -->
+    </div>
+    <script id="matchService_item_tpl" type="text/html">
+        <li class="custom-item-li-cls" action="service" data-icon="false" param="serviceID=_tpl-id">
+            <a class="custom-item-cls vbt vr ui-link">
+                <div>
+                    <img src="_tpl-img"></div>
+                <div>
+                    <div class="custom-item-name-cls">_tpl-serviceName</div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a custom-item-price-cls">￥_tpl-newPrice</div>
+                        <div class="ui-block-b custom-item-username-cls">_tpl-username</div>
+                        <div class="ui-block-a custom-item-count-cls">已_tpl-soldNum人购买</div>
+                        <div class="ui-block-b custom-item-distance-cls">_tpl-distance</div>
+                    </div>
+                </div>
+            </a></li>
+    </script>
+    <script id="paper_tpl" type="text/html">
+        <div class="div_paper">
+            <a class="btn3 ui-corner-all pagePre btn-page _tpl-hasPre" data-page-num="_tpl-pagePre"
+               action="pageNav">上一页</a>
+            <span class="pager-current">_tpl-pageCurrentTotal</span>
+            <a class="btn3 ui-corner-all pageNext btn-page _tpl-hasNext" data-page-num="_tpl-pageNext" action="pageNav">下一页</a>
+        </div>
+    </script>
+</div>
+</body>
+</html>

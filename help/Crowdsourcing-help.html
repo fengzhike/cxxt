@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head lang="UTF-8">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+    <style>
+        body {
+            font-family: arial;
+            width: 100%;
+            margin: 0px;
+        }
+        section {
+            padding: 15px;
+        }
+        .q-title {
+            font-size: 15px;
+            color: #333;
+            font-weight: 700;
+        }
+        .q-content {
+            font-size: 14px;
+            color: #666;
+            margin-top: 15px;
+        }
+        .q-btn {
+            height: 40px;
+            background-color: #e4e4e4;
+            line-height: 40px;
+            text-align: center;
+            font-size: 12.5px;
+            color: #3385ff;
+            margin-bottom: 15px;
+        }
+        .q-img {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .q-img img {
+            border: 1px solid #999;
+            max-width: 100%;
+        }
+        .close {
+            height: 0px;
+            overflow: hidden;
+            -webkit-transition: height 1s;
+            transition: height 1s;
+        }
+        .open {
+            height: auto;
+            -webkit-transition: height 1s;
+            transition: height 1s;
+        }
+
+        /*=========*/
+        .qust {
+            display: block;
+            margin: 20px auto;
+            margin-top: 0;
+            padding-top: 12px;
+            border-top: 1px dashed #ccc;
+        }
+        .qa-select {
+            box-sizing: border-box;
+            padding-top: 12px;
+            line-height: 30px;
+            position: relative;
+        }
+        .qa-select a {
+            color: #fff;
+            text-align: center;
+            display: block;
+            border: none;
+            height: 48px;
+            line-height: 48px;
+            border-radius: 3px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            box-sizing: border-box;
+        }
+        #solved,
+        #solved:visited,
+        #solved:hover,
+        #solved:active {
+            background-color: #6cbe3f;
+            text-decoration: none;
+            color: #fff;
+        }
+        #nsolved,
+        #nsolved:visited,
+        #nsolved:hover,
+        #nsolved:active {
+            background-color: #0083f3;
+            text-decoration: none;
+            color: #fff;
+        }
+        .solved-click {
+            background-color: #66b43c !important;
+        }
+        .nsolved-click {
+            background-color: #007ce7 !important;
+        }
+        .qust-tit {
+            font-size: 14px;
+            color: #333;
+        }
+
+    </style>
+</head>
+<body>
+
+<section>
+    <div class="scroller" id="section">
+        <div>
+            <div class="q-title">1.如何发布众包服务?</div>
+            <div class="q-content">您可以进入创新学堂点击【发布】，进入后选择【发布服务】，就可以看到发布服务的详情界面，填写详情，点击【发布】按钮，完成需求的发布。</div>
+            <div class="q-img close">
+                <img data-src="img/want/want-step1.jpg" maxwidth="100%" height="auto" alt="pic" src="http://ufosdk.baidu.com/Public/img/yonghufankui_map01.jpg">
+            </div>
+            <div class="q-btn">查看图示</div>
+        </div>
+        <div>
+            <div class="q-title">2.如何搜索周围同学的服务?</div>
+            <div class="q-content">当百度地图正在导航状态的时候,点击右下角的【···】,然后点击沿途搜所的【更多】。可以沿途搜索加油站、银行、厕所、景点、餐饮、酒店、服务区、停车场这些服务，点击任意所需服务，然后沿途的周边就可以看到有多少餐饮服务了，是不是很方便呢。</div>
+            <div class="q-img close">
+                <img data-src="http://ufosdk.baidu.com/Public/img/yonghufankui_map02.jpg" width="100%" height="auto" alt="pic">
+            </div>
+            <div class="q-btn">查看图示</div>
+        </div>
+        <div>
+            <div class="q-title">3.计量单位是什么意思?</div>
+            <div class="q-content">首先打开百度地图，点击【导航】-【路况提醒】-添加路线以及路况提醒时间，点击【完成】。在路况提醒里就能看到你添加的路况提醒了。</div>
+            <div class="q-img close">
+                <!-- <img data-src="/Public/img/91_14.png" width="100%" height="auto" alt="pic"> -->
+            </div>
+            <!-- <div class="q-btn">查看图示</div> -->
+        </div>
+        <div>
+            <div class="q-title">4.关键字如何填写?</div>
+            <div class="q-content">当百度地图正在导航状态的时候,点击右下角的【···】,然后点击沿途搜所的【更多】。可以沿途搜索加油站、银行、厕所、景点、餐饮、酒店、服务区、停车场这些服务，点击任意所需服务，然后沿途的周边就可以看到有多少餐饮服务了，是不是很方便呢。</div>
+            <div class="q-img close">
+                <img data-src="http://ufosdk.baidu.com/Public/img/yonghufankui_map02.jpg" width="100%" height="auto" alt="pic">
+            </div>
+            <div class="q-btn">查看图示</div>
+        </div>
+        <div>
+            <div class="q-title">5.服务描述的作用是什么?</div>
+            <div class="q-content">当百度地图正在导航状态的时候,点击右下角的【···】,然后点击沿途搜所的【更多】。可以沿途搜索加油站、银行、厕所、景点、餐饮、酒店、服务区、停车场这些服务，点击任意所需服务，然后沿途的周边就可以看到有多少餐饮服务了，是不是很方便呢。</div>
+            <div class="q-img close">
+                <img data-src="http://ufosdk.baidu.com/Public/img/yonghufankui_map02.jpg" width="100%" height="auto" alt="pic">
+            </div>
+            <div class="q-btn">查看图示</div>
+        </div>
+
+
+        <div class="qust">
+            <div class="qust-tit">是否解决了你的问题：</div>
+            <div class="qa-select">
+                <a href="solve://" id="solved" class="solved">解决了</a>
+                <a id="nsolved" class="nsolved">没有，我要反馈</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="http://ufosdk.baidu.com/Public/js/zepto.min.js"></script>
+<script src="http://ufosdk.baidu.com/Public/js/iscroll.js"></script>
+<script src="http://ufosdk.baidu.com/Public/js/common.js"></script>
+
+<script>
+    $(function () {
+        var faqid = $_GET('faq_id');
+        var os = $('#os').val();
+
+        // åˆå§‹åŒ–iscroll
+        // var myscroll;
+        // function loaded() {
+        //     // å…¨éƒ¨Domèµ„æºåŠ åœ¨å®Œæ¯•çš„æ—¶å€™å†åˆå§‹åŒ–iscroll
+        //     setTimeout(function () {
+        //         myscroll = new iScroll('section');
+        //     }, 100);
+        // }
+        // window.addEventListener('load', loaded, false);
+
+
+        $('.q-btn').click(function () {
+            var $this = $(this);
+            if ($this.prev().hasClass('close')) {
+                $this.prev().removeClass('close').addClass('open');
+                var img = $this.prev().find('img');
+                img.attr({
+                    'src': img.data('src')
+                });
+                $this.text('收起图示');
+                // myscroll.refresh();
+            }
+            else {
+                $this.prev().removeClass('open').addClass('close');
+                $this.text('收起图示');
+                // myscroll.refresh();
+            }
+        });
+
+        var staturl = 'http://ufo.baidu.com/listen/api/suggestion?module=sug&action=eva';
+        $('#solved').click(function () {
+            $.ajax({
+                type: 'get',
+                url: staturl,
+                data: {id: faqid, flag: 1},
+                dataType: 'jsonp',
+                timeout: 4000,
+                success: function (data) {},
+                error: function () {}
+            });
+            if (os === 'ios')loadURL('solve://');
+        });
+        var flag = true;
+        $('#nsolved').click(function () {
+            if (flag){
+                flag = false;
+                if (os === 'ios') {
+                    $.ajax({
+                        type: 'get',
+                        url: staturl,
+                        data: {id: faqid, flag: 2},
+                        dataType: 'jsonp',
+                        timeout: 4000,
+                        success: function (data) {},
+                        error: function () {}
+                    });
+                    setTimeout(function () {
+                        flag = true;
+                    }, 800);
+                    loadURL('nsolve://');
+                }
+                else {
+                    window.location.href = 'feedback://';
+                    setTimeout(function () {
+                        flag = true;
+                    }, 800);
+                    return;
+                }
+            }
+        });
+    });
+    $('#solved').bind('touchstart', function () {
+        $(this).addClass('solved-click');
+    })
+            .bind('touchend', function() {
+                $(this).removeClass('solved-click');
+            });
+    $('#nsolved').bind('touchstart', function () {
+        $(this).addClass('nsolved-click');
+    })
+            .bind('touchend', function() {
+                $(this).removeClass('nsolved-click');
+            });
+</script>
+
+</body>
+</html>

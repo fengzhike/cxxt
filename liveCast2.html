@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1"/>
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+<!-- 	<script src="http://api.map.baidu.com/api?type=quick&ak=7E2819ade2e2fb1ee1594a3af867de10"></script> -->
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <script type="text/javascript" src="http://cdn.aodianyun.com/lss/aodianplay/player.js"></script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="liveCast" data-inline="false" data-ajax="false" noRightTopMenu>
+    <script>
+        var $oHtml = $('#liveCast').parent().parent();
+        var iWidth=$('#liveCast').width();
+        $oHtml.css('fontSize', iWidth/16+"px");
+    </script>
+	<script src="http://qzonestyle.gtimg.cn/open/qcloud/video/h5/h5connect.js" charset="utf-8" ></script>
+
+    <link rel="stylesheet" href="./resource/css/liveCast.css"/>
+	<div data-role="header" class="vrHeader">
+        <span class="back">回互动</span>
+		<h1>直播课堂</h1>
+	</div>
+	<div data-role="content" class="content_box">
+        <div id="play_box">
+            <div id="play"></div>
+        </div>
+        <script type="text/javascript" src="http://cdn.aodianyun.com/lss/aodianplay/player.js"></script>
+        <script>
+                $('#play').empty();
+                var actId = mainJs.parseUrlSearch().actId? mainJs.parseUrlSearch().actId: 'chuangxinxuetang',//485054976911,
+                        serviceID = mainJs.parseUrlSearchTop().serviceID?mainJs.parseUrlSearchTop().serviceID:16461;
+                //console.log(actId)
+                var objectPlayer=new aodianPlayer({
+                    container:'play',//播放器容器ID，必要参数
+                    rtmpUrl: 'rtmp://12317.lssplay.aodianyun.com/'+actId+'/stream',//控制台开通的APP rtmp地址，必要参数
+                    hlsUrl: 'http://12317.hlsplay.aodianyun.com/'+actId+'/stream.m3u8',//控制台开通的APP hls地址，必要参数
+                    /* 以下为可选参数*/
+                    width: '100%',//播放器宽度，可用数字、百分比等
+                    height: 240,//播放器高度，可用数字、百分比等
+                    autostart: true,//是否自动播放，默认为false
+                    bufferlength: '1',//视频缓冲时间，默认为3秒。hls不支持！手机端不支持
+                    maxbufferlength: '2',//最大视频缓冲时间，默认为2秒。hls不支持！手机端不支持
+                    stretching: '1',//设置全屏模式,1代表按比例撑满至全屏,2代表铺满全屏,3代表视频原始大小,默认值为1。hls初始设置不支持，手机端不支持
+                    controlbardisplay: 'enable',//是否显示控制栏，值为：disable、enable默认为disable。
+                    //adveDeAddr: '',//封面图片链接
+                    //adveWidth: 320,//封面图宽度
+                    //adveHeight: 240,//封面图高度
+                    //adveReAddr: ''//封面图点击链接
+                });
+                /*
+                var bOn = true;
+                $('#stop').on('click',function(){
+                    if(bOn){
+                        objectPlayer.pausePlay();
+                        this.value = '播放';
+                    }else{
+                        objectPlayer.startPlay();
+                        this.value = '暂停';
+                    }
+                    bOn = !bOn;
+                })*/
+
+
+            </script>
+            <div class="interact_box scroll-wrapper">
+                <iframe id="cast" frameborder="0" id="interact"  ></iframe>
+            </div>
+            <script>
+                //console.log(window.location.origin)
+                var origin = window.location.origin;
+                var regExp = /110:8080/,
+                    regExpL = /localhost/,
+                        regExpl1 = /186:8080/;
+
+                if(regExp.test(origin)||regExpl1.test(origin)){
+                    origin += '/edu';
+                }
+                if(regExpL.test(origin)){
+                    origin += '/eduN';
+                }
+                $('#cast').attr('src',origin+"/interact.html")
+                var iw = $('#liveCast').width();
+                var ih =parseInt(iw/320*200)
+                //console.log(ih)
+                $('iframe').width(iw);
+                $('iframe').height(ih);
+                $('.back').on('vclick',function(){
+                    $('#cast').attr('src',origin+"/interact.html");
+                })
+                var testTimer0 = setInterval(function() {
+                    if(!$('#liveCast').hasClass('ui-page-active')){
+                        objectPlayer.pausePlay();
+                        clearInterval(testTimer0);
+                    }
+                },1000);
+
+
+            //alert(1)
+        </script>
+    </div>
+
+</div>
+
+</body>
+</html>

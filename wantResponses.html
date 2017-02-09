@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+	<script src="resource/js/service/myServices.js?__rver=2015061211"></script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="wantResponses">
+    <link href="resource/css/wantResponses.css" rel="stylesheet">
+	<div data-role="header" >
+		<a class="ui-btn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+		<h1 id="title">响应列表</h1>
+	</div>
+	<div data-role="content">
+        <div class="tab-bar ui-grid-b">
+            <div class="ui-block-a btn-tab" action="tab" tab="0"><a class="icon-btn btn-no-text">PR最高</a></div>
+            <div class="ui-block-b btn-tab " action="tab" tab="1"><a class="icon-btn btn-no-text">价格最低</a></div>
+            <div class="ui-block-c btn-tab" action="tab" tab="2"><a class="icon-btn btn-no-text">最新发布</a></div>
+        </div>
+        <div class="tabContent tab-bar-content ui-grid-b">
+            <div tab="0"></div>
+            <div tab="1"></div>
+            <div tab="2"></div>
+        </div>
+	</div>
+    <script id="publish_paper_tpl" type="text/html">
+        <div class="pager-nav">
+            <a class="btn3 ui-corner-all pagePre btn-page _tpl-hasPre" data-page-num="_tpl-pagePre"
+               action="pageNav">上一页</a>
+            <span class="pager-current">_tpl-pageCurrentTotal</span>
+            <a class="btn3 ui-corner-all pageNext btn-page _tpl-hasNext" data-page-num="_tpl-pageNext" action="pageNav">下一页</a>
+        </div>
+    </script>
+    <script id="svr_item_tpl" type="text/html">
+        <div class="svrResItem" data-serviceID="_tpl-serviceID">
+            <div class="svrResTop">
+                <img src="_tpl-img">
+                <div class="ui-grid-a">
+                    <div class="ui-block-a custom-item-username-cls">_tpl-username</div>
+                    <div class="ui-block-b custom-item-prTotal-cls"><div class="user-prvalue">_tpl-prTotal</div></div>
+                    <div class="ui-block-a custom-item-price-cls">￥_tpl-newPrice</div>
+                    <div class="ui-block-b custom-item-creTime-cls _tpl-style">_tpl-creTime</div>
+                </div>
+            </div>
+            <div class="svrResDesc">_tpl-serviceDesc</div>
+        </div>
+    </script>
+</div>
+</body>
+</html>

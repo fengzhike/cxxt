@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": ";AACE,oBAAW;EACT,gBAAgB,EAAE,+BAA+B;EACjD,eAAe,EAAE,SAAS;EAC1B,OAAO,EAAE,aAAa;EACtB,WAAW,EAAE,IAAI;EACjB,MAAM,EAAE,IAAI;AAEd,aAAI;EACF,WAAW,EAAE,KAAK;EAClB,eAAe,EAAC,SAAS;AAE3B,cAAK;EACH,WAAW,EAAE,6CAA6C;EAC1D,eAAe,EAAC,IAAI",
+"sources": ["diploma.scss"],
+"names": [],
+"file": "diploma.css"
+}

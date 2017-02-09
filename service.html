@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+<!-- 	<script src="http://api.map.baidu.com/api?type=quick&ak=7E2819ade2e2fb1ee1594a3af867de10"></script> -->
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="service">
+	<div data-role="header" class="vrHeader">
+		<a class="ui-btn ui-icon-back navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+		<h1><span class="prePageTitle"></span>详情</h1>
+	</div>
+	<div data-role="content">
+		<div >
+			<div class="servicePicsCtr">
+				<div id ="storeResult">收藏成功</div>
+				<div class="servicePics">
+				</div>
+			</div>
+			<div class="buySvrCtr svrVTitle">
+				<span id="svrNewPrice" style="font-size: 30px;">￥</span>
+				 <a href="#" data-role="button"  class="buySvrBtn">购买</a>
+			</div>
+		</div>
+		<div class="svrInfo" >
+			<div class="svrVTitle" id="svr_name_ctr">
+             	<div id="svrName">
+
+				</div>
+				<!--<div class="svrSoldNum">-->
+					<!--<span id="svrSoldNum"></span>-->
+				<!--</div>-->
+				<!--<div class="svrWatchNum">-->
+					<!--<span id="svrWatchNum"></span>-->
+				<!--</div>-->
+				<div class="btn-store">
+
+                </div>
+			</div>
+			<table>
+				<!--
+				<tr>
+					<th class="svrSold">
+						已&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;售：
+					</th>
+					<td id="svrSoldNum" class="font-gray">
+					</td>
+				</tr>
+				-->
+				<tr>
+					<th colspan="2">
+						<div class="svrSoldNum">
+						<span id="svrSoldNum"></span>
+						</div>
+						<div class="svrWatchNum">
+						<span id="svrWatchNum"></span>
+						</div>
+					</th>
+				</tr>
+				<tr>
+					<th>
+						分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;类：
+					</th>
+					<td id="svrCatName" class="font-gray">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;点：
+					</th>
+					<td id="address" class="font-gray">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						开始时间：
+					</th>
+					<td id="startTime" class="font-gray">
+					</td>
+				</tr>
+				<tr>
+					<th>
+						发布时间：
+					</th>
+					<td id="svrCreTime" class="font-gray">
+					</td>
+				</tr>
+			</table>
+		</div>
+		<a class="svrGrade vbt vr">
+			<span class="star">
+			</span>
+			<span class="score">
+			</span>
+			<span class="reviewNumbers">
+			</span>
+		</a>
+		<div class="svrUser">
+			<div class="svrVTitle">
+				<span class="prePageTitle"></span>提供者
+			</div>
+			<a class="svrUserInfo vbt vr">
+				<img>
+				<div class="v-icon-right"></div>
+				<div class="userDetail">
+					<div>
+						<div class="svrUserName">
+						</div>
+						<div class="user-rank"></div>
+						<div class="svrUserTages">
+						</div>
+						
+					</div>
+
+				</div>
+				
+			</a>
+		</div>
+		<div class="svrBottomSec">
+			<div class="svrDetail">
+				<div class="svrVTitle">
+					<span class="prePageTitle"></span>描述
+				</div>
+				<div class="svrVoice">
+				</div>
+				<div class="serviceDesc">
+				</div>
+			</div>
+			<div class="svrReport font-gray">
+				<a class="vbt reportBt">举报</a>
+			</div>
+		</div>
+	</div>
+	<div class="svrUserFooter ui-footer ui-footer-fixed">
+		</div>
+    <script id="contract_footer_tpl" type="text/html">
+        <div>
+                <div class="svrUserName">_tpl-realname</div>
+       			 <div class="contactPhone">_tpl-contactContent</div>
+        </div>
+    </script>
+</div>
+</body>
+</html>

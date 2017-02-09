@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+<!-- 	<script src="http://api.map.baidu.com/api?type=quick&ak=7E2819ade2e2fb1ee1594a3af867de10"></script> -->
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/js/service/reviews.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="reviews">
+	<div data-role="header"  >
+		<h1>评价</h1>
+		<a class="ui-btn ui-icon-back navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+
+	</div>
+	<div data-role="content" >
+		<div class="ui-grid-a" id="rvdStatics">
+			<div class="ui-block-a">
+				<div id="rvdTotal">
+					<div id="rvdScore">加载中</div>
+					<div id="rvdTotalNum">加载中</div>
+					<span class="star">
+						<div class="starImg full"></div>
+						<div class="starImg full"></div>
+						<div class="starImg full"></div>
+						<div class="starImg full"></div>
+						<div class="starImg full"></div>
+					</span>
+				</div>
+			 </div>
+		
+			<div class="ui-block-b">
+				<div class="ui-grid-b grade-bar">
+					<div class="ui-block-a">
+						5分
+					</div>
+					<div class="ui-block-b">
+						<div class="bar-5"></div>
+					</div>
+					<div class="ui-block-c num-5">
+					</div>
+					<!-- 	4分 -->
+					<div class="ui-block-a">
+						4分
+					</div>
+					<div class="ui-block-b">
+						<div class="bar-4"></div>
+					</div>
+					<div class="ui-block-c num-4">
+					</div>
+					<!-- 	3分 -->
+					<div class="ui-block-a">
+						3分
+					</div>
+					<div class="ui-block-b">
+						<div class="bar-3"></div>
+					</div>
+					<div class="ui-block-c num-3">
+					</div>
+					<!-- 	2分 -->
+					<div class="ui-block-a">
+						2分
+					</div>
+					<div class="ui-block-b">
+						<div class="bar-2"></div>
+					</div>
+					<div class="ui-block-c num-2">
+					</div>
+					<!-- 	1分 -->
+					<div class="ui-block-a">
+						1分
+					</div>
+					<div class="ui-block-b">
+						<div class="bar-1"></div>
+					</div>
+					<div class="ui-block-c num-1">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="ui-grid-a" id="rvdItems">
+			<ul data-role="listview" id="rvdlist">
+			</ul>
+		</div>
+	</div>
+    <script id="paper_tpl" type="text/html">
+        <div class="pager-nav">
+            <a class="btn3 ui-corner-all pagePre btn-page _tpl-hasPre" data-page-num="_tpl-pagePre"
+               action="pageNav">上一页</a>
+            <span class="pager-current">_tpl-pageCurrentTotal</span>
+            <a class="btn3 ui-corner-all pageNext btn-page _tpl-hasNext" data-page-num="_tpl-pageNext" action="pageNav">下一页</a>
+        </div>
+    </script>
+    <script id="rvdItem-tpl" type="text/html">
+        <li data-icon="false" class="rvdItem _tpl-cls" action="userDetail" data-id="_tpl-id" >
+            <div class="line1 font-gray">
+                <span class="left">_tpl-realname</span>
+							<span class="right">
+								<span class="reviewTime">_tpl-reviewTime</span>
+								<span>_tpl-stars</span>
+							</span>
+            </div>
+            <div class=""><span>_tpl-reviewContent</span></div>
+            <div class="font-gray">
+                <small>
+                    <span class="left">_tpl-serviceName</span>
+                </small>
+                <small class="right">
+                    单价：￥ _tpl-price
+                </small>
+            </div>
+        </li>
+    </script>
+</div>
+</body>
+</html>

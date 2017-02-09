@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>创新学堂</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1"/>
+    <link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+    <script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+    <script src="resource/js/urming.min.js?__rver=2015061211"></script>
+    <script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="moreServices">
+    <div data-role="header">
+        <a class="ui-btn ui-icon-back ui-btn-icon-notext navigateBackBtn ">返回</a>
+
+        <h1>更多服务</h1>
+    </div>
+    <div data-role="content">
+        <div id="moreServicesCt" class="list list1">
+
+        </div>
+    </div>
+    <script id="service_item_tpl" type="text/html">
+        <a param="serviceID=_tpl-id" action="service"class="vbt vr service">
+            <div class="">
+                <div class="block left">
+                    <img src="_tpl-img"></div>
+                <div class="block right">
+                    <div class="vr name ellipsis">_tpl-serviceName</div>
+                    <div class="vr price">￥_tpl-newPrice</div>
+                    <div class="vr soldNum"><img src="resource/images/watch-num.png" style="width: 16px;height: 16px;margin: -5px 3px 0px 2px;vertical-align: middle;">_tpl-watchNumber</div>
+                </div>
+            </div>
+        </a>
+    </script>
+    <script id="paper_tpl" type="text/html">
+        <div class="div_paper">
+            <a class="btn3 ui-corner-all pagePre btn-page _tpl-hasPre" data-page-num="_tpl-pagePre"
+               action="pageNav">上一页</a>
+            <span class="pager-current">_tpl-pageCurrentTotal</span>
+            <a class="btn3 ui-corner-all pageNext btn-page _tpl-hasNext" data-page-num="_tpl-pageNext" action="pageNav">下一页</a>
+        </div>
+    </script>
+</div>
+</body>
+</html>

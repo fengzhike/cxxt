@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="register">
+	<div data-role="header" >
+		<a	class="ui-btn backBtn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a> 
+		<h1><span class="type"></span>注册</h1>
+	</div>
+	<div data-role="content">
+		<div class="font-gray" style="margin-bottom: .5em;font-size: 12px;display:none">手机号仅作为公众号消息接收、联络，不能用于登录</div>
+		<div class="vItemTable layout-2 vForm">
+            <div class="userType" style="display: none">
+                <label>
+                    <input type="radio" name = 'isGroup' checked value="0">
+                    <span>企业/机构/学校</span>
+                </label>
+                <label>
+                    <input type="radio" name = 'isGroup' value="1">
+                    <span>项目/团队</span>
+                </label>
+            </div>
+			<div class="vTr account enterprise">
+				<div class="vTh">用户名</div>
+				<input id="register_account" maxlength="20"type="text" placeholder="4-20位字母、数字或下划线">
+			</div>
+            <div class="vTr realname">
+                <div class="vTh">用户名</div>
+                <input id="register_name" maxlength="40"type="text" placeholder="您的姓名">
+            </div>
+			<div class="vTr contactRealname enterprise">
+				<div class="vTh">联系人</div>
+				<input id="register_contactRealname" maxlength="40"type="text" placeholder="联系人姓名">
+			</div>
+			<div class="vTr securityCode">
+				<div class="vTh ">验证码</div>
+				<input type="text" placeholder="图片验证码">
+				<img class=""/>
+			</div>
+			<div class="vTr phone">
+				<div class="vTh ">手机号</div>
+				<input type="text" placeholder="手机号"  data-format="alphanumeric" maxlength="11" oninput="viewJs.onPhoneInput(this);">
+				<a class="vbt sendCode">获取验证码</a>
+			</div>
+			<div class="vTr verifyCode">
+				<div class="vTh">验证码</div>
+				<input type="text" data-format="number" maxlength="6" placeholder="短信验证码">
+			</div>
+			<div class="vTr password">
+                <div class="vTh ">密码</div>
+                <input maxlength="20" type="text" data-format="alphanumeric" placeholder="密码">
+                <a class="vbt pwdCtr">隐藏</a>
+            </div>
+		</div>
+        <div class="termsCtr">
+				<span class="vcheck left sel">
+				</span>
+            <span>我已阅读并接受</span>
+            <a id="register_term" data-href="./protocol.html?v=3">《创新学堂使用协议》</a>
+        </div>
+        <a class="vbt submit">提交</a>
+		<div class="popMsg ui-footer-fixed">
+			<span class="popCt">请给服务打分</span>
+		</div>
+	</div>
+    <script type="text/html" id="inviter-msg-tpl">
+        <div class="tip-msg" id="inviter-msg">您的好友 <a  class="toUser" data-user-id="_tpl-userId" data-ajax="false">_tpl-realname</a> 邀您加入创新学堂</div>
+    </script>
+</div>
+</body>
+</html>

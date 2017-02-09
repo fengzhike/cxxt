@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>创新学堂</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="resource/images/course-icon-96.png">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="resource/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+    <link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+    <script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+    <!--<script src="resource/js/urming.min.js?__rver=2015061211"></script>-->
+    <script src="resource/js/urming.min.js?__v=4"></script>
+    <script src="resource/js/service/market.js?__rver=2015061211"></script>
+    <script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls" >
+<div data-role="page" id="market"  noRightTopMenu>
+    <link href="resource/css/market.css?__rver=2015061211" rel="stylesheet">
+    <script>
+        var $oHtml = $('#market').parent().parent();
+        var iw = $('#market').outerWidth()>600? 480:$('#market').outerWidth() ;
+        $oHtml.css('font-size',iw/16);
+    </script>
+    <div data-role="header" >
+        <a class="ui-btn ui-icon-back navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+        <header>
+            <div class="ui-grid-a v-tabs" >
+                <div class="ui-block-a v-tab" data-i="0">
+                    服务
+                </div>
+                <div class="ui-block-b v-tab" data-i="1">
+                    需求
+                </div>
+            </div>
+            <input type="image" class="search-icon v-input-search" src="./resource/images/icon-search-blue-old.png" alt="搜索"/>
+        </header>
+    </div><!-- /header -->
+    <div data-role="content" class="custom-content-cls" style="padding: 0;">
+
+
+        <!--
+        <div class="bannerAdPics">
+        </div>
+        -->
+        <div class="ui-grid-b catSvrs">
+        </div>
+        <div class="sec-tip font-black" id="market_tab_title"></div>
+        <ul data-role="listview" data-theme="c" class="list-items"  id="market-hots">
+        </ul>
+        <div class="download-con ui-footer-fixed" style="display:none">
+            <div class="download-logo"></div>
+            <div class="alogo">
+                <p class="client-name">创新学堂客户端</p>
+
+                <!--<p class="client-logon">找对人 ● 做成事</p>-->
+            </div>
+            <div class="open_now">
+                <a data-role="button" data-ajax="false" link="./download.html">立即下载</a>
+            </div>
+            <div class="close-btn-con close-btn">
+                X
+            </div>
+        </div>
+    </div>
+    <!-- /content-->
+    <script type="text/html" id="catSvrs_tpl">
+        <!--
+        <div class="ui-block-a">
+            <div class="catSvr" style="background-image: url(_tpl-0.imageUrl)" param='{"catId":"_tpl-0.category.id","categoryId":"_tpl-0.id"}'> _tpl-0.categoryName</div>
+        </div>
+        <div class="ui-block-b">
+            <div class="catSvr" style="background-image: url(_tpl-1.imageUrl)" param='{"catId":"_tpl-1.category.id","categoryId":"_tpl-1.id"}'> _tpl-1.categoryName</div>
+        </div>
+        <div class="ui-block-c">
+            <div class="catSvr" style="background-image: url(_tpl-2.imageUrl)" param='{"catId":"8","categoryId":""}'> 融资合作</div>
+        </div>
+        <div class="ui-block-a">
+            <div class="catSvr" style="background-image: url(_tpl-2.imageUrl)" param='{"catId":"_tpl-2.category.id","categoryId":"_tpl-2.id"}'> _tpl-2.categoryName</div>
+        </div>
+        <div class="ui-block-b">
+            <div class="catSvr" style="background-image: url(_tpl-3.imageUrl)" param='{"catId":"_tpl-3.category.id","categoryId":"_tpl-3.id"}'> _tpl-3.categoryName</div>
+        </div>
+        <div class="ui-block-c">
+            <div class="catSvr" style="background-image: url(_tpl-4.imageUrl)" param='{"catId":"_tpl-4.category.id","categoryId":"_tpl-4.id"}'> _tpl-4.categoryName</div>
+        </div>
+        <div class="ui-block-a">
+            <div class="catSvr" style="background-image: url(_tpl-4.imageUrl)" param='{"catId":"1","categoryId":"26"}'> IT服务</div>
+        </div>
+        <div class="ui-block-b">
+            <div class="catSvr" style="background-image: url(_tpl-4.imageUrl)" param='{"catId":"1","categoryId":"31"}'> 中介服务</div>
+        </div>
+        <div class="ui-block-c">
+            <div class="catSvr" style="background-image: url(_tpl-4.imageUrl)" param='{"catId":"1","categoryId":"38"}'> 文化艺术</div>
+        </div>
+        -->
+        <div class="ui-grid-d">
+            <div class="ui-block-a" param='{"catId":"_tpl-0.category.id","categoryId":"_tpl-0.id"}'>
+                <div><img src="resource/images/ico12/chuangye-n.png"></div>
+                <a class="btn-pos-top icon-course ui-link">_tpl-0.categoryName</a>
+            </div>
+            <div class="ui-block-b" param='{"catId":"_tpl-1.category.id","categoryId":"_tpl-1.id"}'>
+                <div><img src="resource/images/ico12/sale-n.png"></div>
+                <a class="btn-pos-top icon-course ui-link">_tpl-1.categoryName</a>
+            </div>
+            <div class="ui-block-c" param='{"catId":"8","categoryId":""}'>
+                <div><img src="resource/images/ico12/funding-n.png"></div>
+                <a class="btn-pos-top icon-course ui-link">融资合作</a>
+            </div>
+            <div class="ui-block-d" param='{"catId":"_tpl-2.category.id","categoryId":"_tpl-2.id"}'>
+                <div><img src="resource/images/ico12/chuangyisheji-n.png"></div>
+                <a class="btn-pos-top icon-course ui-link">_tpl-2.categoryName</a>
+            </div>
+            <div class="ui-block-e" param='{"catId":"_tpl-3.category.id","categoryId":"_tpl-3.id"}'>
+                <div><img src="resource/images/ico12/shenghuofuwu-n.png"></div>
+                <a class="btn-pos-top icon-course ui-link">_tpl-3.categoryName</a>
+            </div>
+            <div class="ui-block-a" param='{"catId":"_tpl-4.category.id","categoryId":"_tpl-4.id"}'>
+                <div><img src="resource/images/ico12/jiankangguanli-n.png"></div>
+                <a class="btn-pos-top icon-course ui-link">_tpl-4.categoryName</a>
+            </div>
+            <div class="ui-block-b" param='{"catId":"1","categoryId":"26"}'>
+                <div><img src="resource/images/ico12/itSerivice-n.png"></div>
+                <a class="btn-pos-top icon-course ui-link">IT服务</a>
+            </div>
+            <div class="ui-block-c" param='{"catId":"1","categoryId":"31"}'>
+                <div><img src="resource/images/ico12/zhongjiefuwu-n.png"></div>
+                <a class="btn-pos-top icon-course ui-link">中介服务</a>
+            </div>
+            <div class="ui-block-d" param='{"catId":"1","categoryId":"38"}'>
+                <div><img src="resource/images/ico12/wenhuayishu-n.png"></div>
+                <a class="btn-pos-top icon-course ui-link">文化艺术</a>
+            </div>
+        </div>
+    </script>
+    <script type="text/html" id="catWant_tpl">
+       <!-- <div class="ui-block-a">
+            <div class="catSvr" style="background-image: url(_tpl-0.imageUrl)" param='{"catId":"_tpl-0.category.id","categoryId":"_tpl-0.id"}'> _tpl-0.categoryName</div>
+        </div>
+        <div class="ui-block-b">
+            <div class="catSvr" style="background-image: url(_tpl-1.imageUrl)" param='{"catId":"_tpl-1.category.id","categoryId":"_tpl-1.id"}'> _tpl-1.categoryName</div>
+        </div>
+        <div class="ui-block-c">
+            <div class="catSvr" style="background-image: url(_tpl-2.imageUrl)" param='{"catId":"_tpl-2.category.id","categoryId":"_tpl-2.id"}'> _tpl-2.categoryName</div>
+        </div>
+        <div class="ui-block-a">
+            <div class="catSvr" style="background-image: url(_tpl-3.imageUrl)" param='{"catId":"_tpl-3.category.id","categoryId":"_tpl-3.id"}'> _tpl-3.categoryName</div>
+        </div>
+        <div class="ui-block-b">
+            <div class="catSvr" style="background-image: url(_tpl-4.imageUrl)" param='{"catId":"_tpl-4.category.id","categoryId":"_tpl-4.id"}'> _tpl-4.categoryName</div>
+        </div>
+        <div class="ui-block-c">
+            <div class="catSvr catSvr-more">更多服务</div>
+        </div>-->
+       <div class="ui-grid-c">
+           <div class="ui-block-a" param='{"catId":"_tpl-0.category.id","categoryId":"_tpl-0.id"}'>
+               <div><img src="resource/images/ico12/chuangye-n.png"></div>
+               <a class="btn-pos-top icon-course ui-link">_tpl-0.categoryName</a>
+           </div>
+           <div class="ui-block-b" param='{"catId":"_tpl-1.category.id","categoryId":"_tpl-1.id"}'>
+               <div><img src="resource/images/ico12/zongbao-n.png"></div>
+               <a class="btn-pos-top icon-course ui-link">_tpl-1.categoryName</a>
+           </div>
+           <div class="ui-block-c" param='{"catId":"_tpl-2.category.id","categoryId":"_tpl-2.id"}'>
+               <div><img src="resource/images/ico12/chuangyisheji-n.png"></div>
+               <a class="btn-pos-top icon-course ui-link">_tpl-2.categoryName</a>
+           </div>
+           <div class="ui-block-d" param='{"catId":"_tpl-3.category.id","categoryId":"_tpl-3.id"}'>
+               <div><img src="resource/images/ico12/shenghuofuwu-n.png"></div>
+               <a class="btn-pos-top icon-course ui-link">_tpl-3.categoryName</a>
+           </div>
+           <div class="ui-block-a" param='{"catId":"_tpl-4.category.id","categoryId":"_tpl-4.id"}'>
+               <div><img src="resource/images/ico12/jiankangguanli-n.png"></div>
+               <a class="btn-pos-top icon-course ui-link">_tpl-4.categoryName</a>
+           </div>
+           <div class="ui-block-b" param='{"catId":"2","categoryId":"66"}'>
+               <div><img src="resource/images/ico12/itSerivice-n.png"></div>
+               <a class="btn-pos-top icon-course ui-link">IT服务</a>
+           </div>
+           <div class="ui-block-c" param='{"catId":"2","categoryId":"71"}'>
+               <div><img src="resource/images/ico12/zhongjiefuwu-n.png"></div>
+               <a class="btn-pos-top icon-course ui-link">中介服务</a>
+           </div>
+           <div class="ui-block-d" param='{"catId":"2","categoryId":"78"}'>
+               <div><img src="resource/images/ico12/wenhuayishu-n.png"></div>
+               <a class="btn-pos-top icon-course ui-link">文化艺术</a>
+           </div>
+       </div>
+    </script>
+    <script id="market_svr_item_tpl" type="text/html">
+        <li class=" svr hot-svr" data-icon="false" data-id="_tpl-id">
+            <a class="vbt vr ui-link">
+                <div class="img_wrap">
+                    <div>
+                        <img src="_tpl-img">
+                    </div>
+
+                </div>
+                <div class="s-content ellipsis">
+                    <div class="s-title">_tpl-serviceName</div>
+                    <div>
+                        <span class="price-color">_tpl-newPrice元</span>
+                        <span style="float: right">_tpl-username</span>
+                    </div>
+                    <div>
+                        <span class="icon icon-watch"></span>
+                        <span class="">_tpl-watchNumber</span>
+                    </div>
+                </div>
+            </a></li>
+    </script>
+    <script id="market_want_item_tpl" type="text/html">
+        <li class=" svr hot-want" data-icon="false" data-id="_tpl-id">
+            <a class="vbt vr ui-link">
+                <div class="s-content ellipsis">
+                    <div class="s-title">_tpl-wantName</div>
+                    <div>
+                        <span class="price-color">_tpl-price元</span>
+                        <span style="float: right">_tpl-username</span>
+                    </div>
+                </div>
+            </a></li>
+    </script>
+</div><!-- /page-->
+</body>
+
+</body>
+</html>

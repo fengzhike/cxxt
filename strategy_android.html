@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>创新学堂帮助</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="msapplication-tap-highlight" content="no"/> 
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../resource/images/course-icon-96.png">
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="shortcut icon" href="../resource/images/favicon.ico">
+
+<style>
+* {
+	padding: 5px;
+	margin: 1px;
+}
+
+body {
+	background-color: #f7f7f7;
+	font-size: 15px;
+	color: #333333;
+}
+
+.title {
+	padding-left:10px;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.bold {
+	padding-left:10px;
+	font-size: 17px;
+	font-weight: bold;
+}
+#top,#middle,#footer{
+	margin:0;
+}
+.ui-header {
+	font-size: 16px;
+	border-bottom: 1px solid #ccc;
+	margin-bottom:10px;
+	margin-top:0px;
+		background-color:#197eee;
+color:#ffffff;
+}
+.ui-header .ui-btn{
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	padding: 0em;
+	top: 0;
+	margin: 0;
+	vertical-align: middle;
+	width: 2.65em;
+	height: 2.65em;
+	background-image: url('resource/images/arrow-top-left.png');
+	background-size: 22px 22px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	position:absolute;
+}
+.ui-header .ui-title, .ui-footer .ui-title {
+	font-size: 1em;
+	min-height: 1.1em;
+	text-align: center;
+	display: block;
+	margin: 0 30%;
+	padding: .7em 0;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	outline: 0 !important;
+	font-weight: bold;
+	font-family: '微软雅黑', 'Helvetica Neue', arial, Lato, sans-serif;
+}
+</style>
+      <script>
+          var _hmt = _hmt || [];
+          (function() {
+              var hm = document.createElement("script");
+              hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+              var s = document.getElementsByTagName("script")[0];
+              s.parentNode.insertBefore(hm, s);
+          })();
+      </script>
+</head>
+
+<body>
+	
+	<div class="bold">1.如何提升服务的销量？</div>
+	&nbsp;&nbsp;提升服务的销量有很多方式哦！方式一：把服务分享到微信、微博、QQ等各大平台；方式二：点击“首页-搜索框-周围的需求”，搜索各种需求，立刻联系Ta。
+	<br />
+	
+	<br />
+	<div class="bold">2. 买家购买了我的服务之后，我是让买家先确认还是服务之后再让买家确认呢</div>
+	&nbsp;&nbsp;买家购买服务后，只要买家还没有确认服务，买家是有权利申请退款的。如果买家购买了您的服务消费后不满意，这个时候可能您的劳动不会产生回报哦。但是服务之后再让买家付款更有利于您在有名服务平台上产生更良好的口碑哦。
+	<br />
+	
+</body>
+  <script>
+	  var browser={
+		  versions:function(){
+			  var u = navigator.userAgent;
+			  var ret = {};
+			  ret.webKit = u.indexOf('AppleWebKit') > -1;
+			  ret.uc = u.indexOf('UCBrowser') > -1;
+			  ret.android = u.indexOf('Android') > -1 || (u.indexOf('UCBrowser')> -1 && u.indexOf('Linux;')> -1);
+			  ret.iosMobile = !!navigator.userAgent.match(/iPhone|iPad|iPod/i);
+			  ret.mobile = ret.iosMobile || ret.android || !!navigator.userAgent.match(/IEMobile/i)
+			  || !!navigator.userAgent.match(/Opera Mini/i)
+			  || !!navigator.userAgent.match(/BlackBerry/i);
+			  return ret;
+		  }()
+	  };
+	  var browserInfo = browser.versions;
+	  var classes = [];
+	  for(var k in browserInfo){
+		  if(browserInfo[k] == true){
+			  classes.push('urming-'+k);
+		  }
+	  }
+	  classes = classes.join(' ');
+	  document.body.setAttribute('class', classes);
+  </script>
+  <style>
+	  @media all and (min-width:600px) {
+		  body:not(.urming-mobile){
+			  width: 480px;
+			  height: auto;
+			  border-left: 1px solid #cccccc;
+			  border-right: 1px solid #cccccc;
+			  left: 50%;
+			  margin-left: -240px;
+			  position: absolute;
+		  }
+	  }
+  </style>
+</html>

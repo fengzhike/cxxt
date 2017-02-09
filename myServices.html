@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+	<script src="resource/js/service/myServices.js?__rver=2015061211"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="myServices">
+	<div data-role="header" >
+		<a class="ui-btn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+		<h1 id="title">发布的服务</h1>
+	</div>
+	<div data-role="content">
+        <div class="tab-bar ui-grid-b">
+            <div class="ui-block-a btn-tab" action="tab" tab="mine"><a class="icon-btn btn-no-text">我的发布</a></div>
+            <div class="ui-block-b btn-tab " action="tab" tab="pay"><a class="icon-btn btn-no-text">买家待付</a></div>
+            <div class="ui-block-c btn-tab" action="tab" tab="finish"><a class="icon-btn btn-no-text">已售服务</a></div>
+            <!--<div class="ui-block-c btn-tab" action="tab" tab="guide"><a class="icon-btn btn-no-text">卖家攻略</a></div>-->
+        </div>
+        <div class="tabContent tab-bar-content ui-grid-b">
+            <div tab="mine"></div>
+            <div tab="pay"></div>
+            <div tab="finish"></div>
+            <!--<div tab="guide">-->
+                <!--<p>1.如何提升服务的销量？</p>-->
+                <!--<div class="comment1">提升服务的销量有很多方式哦！<br/>方式一：把服务分享到微信、微博、QQ等各大平台；<br/>方式二：点击“首页-搜索框-周围的需求”，搜索各种需求，立刻联系Ta。</div>-->
+
+                <!--<p>2.买家购买了我的服务之后，我是让买家先确认还是服务之后再让买家确认呢？</p>-->
+                <!--<div class="comment1">买家购买服务后，只要买家还没有确认服务，买家是有权利申请退款的。<br/>如果买家购买了您的服务消费后不满意，这个时候可能您的劳动不会产生回报哦。<br/>但是服务之后再让买家付款更有利于您在有名服务平台上产生更良好的口碑哦。</div>-->
+            <!--</div>-->
+        </div>
+	</div>
+    <script id="publish_paper_tpl" type="text/html">
+        <div class="pager-nav">
+            <a class="btn3 ui-corner-all pagePre btn-page _tpl-hasPre" data-page-num="_tpl-pagePre"
+               action="pageNav">上一页</a>
+            <span class="pager-current">_tpl-pageCurrentTotal</span>
+            <a class="btn3 ui-corner-all pageNext btn-page _tpl-hasNext" data-page-num="_tpl-pageNext" action="pageNav">下一页</a>
+        </div>
+    </script>
+    <script id="svr_selling_tpl" type="text/html">
+        <div data-serviceid="_tpl-id" catId="_tpl-catId" class="vbt vr svrItem service">
+            <div class="left-block watermark staus _tpl-status">
+                <img src="_tpl-img">
+            </div>
+            <div class="right-row">
+                <div class="name ellipsis">_tpl-name</div>
+                <div class="price">已售：_tpl-count</div>
+                <a class="actionBtn" action="edit" param="_tpl-id" catId="_tpl-catId" _tpl-style>编辑</a>
+                <a class="actionBtn _tpl-btnCls" param="_tpl-id" action="_tpl-btnAction">_tpl-btnText</a>
+            </div>
+        </div>
+    </script>
+    <script id="svr_sold_tpl" type="text/html">
+        <div class="vbt vr svrItem getServiceOwnByID" data-service-own-id="_tpl-id">
+            <div class="left-block watermark _tpl-status">
+                <img src="_tpl-img">
+            </div>
+            <div class="right-row">
+                <div class="name">_tpl-name</div>
+                <div class="price">￥_tpl-price</div>
+                <a class="actionBtn _tpl-btnCls" action="_tpl-action" param="_tpl-param" _tpl-style2>评价</a>
+            </div>
+        </div>
+    </script>
+    <script id="pay_item_tpl" type="text/html">
+        <div class="vbt vr svrItem" action="_tpl-action" >
+            <div class="left-block">
+                <img src="_tpl-img">
+            </div>
+            <div class="right-row">
+                <div class="name">_tpl-name</div>
+                <div class="price">_tpl-realname <span style="float: right">总价：￥_tpl-price</span></div>
+                <a class="actionBtn _tpl-actionCls" action="_tpl-action"  data-param="_tpl-param"><span>_tpl-actionTxt</span></a>
+            </div>
+        </div>
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>创新学堂</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+    <link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+    <script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+    <script src="resource/js/urming.min.js?__rver=2015061211"></script>
+    <script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="buyorder" noRightTopMenu>
+
+    <script>$('#buyorder').parent().parent().css('font-size',$('#buyorder').outerWidth()/16)</script>
+    <div data-role="header"   class="no-search">
+        <h1 class="main-title">全部订单</h1>
+            <ul class="down_menu" style = 'display:none;'>
+                <li class="act">全部已购订单</li>
+                <li>已取消</li>
+                <li>待付款</li>
+                <li>待确认</li>
+                <li>已完成</li>
+            </ul>
+        <div class="ui-mask" style = "display:none;"></div>
+        <script>
+            $('.ui-mask').height($('#buyorder').height())
+        </script>
+        <a href="#" class="navigateBackBtn ui-icon-back ui-btn-icon-notext ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-notext"></a>
+        <a class="new_search"></a>
+        <input type="search"  placeholder="请输入关键字"/>
+        <span class="cancel_search">取消</span>
+    </div>
+    <div data-role="content" >
+        <ul class="order-list">
+
+        </ul>
+
+    </div>
+    <script id="order_item" type="text/html">
+        <li>
+            <header class="list-header clearFix">
+                <div class="user-info">
+                    <img src="http://cdnimg2.edu.euming.com/pkuie/userInfo/upload/20160422/u_1461329910016_469264-1.jpg" alt="罗志勃"/>
+                    <span>罗志勃</span>
+                </div>
+                <p class="pay-state">待支付</p>
+            </header>
+            <section class="order-dec clearFix" >
+                <div class="pic-wrap">
+                    <img src="http://cdnimg2.edu.euming.com/pkuie/2016/06/22/s_1466563063402_xAZrEI.jpg@480w"
+                         alt=""/>
+                </div>
+                <div class="order-info">
+                    <h3 class="order-title">生活馆创业想法</h3>
+                    <time class="pub-time">2016/06/21</time>
+                </div>
+                <p class="price">￥10</p>
+            </section>
+            <footer class="deal clearFix">
+                <p class="connect">联系卖家</p>
+
+                <p class="pay-order">确认支付</p>
+                <p class="del-order">取消订单</p>
+            </footer>
+        </li>
+    </script>
+    <script id="paper_tpl" type="text/html">
+        <div class="pager-nav">
+            <a class="btn3 ui-corner-all pagePre btn-page _tpl-hasPre" data-page-num="_tpl-pagePre"
+               action="pageNav">上一页</a>
+            <span class="pager-current">_tpl-pageCurrentTotal</span>
+            <a class="btn3 ui-corner-all pageNext btn-page _tpl-hasNext" data-page-num="_tpl-pageNext" action="pageNav">下一页</a>
+        </div>
+    </script>
+</div>
+</body>
+</html>

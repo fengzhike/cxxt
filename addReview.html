@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/js/service/addReview.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="addReview">
+	<div data-role="header" >
+		<a action="cancel" class="ui-btn ui-icon-back ui-btn-icon-notext" >返回</a>
+		<h1>评价</h1>
+	</div>
+	<div data-role="content">
+	</div>
+    <script id="review-tpl" type="text/html">
+        <span class="btn6 vbt icon-right" data-id="_tpl-id" data-catId="_tpl-catId" action="service">_tpl-name</span>
+        <p>本次服务评价</p>
+        <div class="vItemTable layout-3 _tpl-anonymousCls">
+            <div class="vTr auto-height-cls">
+                <span class="reviewGrade"><div class="starImg full"></div><div class="starImg full"></div><div class="starImg full"></div><div class="starImg full"></div><div class="starImg full"></div></span>
+            </div>
+            <div class="vTr auto-height-cls">
+                <textarea class="reviewContent single ui-input-text ui-body-inherit" rows="8" placeholder="请输入评价内容"></textarea>
+            </div>
+            <div class="vTr auto-height-cls">
+                <div class="sec anonymousCtr" action="check">
+                    <div class="vt">匿名评价</div>
+                    <div class="vcheck right"></div>
+                </div>
+            </div>
+        </div>
+        <span class="btn1" action="submit">提交</span>
+    </script>
+</div>
+</body>
+</html>

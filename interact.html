@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+	<script src="resource/js/want/myWants.js?__rver=2015061211"></script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="interact">
+	<!--<div data-role="header" >
+		<h1>发布的问题</h1>
+	</div>-->
+	<div data-role="content">
+        <div class="send">
+            <a class="svrUserInfo vbt vr ui-link">
+                <img src="resource/images/404-user.png" alt=""/>
+            </a>
+            <input type="text" placeholder="提个问，证明来过"/>
+            <span class="sendRight">发送</span>
+        </div>
+        <section class="chart">
+            <ul>
+
+            </ul>
+            <div class="more">点击加载更多</div>
+        </section>
+
+	</div>
+    <script id="paper_tpl" type="text/html">
+        <div class="pager-nav">
+            <a class="btn3 ui-corner-all pagePre btn-page _tpl-hasPre" data-page-num="_tpl-pagePre"
+               action="pageNav">上一页</a>
+            <span class="pager-current">_tpl-pageCurrentTotal</span>
+            <a class="btn3 ui-corner-all pageNext btn-page _tpl-hasNext" data-page-num="_tpl-pageNext" action="pageNav">下一页</a>
+        </div>
+    </script>
+    <script id="chart_detial" type="text/html">
+        <li data-id = 1>
+            <div class="svrUserInfo vbt vr ui-link">
+                <img src= user.profileImageUrl alt=""/>
+            </div>
+            <div class="right-text">
+                <div class="user_head">
+                    <a>user.realname</a>
+                </div>
+                <p class="mess_content">content</p>
+            </div>
+        </li>
+    </script>
+    <script id="chart_system" type="text/html">
+        <li ata-id = 1 class="system">
+            <div class="svrUserInfo vbt vr ui-link">
+                <img src= user.profileImageUrl alt=""/>
+            </div>
+            <div class="right-text">
+                <p class="mess_content">content</p>
+            </div>
+        </li>
+    </script>
+
+</div>
+</body>
+</html>

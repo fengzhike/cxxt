@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="calendar" no-footer>
+	<link href="resource/css/calendar.css" rel="stylesheet">
+	<div data-role="header"  >
+		<h1>日程表</h1>
+		<a href="#" class="navigateBackBtn ui-icon-back ui-btn-icon-notext ui-btn ui-corner-all ui-shadow ui-icon-back ui-btn-icon-notext"></a>
+	</div>
+	<div data-role="content" >
+		<div class="day">
+			<div class="DaySelect">
+				<i class="lr" title="上一月"><</i>
+				<div class="select">
+					<div class="stop" id="cy"></div>
+					<div class="sbox" id="">
+						<ul id="YearAll">
+							<li></li>
+						</ul>
+					</div>
+				</div>
+				<div class="select" id="sm">
+					<div class="stop" id="cm"></div>
+					<div class="sbox" id="mm">
+						<ul id="DateAll">
+							<li></li>
+						</ul>
+					</div>
+				</div>
+				<i class="lr" title="下一月">></i>
+				<i class="today">今天</i>
+			</div>
+			<div id="DayAll"></div>
+		</div>
+		<div class="loading-area calendarList"></div>
+		<div data-role="footer" data-position="fixed" data-theme="f">
+			<div class="h-menu" style="">
+				<a class="icon-btn btn-pos-top icon-home ui-link" action="home">首页</a>
+				<a class="icon-btn btn-pos-top icon-found ui-link" action="menu-found">周围<span class="remind" style = "display:none"></span></a>
+				<a class="icon-btn icon-publish ui-link" action="menu-publish"></a>
+				<a class="icon-btn btn-pos-top icon-calendar ui-link activated">日程</a>
+				<a class="icon-btn btn-pos-top icon-user-center ui-link" action="user-center">我的</a>
+			</div>
+		</div>
+		<script id="calendar_item_tpl" type="text/html">
+			<div class="vbt vr calendarItem" action="_tpl-action" param="_tpl-param">
+				<div class="startTime">_tpl-startTime<span class="_tpl-style">_tpl-parentCategory</span></div>
+				<div class="name">_tpl-name</div>
+				<div class="address">_tpl-address</div>
+			</div>
+		</script>
+	</div>
+</div>
+</body>
+</html>

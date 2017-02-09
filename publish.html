@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发布直播</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta name="mobile-web-app-capable" content="yes">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+   <div id="publish"></div>
+   <section class="control">
+       <input type="button" value="准备开始">
+       <input type="button" value="断开连接">
+       <input type="button" value="mic">
+       <input type="button" value="cam">
+       <input type="button" value="直播开始">
+   </section>
+
+    <script type="text/javascript" src="http://cdn.aodianyun.com/static/jquery/jquery-1.7.2.min.js"></script><!-- jquery地址也可使用您的地址 -->
+    <script type="text/javascript" src="http://cdn.aodianyun.com/lss/aodianpublish/publish.js"></script>
+    <script type="text/javascript">
+    /*--加载播放器--*/
+    $(function(){
+        var lss = new aodianLss({
+          container:'publish',//播放器容器ID，必要参数
+          url:'rtmp://12317.lsspublish.aodianyun.com/chuangxinxuetang/stream',//控制台开通的APP rtmp地址，必要参数
+          width: '640',//播放器宽度，可用数字、百分比等
+          height: '400',//播放器高度，可用数字、百分比等
+          autoconnect: true//加载完毕后是否初始化连接，默认为true
+        });
+
+        var mic = null,cam = null;
+        $('input[value ="准备开始"]').click( function(){
+            lss.initConnect();
+            console.log('start')
+        });
+        $('input[value ="断开连接"]').click( function(){
+            lss.closeConnect();
+            console.log('close')
+        });
+        $('input[value ="mic"]').click( function(){
+            mic = lss.getMic();
+            console.log(mic)
+        });
+        $('input[value ="cam"]').click( function(){
+            cam = lss.getCam();
+            console.log(cam)
+        });
+
+        $('input[value ="直播开始"]').click( function(){
+            var publishConf = {
+                micID:mic,
+                camID:cam,
+                audioKBitrate:44,
+                audioSamplerate:44100,
+                videoFPS:10,
+                keyFrameInterval:30,
+                videoKBitrate:256,
+                videoQuality:80,
+                volume:90,
+                isUseCam:true,
+                isUseMic:true,
+                isMute:false
+            };
+            console.log(publishConf)
+            lss.startPublish(publishConf);
+        });
+    })
+        
+/*--
+  以下为播放器加载完成后支持事件
+  （注意：必须在播放器加载完成后才能调用，否则会出现对象为空的错误！建议将事件绑定至网页元素中。)
+--*/
+/*--
+  事件名：initConnect
+  作用：初始化连接
+  返回值：true|false
+  注意：播放器很多事件需要此事件支持，建议再加载播放器阶段将autoconnect设置为true
+--*/
+//lss.initConnect();
+
+/*--
+  事件名：closeConnect
+  作用：断开连接
+  返回值：true|false
+--*/
+//lss.closeConnect();
+
+/*--
+  事件名：getMic
+  作用：获得麦克风列表
+  返回值：Array，格式为：{0:"Mic1",1:"Mic2",2:"Mic3"}
+  注意：上麦时需要传麦克风的key
+--*/
+//lss.getMic();
+
+/*--
+  事件名：getCam
+  作用：获得摄像头列表
+  返回值：Array，格式为：{0:"Cam1",1:"Cam2",2:"Cam3"}
+  注意：上麦时需要传摄像头的key
+--*/
+//lss.getCam();
+
+/*--
+  事件名：startPublish
+  作用：发布
+  参数：数组，结构为：
+    micID（麦克风列表中的一个key），
+    camID（摄像头列表中的一个key），
+    audioKBitrate（音频码率，只能为16~48数字，单位kbps，默认为44），
+    audioSamplerate（音频采样率，只能为16000~48000数字，单位Hz，默认为44100），
+    videoFPS（视频帧率，只能为1~25数字，默认为10），
+    keyFrameInterval（设置关键帧间隔，只能为数字，默认为30），
+    videoKBitrate（视频码率，只能为96~512数字，单位kbps，默认为256），
+    videoQuality（视频质量，只能为1-85数字，越高画面质量越好，默认为80），
+    volume（音量，只能为0-100数字，默认为80），
+    isUseCam（是否使用摄像头，true|false，默认为true），
+    isUseMic（是否使用麦克风，true|false，默认为true），
+    isMute（是否静音，true|false，默认为false）
+  注意：initConnect()之后调用有效
+--*/
+/*
+var publishConf = {
+  micID:0,
+  camID:0,
+  audioKBitrate:44,
+  audioSamplerate:44100,
+  videoFPS:10,
+  keyFrameInterval:30,
+  videoKBitrate:256,
+  videoQuality:80,
+  volume:80,
+  isUseCam:true,
+  isUseMic:true,
+  isMute:false
+};
+lss.startPublish(publishConf);
+*/
+
+/*--
+  事件名：setMic
+  作用：使用或切换麦克风
+  参数：micID（麦克风列表中的一个key）
+  注意：startPublish()之后调用有效
+--*/
+//lss.setMic(micID);
+
+/*--
+  事件名：setCam
+  作用：使用或切换麦克风
+  参数：camID（摄像头列表中的一个key）
+  注意：startPublish()之后调用有效
+--*/
+//lss.setCam(camID);
+
+/*--
+  事件名：setCameraMode
+  作用：设置摄像头捕获画面的大小，帧率
+  参数：weight（宽度，只能为数字），height（高度：只能为数字）,videoFPS（视频帧率，只能为1~25数字）
+  注意：initConnect()之后调用有效
+--*/
+//lss.setCameraMode(weight,height,videoFPS);
+
+/*--
+  事件名：setCameraQuality
+  作用：设置视频码率，质量
+  参数：
+    videoKBitrate（视频码率，只能为96~512数字，单位kbps），
+    videoQuality（视频质量，只能为1-85数字，越高画面质量越好），数字）
+  注意：initConnect()之后调用有效
+--*/
+//lss.setCameraQuality(videoKBitrate,videoQuality);
+
+/*--
+  事件名：setAudioBitrate
+  作用：设置音频码率
+  参数：audioKBitrate（音频码率，只能为16~48数字，单位kbps）
+  注意：initConnect()之后调用有效
+--*/
+//lss.setAudioBitrate(audioKBitrate);
+
+/*--
+  事件名：setAudioSamplerate
+  作用：设置音频采样率
+  audioSamplerate（音频采样率，只能为16000~48000数字，单位Hz））
+  注意：initConnect()之后调用有效
+--*/
+//lss.setAudioSamplerate(audioKBitrate);
+
+/*--
+  事件名：setMute
+  作用：设置音频采样率
+  isMute（是否静音，true|false）
+  注意：initConnect()之后调用有效
+--*/
+//lss.setMute(isMute);
+
+/*--
+  事件名：lss.setVolume
+  作用：设置音量
+  volume（音量，只能为0-100数字），
+  注意：initConnect()之后调用有效
+--*/
+//lss.setVolume(volume);
+    </script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="searchAll" noRightTopMenu>
+	<style>
+		#searchAll .ui-input-search {
+			margin: 0 0.8em 0 50px;
+			border-radius: .3125em;
+			border-color: #fff;
+		}
+
+		#searchAll .ui-input-search input{
+			font-size: 12px;
+			line-height: 24px;
+			padding-top: 6.4px;
+			padding-bottom: 6.4px;
+			padding-left: 25px;
+		}
+		#searchAll .ui-header{
+			padding-top: .5em;
+			padding-bottom: .5em;
+		}
+		#searchFilterBtn{
+			height: 53px;
+			font-size:17px;
+			line-height: 53px;
+			color:#ffffff;
+			font-weight:normal;
+		}
+		#searchFilterBtn{
+			padding-right:.8em;padding-left:.8em;position: absolute;
+		}
+
+		#searchAll .around {
+			font-size: 14px;
+		}
+		#searchAll .around .ui-btn{
+			padding-right:.5em;
+			padding-left:.5em;
+		}
+	</style>
+	<!-- TODO -->
+	<div data-role="header" >
+		<a class="ui-btn ui-icon-back navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+		<input name="keyword" id="keyword" maxlength="40" autofocus type="search" placeholder="搜索">
+	</div>
+	<div data-role="content">
+		<div class="ui-grid-c around">
+			<div class="ui-block-a" data-categoryId="3">
+				<a class="btn-pos-top icon-course">课程</a>
+			</div>
+			<div class="ui-block-d" data-categoryId="4">
+				<a class="btn-pos-top icon-activity">活动</a>
+			</div>
+			<div class="ui-block-c" data-categoryId="1">
+				<a class="btn-pos-top icon-service">服务</a>
+			</div>
+			<div class="ui-block-d" data-categoryId="2">
+				<a class="btn-pos-top icon-want">需求</a>
+			</div>
+			<div class="ui-block-a" data-categoryId="5">
+				<a class="btn-pos-top icon-question">问答</a>
+			</div>
+			<div class="ui-block-b" data-categoryId="-1">
+				<a class="btn-pos-top icon-user">人才</a>
+			</div>
+			<div class="ui-block-c" data-categoryId="-3">
+				<a class="btn-pos-top icon-teacher">师资</a>
+			</div>
+			<div class="ui-block-d" data-categoryId="-2" data-isGroup ="0">
+				<a class="btn-pos-top icon-institution">公众号</a>
+			</div>
+            <div class="ui-block-a" data-categoryId="-2" data-isGroup ="1" >
+                <a class="btn-pos-top icon-project">项目号</a>
+            </div>
+		</div>
+
+        <div id="searchTips">
+        </div>
+		<script type="text/html" id="service_item_tpl">
+			<a class="custom-item-cls vbt vr ui-link service _tpl-type" data-serviceID="_tpl-id">
+				<div>
+					<img src="_tpl-picUrl">
+				</div>
+				<div>
+					<div class="custom-item-name-cls">_tpl-serviceName</div>
+					<div class="ui-grid-a">
+						<div class="ui-block-a price-color">_tpl-newPrice</div>
+						<div class="ui-block-b custom-item-username-cls">_tpl-realname</div>
+						<div class="ui-block-a"><img src="resource/images/watch-num.png" style="width: 16px;height: 16px;margin: -5px 3px 0px 2px;">_tpl-watchNumber</div>
+						<div class="ui-block-b">_tpl-creTime</div>
+					</div>
+				</div>
+			</a>
+		</script>
+		<script id="want_item_tpl" type="text/html">
+			<a data-wantid="_tpl-id" class="vbt vr _tpl-type">
+				<div class="">
+					<div class="vr ellipsis">_tpl-wantName</div>
+					<div class="font-gray">_tpl-content</div>
+					</div></a>
+		</script>
+		<script id="user_item_tpl" type="text/html">
+			<li class="custom-item-li-cls userItem _tpl-type" data-icon="false" data-userid="_tpl-id">
+				<a class="custom-item-cls vbt vr ui-link">
+					<img src="_tpl-img">
+					<div class="">
+						<div class="vTitle ellipsis">
+							<span class="username">_tpl-userName</span>
+							<span class="mark sex _tpl-sex"></span>
+							<span class="mark _tpl-idcardValidated _tpl-userType"></span>
+							<!--
+                        <span class="mark _tpl-isMoneyGuaranteed"></span>
+                        -->
+							<div class="user-prvalue">_tpl-prvalue</div>
+						</div>
+						<div class="user-enterprise">
+							_tpl-institutionUserName
+						</div>
+						<div class="user-tags">
+							_tpl-tag
+						</div>
+					</div>
+				</a>
+			</li>
+		</script>
+	</div>
+</div>
+</body>
+</html>

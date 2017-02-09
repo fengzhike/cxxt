@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>创新学堂</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="resource/images/course-icon-96.png">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="resource/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+    <link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+    <script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+    <script src="resource/js/urming.min.js?__rver=2015061211"></script>
+    <script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls" >
+<div data-role="page" id="selectPublish" no-footer>
+    <style>
+        .publish-desc{
+            display: inline-block;
+            line-height: 1.4em;
+        }
+        .publish-type-row.vbt.vr{
+            padding-left: 4em;
+            background-repeat:no-repeat;
+            background-size:  3em;
+            background-position: .5em center;
+            border-bottom: 1px solid #cccccc;
+        }
+        .publish-type-row.publish-type-service{
+            background-image:url(resource/images/icon-publish-service.png?a=1);
+         }
+        .publish-type-row.publish-type-want{
+            background-image:url(resource/images/icon-publish-want.png?a=1);
+        }
+        .publish-type-row.publish-type-course{
+            background-image:url(resource/images/icon-publish-course.png);
+        }
+        .publish-type-row.publish-type-activity{
+            background-image:url(resource/images/icon-publish-activity.png);
+        }
+		.publish-type-row.publish-type-question{
+            background-image:url(resource/images/icon-publish-question.png);
+        }
+        .publish-type-row.publish-type-answer{
+            background-image:url(resource/images/icon-publish-answer.png);
+        }
+        .publish-type-row.publish-type-funing{
+            background-image:url(resource/images/icon-publish-funing.png);
+            display:none;
+        }
+        .publish-type-row.publish-type-souring{
+            background-image:url(resource/images/icon-publish-souring.png);
+        }
+    </style>
+    <div data-role="header" class="vHeader">
+        <a class="ui-btn backBtn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+        <h1>选择发布类型</h1>
+    </div><!-- /header -->
+    <div data-role="content" class="custom-content-cls">
+        <div id="publish_type">
+            <div class="vbt vr publish-type-row publish-type-service" action="service"
+			param='{"catId":"1","catName":"服务"}'>
+                    <div class="font-black-1">发布服务</div>
+                    <small class="font-gray">
+                        发布您能提供的服务
+                    </small>
+            </div>
+            <div class="vbt vr publish-type-row publish-type-want"action="want"
+			param='{"catId":"2","catName":"需求"}'>
+                    <div class="font-black-1">发布需求</div>
+                    <small class="font-gray">
+                        告诉我们您想要什么
+                    </small>
+            </div>
+            <!--
+            <div class="vbt vr publish-type-row publish-type-course"action="service"
+                 param='{"catId":"3","catName":"课程"}'>
+                <div class="font-black-1">发布课程</div>
+                <small class="font-gray">
+                    发布您能提供的课程
+                </small>
+            </div>
+            -->
+            <div class="vbt vr publish-type-row publish-type-activity"action="service"
+                 param='{"catId":"4","catName":"活动"}' >
+                <div class="font-black-1">发布活动</div>
+                <small class="font-gray">
+                    发布您想组织的活动
+                </small>
+            </div>
+			<div class="vbt vr publish-type-row publish-type-question"action="want"
+                 param='{"catId":"5","catName":"问题"}' >
+                <div class="font-black-1">发布问题</div>
+                <small class="font-gray">
+                    发布您想提的问题
+                </small>
+            </div>
+            <!--
+			<div class="vbt vr publish-type-row publish-type-answer"action="service"
+                 param='{"catId":"6","catName":"答案"}'>
+                <div class="font-black-1">发布答案</div>
+                <small class="font-gray">
+                    发布您的答案
+                </small>
+            </div>
+            -->
+            <div class="vbt vr publish-type-row publish-type-souring"action="want"
+                 param='{"catId":"2","catName":"众包项目"}'>
+                <div class="font-black-1">发布众包项目</div>
+                <small class="font-gray">
+                    发布您需要的众包
+                </small>
+            </div>
+            <div class="vbt vr publish-type-row publish-type-funing"action="service"
+                 param='{"catId":"8","catName":"融资"}'>
+                <div class="font-black-1">发布融资</div>
+                <small class="font-gray">
+                    发布融资
+                </small>
+            </div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="f">
+        <div class="h-menu" style="">
+            <a class="icon-btn btn-pos-top icon-home ui-link" action="home">首页</a>
+            <a class="icon-btn btn-pos-top icon-found ui-link" action="menu-found">周围 <span class="remind" style = "display:none"></span></a>
+            <a class="icon-btn icon-publish ui-link activated"></a>
+            <a class="icon-btn btn-pos-top icon-calendar ui-link " action="menu-calendar">日程</a>
+            <a class="icon-btn btn-pos-top icon-user-center ui-link" action="user-center">我的</a>
+        </div>
+    </div>
+</div><!-- /page-->
+</body>
+</html>

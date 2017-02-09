@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>创新学堂</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1"/>
+    <link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+    <script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+    <script src="resource/js/urming.min.js?__rver=2015061211"></script>
+    <script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="found" no-footer>
+    <link href="resource/css/found.css" rel="stylesheet">
+    <div data-role="header">
+        <a class="ui-btn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+        <h1><span id="title">周围的</span></h1>
+    </div>
+    <div data-role="content">
+        <div class="tab-bar ui-grid-e">
+            <div class="ui-block-a btn-tab" action="tab" tab="course">课程<span class="remind" style = "display:none;"></span></div>
+            <div class="ui-block-b btn-tab" action="tab" tab="service">服务<span class="remind" style = "display:none;"></span></div>
+            <div class="ui-block-c btn-tab" action="tab" tab="activity">活动<span class="remind" style = "display:none;"></span></div>
+            <div class="ui-block-d btn-tab" action="tab" tab="want">需求<span class="remind" style = "display:none;"></span></div>
+            <div class="ui-block-e btn-tab" action="tab" tab="question">问题<span class="remind" style = "display:none;"></span></div>
+            <div class="ui-block-f btn-tab" action="tab" tab="users">人才<span class="remind" style = "display:none;"></span></div>
+        </div>
+        <div class="tabContent tab-bar-content ui-grid-c">
+            <div tab="course"></div>
+            <div tab="service"></div>
+            <div tab="activity"></div>
+            <div tab="want"></div>
+            <div tab="question"></div>
+            <div tab="users"></div>
+        </div>
+    </div>
+    <div data-role="footer" data-position="fixed" data-theme="f">
+        <div class="h-menu" style="">
+            <a class="icon-btn btn-pos-top icon-home ui-link" action="home">首页</a>
+            <a class="icon-btn btn-pos-top icon-found ui-link activated" action="menu-found">周围</a>
+            <a class="icon-btn icon-publish ui-link" action="menu-publish"></a>
+            <a class="icon-btn btn-pos-top icon-calendar ui-link" action="menu-calendar">日程</a>
+            <a class="icon-btn btn-pos-top icon-user-center ui-link" action="user-center">我的</a>
+        </div>
+    </div>
+    <script id="course_item_tpl" type="text/html">
+        <a class="custom-item-service vbt vr ui-link" action="course" data-id="_tpl-id">
+            <div>
+                <img src="_tpl-img">
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a custom-item-name-cls">_tpl-serviceName</div>
+                <div class="ui-block-b custom-item-price-cls">￥_tpl-price</div>
+                <div class="ui-block-a custom-item-count-cls"><img src="resource/images/watch-num.png" style="width: 16px;height: 16px;margin: -5px 3px 0px 2px;vertical-align: middle;">_tpl-viewCount</div>
+                <div class="ui-block-b custom-item-category-cls"><span>_tpl-category</span></div>
+            </div>
+        </a>
+    </script>
+    <script id="service_item_tpl" type="text/html">
+        <div class="custom-item-service vbt vr ui-link" action="service" data-id="_tpl-id">
+            <div>
+                <img src="_tpl-img">
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a custom-item-name-cls">_tpl-serviceName</div>
+                <div class="ui-block-b custom-item-price-cls">￥_tpl-price</div>
+                <div class="ui-block-a custom-item-count-cls"><img src="resource/images/watch-num.png" style="width: 16px;height: 16px;margin: -5px 3px 0px 2px;vertical-align: middle;">_tpl-viewCount</div>
+                <div class="ui-block-b custom-item-category-cls"><span>_tpl-category</span></div>
+            </div>
+        </div>
+    </script>
+    <script id="activity_item_tpl" type="text/html">
+        <a class="custom-item-service vbt vr ui-link" action="service" data-id="_tpl-id">
+            <div>
+                <img src="_tpl-img">
+            </div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a custom-item-name-cls">_tpl-serviceName</div>
+                <div class="ui-block-b custom-item-price-cls">￥_tpl-price</div>
+                <div class="ui-block-a custom-item-count-cls"><img src="resource/images/watch-num.png" style="width: 16px;height: 16px;margin: -5px 3px 0px 2px;vertical-align: middle;">_tpl-viewCount</div>
+                <div class="ui-block-b custom-item-category-cls"><span>_tpl-category</span></div>
+            </div>
+        </a>
+    </script>
+    <script id="want_item_tpl" type="text/html">
+        <div class="custom-item-want vbt vr ui-link">
+            <div class="ui-grid-a" action="want" data-id="_tpl-id">
+                <div class="ui-block-a custom-item-name-cls want-title">_tpl-title</div>
+                <div class="ui-block-b custom-item-price-cls">￥_tpl-price</div>
+            </div>
+            <div class="want-content" action="want" data-id="_tpl-id">_tpl-content</div>
+            <div class="ui-grid-a userinfo">
+                <div class="ui-block-a custom-item-name-cls" action="toUser"data-id="_tpl-userId">
+                    <img src="_tpl-profileImageUrl"/>&nbsp;&nbsp;_tpl-realname</div>
+                <div class="ui-block-b"><span action="addService" data-id="_tpl-id">响应</span></div>
+            </div>
+        </div>
+    </script>
+    <script id="question_item_tpl" type="text/html">
+        <div class="custom-item-want vbt vr ui-link">
+            <div class="ui-grid-a" action="question" data-id="_tpl-id">
+                <div class="ui-block-a custom-item-name-cls want-title">_tpl-title</div>
+                <div class="ui-block-b custom-item-price-cls">￥_tpl-price</div>
+            </div>
+            <div class="want-content" action="question" data-id="_tpl-id">_tpl-content</div>
+            <div class="ui-grid-a userinfo">
+                <div class="ui-block-a custom-item-name-cls" action="toUser"data-id="_tpl-userId"><img src="_tpl-profileImageUrl"/>&nbsp;&nbsp;_tpl-realname</div>
+                <div class="ui-block-b"><span action="addAnswer" data-id="_tpl-id">回答</span></div>
+            </div>
+        </div>
+    </script>
+    <script id="users_item_tpl" type="text/html">
+        <div class="custom-item-li-cls userItem" data-icon="false" data-id="_tpl-id" action="user">
+            <a class="custom-item-cls vbt vr ui-link">
+                <img src="_tpl-img">
+                <div class="">
+                    <div class="vTitle ellipsis">
+                        <span class="username">_tpl-userName</span>
+                        <span class="mark sex _tpl-sex"></span>
+                        <span class="mark _tpl-idcardValidated _tpl-userType"></span>
+                        <!--
+                    <span class="mark _tpl-isMoneyGuaranteed"></span>
+                    -->
+                        <div class="user-prvalue">_tpl-prvalue</div>
+                    </div>
+                    <div class="user-enterprise">
+                        _tpl-institutionUserName
+                    </div>
+                    <div class="user-tags">
+                        _tpl-tag
+                    </div>
+                </div>
+            </a>
+        </div>
+    </script>
+    <script id="paper_tpl" type="text/html">
+        <div class="div_paper">
+            <a class="btn3 ui-corner-all pagePre btn-page _tpl-hasPre"  data-page-num="_tpl-pagePre" action="pageNav">上一页</a>
+            <span class="pager-current">_tpl-pageCurrentTotal</span>
+            <a class="btn3 ui-corner-all pageNext btn-page _tpl-hasNext" data-page-num="_tpl-pageNext" action="pageNav">下一页</a>
+        </div>
+    </script>
+</div>
+</body>
+</html>

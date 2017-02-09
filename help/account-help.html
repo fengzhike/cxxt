@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="UTF-8">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link href="css/help.css" rel="stylesheet">
+
+</head>
+<body>
+
+<section>
+    <div class="scroller" id="section">
+        <div>
+            <div class="q-title">1.如何进行个人认证?</div>
+            <div class="q-content">点击【我的】-【账号管理】-【身份认证】-【个人认证】，按要求提交个人认证资料，管理员审核通过后即可完成。</div>
+            <div class="q-img close">
+                <img data-src="img/acount/acount1-1.png" maxwidth="100%" height="auto" alt="pic" src="img/acount/acount1-1.png">
+                <img data-src="img/acount/acount1-2.png" maxwidth="100%" height="auto" alt="pic" src="img/acount/acount1-2.png">
+                <img data-src="img/acount/acount1-3.png" maxwidth="100%" height="auto" alt="pic" src="img/acount/acount1-3.png">
+                <img data-src="img/acount/acount1-4.png" maxwidth="100%" height="auto" alt="pic" src="img/acount/acount1-4.png">
+            </div>
+            <div class="q-btn">查看图示</div>
+        </div>
+        <div>
+            <div class="q-title">2.如何进行机构认证?</div>
+            <div class="q-content">点击【我的】-【账号管理】-【身份认证】-【机构认证】，按要求提交机构认证资料，管理员审核通过后即可完成。</div>
+            <div class="q-img close">
+                <img data-src="img/acount/acount2-1.png" maxwidth="100%" height="auto" alt="pic" src="img/acount/acount2-1.png">
+                <img data-src="img/acount/acount1-2.png" maxwidth="100%" height="auto" alt="pic" src="img/acount/acount1-2.png">
+                <img data-src="img/acount/acount1-3.png" maxwidth="100%" height="auto" alt="pic" src="img/acount/acount1-3.png">
+                <img data-src="img/acount/acount2-1.png" maxwidth="100%" height="auto" alt="pic" src="img/acount/acount2-4.png">
+            </div>
+            <div class="q-btn">查看图示</div>
+        </div>
+        <div>
+            <div class="q-title">3.如何添加更新个人信息?</div>
+            <div class="q-content">点击【我的】-【账号管理】，进入【修改基本信息】添加更新自己的个人信息。在最下方有“所在学校”一项可以添加学校名称。</div>
+            <div class="q-img close">
+                <img data-src="img/acount/acount3-1.png" width="100%" height="auto" alt="pic" src="img/acount/acount3-1.png">
+            </div>
+            <div class="q-btn">查看图示</div>
+        </div>
+        <div>
+            <div class="q-title">4.微信和手机两个账户如何绑定?</div>
+            <div class="q-content">点击【我的】-【账号管理】-【绑定手机】，即可完成账号手机号的绑定。</div>
+            <div class="q-img close">
+                <img data-src="img/acount/acount4-1.png" maxwidth="100%" height="auto" alt="pic" src="img/acount/acount4-1.png">
+                <img data-src="img/acount/acount4-2.png" maxwidth="100%" height="auto" alt="pic" src="img/acount/acount4-2.png">
+            </div>
+            <div class="q-btn">查看图示</div>
+        </div>
+		<!--
+        <div class="qust">
+            <div class="qust-tit">是否解决了你的问题：</div>
+            <div class="qa-select">
+                <a href="solve://" id="solved" class="solved">解决了</a>
+                <a id="nsolved" class="nsolved">没有，我要反馈</a>
+            </div>
+        </div>
+		-->
+    </div>
+</section>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/iscroll.js"></script>
+<script src="js/common.js"></script>
+
+<script>
+    $(function () {
+        var faqid = $_GET('faq_id');
+        var os = $('#os').val();
+
+        // åˆå§‹åŒ–iscroll
+        // var myscroll;
+        // function loaded() {
+        //     // å…¨éƒ¨Domèµ„æºåŠ åœ¨å®Œæ¯•çš„æ—¶å€™å†åˆå§‹åŒ–iscroll
+        //     setTimeout(function () {
+        //         myscroll = new iScroll('section');
+        //     }, 100);
+        // }
+        // window.addEventListener('load', loaded, false);
+
+
+        $('.q-btn').click(function () {
+            var $this = $(this);
+            if ($this.prev().hasClass('close')) {
+                $this.prev().removeClass('close').addClass('open');
+//                var img = $this.prev().find('img');
+//                img.attr({
+//                    'src': img.data('src')
+//                });
+                $this.text('收起图示');
+                // myscroll.refresh();
+            }
+            else {
+                $this.prev().removeClass('open').addClass('close');
+                $this.text('收起图示');
+                // myscroll.refresh();
+            }
+        });
+    });
+    $('#solved').bind('touchstart', function () {
+        $(this).addClass('solved-click');
+    })
+            .bind('touchend', function() {
+                $(this).removeClass('solved-click');
+            });
+    $('#nsolved').bind('touchstart', function () {
+        $(this).addClass('nsolved-click');
+    })
+            .bind('touchend', function() {
+                $(this).removeClass('nsolved-click');
+            });
+</script>
+
+</body>
+</html>

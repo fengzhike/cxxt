@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>创新学堂</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1"/>
+    <link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+    <script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+    <script src="resource/js/urming.min.js?__rver=2015061211"></script>
+    <script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="withdraw">
+    <link href="resource/css/withdraw.css" rel="stylesheet">
+    <div data-role="header" class="vrHeader">
+        <a class="ui-btn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+        <h1>提现</h1>
+    </div>
+    <div data-role="content" style="padding: 1em">
+        <!--
+        <div class="font-gray"><small><span class="striking-1">请输入该姓名下的银行卡信息</span></small></div>
+        -->
+        <div class="vForm fieldContainer" style="margin-top: 1em;margin-bottom: 1em;">
+            <input type="text" name="realname" maxlength="20" class="realname" placeholder="姓名">
+            <input type="text" name="creditCardNumber" maxlength="100" placeholder="银行卡号">
+            <input type="text" class="toSelectBank vbt" name="bank" placeholder="开户银行" readonly>
+            <input type="text" name="bankCity" class="bankCity" maxlength="100" placeholder="开户城市" readonly>
+            <input type="text" name="subBranch" class="subBranch" placeholder="所在支行" readonly>
+            <input type="text" name="money" class="money" placeholder="可提现金额">
+        </div>
+        <div class="remind-btn"></div>
+        <div class="remind-mess">您的账户余额中创业基金部分未达到提现要求，如需全部提取请参考帮助中的创业基金提现说明</div>
+        <div class="tip-line font-gray" style="margin-left: 0em"><small><span class="font-red1">注：</span>如有疑问，请联系创新学堂客服人员<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系电话：010-59433195<br>
+        </small>
+        </div>
+        <a class="vbt submit">提交</a>
+    </div>
+    <script id="confirm_card" type="text/html">
+        <div id="confirm_card_box">
+            <div class="card-info-item">
+                <span class="vc">姓名：</span>
+                <span class="vt">_tpl-realname</span>
+            </div>
+            <div class="card-info-item">
+                <span class="vc">银行卡号：</span>
+                <span class="vt">_tpl-creditCardNumber</span>
+            </div>
+            <div class="card-info-item">
+                <span class="vc">开户银行：</span>
+                <span class="vt">_tpl-bank</span>
+            </div>
+            <div class="card-info-item _tpl-cls">
+                <span class="vc">开户城市：</span>
+                <span class="vt">_tpl-bankCity</span>
+            </div>
+            <div class="card-info-item _tpl-cls">
+                <span class="vc">所在支行：</span>
+                <span class="vt">_tpl-subBranch</span>
+            </div>
+            <div class="card-info-item">
+                <span class="vc">提现金额：</span>
+                <span class="vt">_tpl-money</span>
+            </div>
+            <div class="vc">
+                请核实银行卡信息，银行卡信息确认无误后，预计0-3个工作日内到账。
+            </div>
+        </div>
+    </script>
+    <script id="withdraw_result_tpl" type="text/html">
+        <div id="withdraw_result_page" class="ui-page fullScreen vChild">
+            <div class="content">
+                <div>
+                    <div class="icon-checkround"></div>
+                    <p>提现申请处理中</p>
+                    <small><p>预计0-3个工作日内到账</p></small>
+                </div>
+                <div class="vItemTable ">
+                    <div class="vTr">
+                        <div class="vTh">提现卡号</div>
+                        <div class="vTd">_tpl-creditCardNumber</div>
+                    </div>
+                    <div class="vTr">
+                        <div class="vTh">提现金额</div>
+                        <div class="vTd">_tpl-money元</div>
+                    </div>
+                </div>
+                <div>
+                    <!--
+                    <span action="back" class="btn8 ui-corner-all">点击返回</span>
+                    -->
+                    <a class="back vbt submit">我知道了</a>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+</body>
+</html>

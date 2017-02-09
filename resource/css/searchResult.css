@@ -1,0 +1,319 @@
+#areaListCtr>div {
+    display:inline-block;
+    max-height: 385px;
+    overflow-y: scroll;
+}
+#liveList{
+    position:relative;
+
+}
+
+#services .ui-content{
+    position: relative;
+}
+#newPublish{
+    position:absolute;
+    text-align: center;
+    line-height:45px;
+    height:45px;
+    width:100%;
+    background: #197EEE;
+    color:#fff;
+    top:0px;
+    left:0;
+}
+#areaList {
+    width:40%;
+}
+#childAreaList {
+    width: 60%;
+    float: right;
+    left: 40%;
+    z-index: 1500;
+    position: absolute;
+    padding-left: 1em;
+    background-color: #ffffff;
+}
+#areaListCtr li{
+    background-color: white;
+}
+#areaList li{
+    background-color: white;
+}
+#services .sort-bar .ui-btn.ui-btn-active:after{
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+#services .sort-bar .ui-btn.ui-btn-active,#services .sort-bar .ui-btn:hover{
+    background-color:white;
+}
+#services .sort-bar .ui-btn:after{
+    background-size:contain;
+    width: 18px;
+    background-image:url(../images/arow-down.png);
+}
+#services .sort-bar .ui-btn.ui-btn-active:after{
+    background-size:contain;
+    background-image:url(../images/arow-blue-down.png);
+}
+#services .sort-bar .ui-btn:last-child{
+    border-right:0;
+}
+#services .btn-active-arrow{
+    height: .5em;
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    /* z-index: 3; */
+    display:none;
+    top:49px;
+}
+#services[tab] .btn-active-arrow{
+    top:110px;
+}
+#services .btn-active-arrow[col]{
+    display:block;
+}
+
+#services .position-arrow{
+    width: 100%;
+    height: .9em;
+    margin-top: -.9em;
+    overflow: hidden;
+}
+.urming-uc #services .position-arrow{
+    margin-top: -1em;
+}
+#services .position-arrow:before {
+    content: '';
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    background-color: white;
+    -webkit-transform:translate(-.75em, 0) rotate(45deg);
+    transform:translate(-.75em, 0) rotate(45deg);
+    margin-top: .4em;
+    border:1px solid #ccc;
+    -webkit-transition: margin-left .2s;
+    transition: margin-left .2s;
+}
+#services  .searchPageList .ui-listview{
+    margin:0;
+}
+#services .btn-active-arrow[col="1"] .position-arrow:before {
+    margin-left:16.667%;
+}
+#services[allDistance] .btn-active-arrow[col="1"] .position-arrow:before {
+    background-color:#eeeeee;
+}
+#services .btn-active-arrow[col="2"] .position-arrow:before {
+    margin-left:50%;
+}
+#services .btn-active-arrow[col="3"] .position-arrow:before {
+    margin-left:83.333%;
+}
+.searchPageList > div {
+    line-height: 1.4em;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    padding: 1em;
+}
+#childAreaList>div{
+    padding:1em 0;
+}
+#services  .searchPageList .ui-listview>li:first-child,#childAreaList>.ui-listview>li:first-child{
+    border-top:0;
+}
+#services .ui-content{
+    padding:0;
+}
+#services .list-items{
+    margin:0;
+}
+#services .sort-bar .ui-btn{
+    border-top:0;
+    color:#999999;
+}
+#services .sort-bar .ui-btn-active{
+    color:#197eee;
+}
+#services .sort-bar .ui-btn-active{
+
+}
+
+/*#services .sort-bar .ui-btn-active:before{*/
+/*content: '';*/
+/*height: 49px;*/
+/*width: 100%;*/
+/* margin-left: -48%; */
+/*left: -.7em;*/
+/*margin-top: -9.5px;*/
+/*position: absolute;*/
+/*background-image: url('../images/triangle-inverted.png?v=3');*/
+/*background-position: center 25px;*/
+/*background-repeat: no-repeat;*/
+/*background-color: rgba(0, 0, 0, 0.16);*/
+/*background-size: 3em;*/
+/*z-index: 3;*/
+/*padding: 0;*/
+/*border: 1px solid rgba(0,0,0,0);*/
+/*border-width: 0 1px 1px 0;*/
+/*background-clip: border-box;*/
+/*}*/
+#services .wantName,#services .userName{
+  /*   //font-weight: bold; */
+}
+.custom-item-price-cls{
+    color:#197eee;
+    font-size:16px;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#services .sort-bar .ui-btn:after{
+    -webkit-transition: -webkit-transform .3s;
+    transition: transform .3s;
+}
+#services .sort-bar .ui-btn{
+    -webkit-transition: color .3s;
+    transition: color .3s;
+}
+#services[tab]  .vrGrp{
+    display:inline-block;
+}
+#services  .vrGrp{
+    display:none;
+}
+#services[tab] .vt.ui-title{
+    margin:0;
+}
+#services[tab] .navigateBackBtn{
+    width:3em;
+    height:2.85em;
+}
+#services[tab] .icon-menu {
+    margin-top: -10px;/*-60*/
+    padding-top: 19px;
+    padding-bottom: 19px;
+}
+/*.all-kind #top-right-menu-area .icon-menu {
+    margin-top: -10px;
+}*/
+#services .kindSel{
+    color: #197eee;
+    border-bottom: 1px solid #197eee;
+}
+#services[allDistance]  #areaList  > div{
+    background-color: #ececec;
+    border:inherit;
+}
+#services[allDistance]  #areaList   > div.kindSel{
+    background-color:white;
+    border:inherit;
+    color: inherit;
+}
+.searchPageList {
+    z-index:1500;
+    position:absolute;
+    width:100%;
+    -webkit-transition: height .5s;
+    transition: height .5s;
+}
+.searchTips {
+    display:none;
+    line-height: 2em;
+}
+div#areaListCtr {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#services .crowdfunding-top{
+    height:200px;
+    position: relative;
+}
+#services .crowdfunding-top img{
+    width:100%;
+    height:200px;
+    z-index: -1;
+}
+#services .crowdfunding-top .crowdfunding-bg{
+    width:100%;
+    height:200px;
+    top:0;
+    right: 0;
+    position: absolute;
+    background-color: #000102;
+    opacity: 0.5;
+    z-index: 0;
+}
+#services .crowdfunding-top .crowdfunding-content{
+    width:100%;
+    height:200px;
+    top:0;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+}
+#services .crowdfunding-top .crowdfunding-content .complete-endTime{
+    top:0;
+    right: 0;
+    position: absolute;
+    padding:2px 5px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #545454;
+    text-align: center;
+}
+#services .crowdfunding-top .crowdfunding-content .complete-rate{
+    margin-top: 50px;
+    height:100px;
+    text-align: center;
+}
+#services .crowdfunding-top .crowdfunding-content .complete-total-money{
+    height:50px;
+    text-align: center;
+    color: #67BBAB;
+}
+#services .crowdfunding-top .crowdfunding-content .complete-total-money span{
+    color: #F7F688;
+    font-size: 18px;
+    padding:0px 5px;
+}
+#services .crowdfunding-bottom{
+    padding: 8px 8px;
+    height: 20px;
+    border-bottom: 1px solid #E0E0E0;
+    color: #999999;
+}
+#services .crowdfunding-bottom span:first-child{
+    width: 60%;
+    display: block;
+    float: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#services .crowdfunding-bottom span:last-child{
+    width: 40%;
+    text-align: right;
+    display: block;
+    float: right;
+}
+.ask_footer{
+    position:fixed;
+    width: 16rem;
+    margin-left:-8rem;
+    left:50%;
+    height:2rem;
+    line-height: 2rem;
+    font-size: .8rem;
+    background-color: #197eee;
+    color: #fff;
+    text-align:    center;
+    bottom:0;
+    z-index: 99999;
+}
+.footer-bar{
+    margin-bottom: 2rem;
+}

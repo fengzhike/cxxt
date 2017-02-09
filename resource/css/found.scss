@@ -1,0 +1,127 @@
+#found{
+  .tab-bar{
+    height: 3em;
+    line-height: 3em;
+    color: #6e6e6e;
+    div[action="tab"]{
+      position: relative;
+      .remind{
+        position:absolute;
+        width:6px;
+        height:6px;
+        background: red;
+        border-radius: 5px;
+        right:20%;
+        top:.4em;
+        /*box-shadow:1px 1px  4px #f00,-1px -1px  4px #f00;*/
+      }
+    }
+    .sel{
+      color: #197eee;
+    }
+  }
+  .tabContent{
+    >div{
+    }
+  }
+  .custom-item-service{
+    border-bottom: 1px solid #E0E0E0;
+    border-top: 1px solid #E0E0E0;
+    padding: 0em;
+    margin-top: 1em;
+    >div:first-child{
+      height:200px;
+      overflow: hidden;
+    }
+    img{
+      width:100%;
+      vertical-align: middle;
+      height:auto;
+    }
+    .ui-grid-a{
+      line-height: 30px;
+      padding: 0em 1em;
+      .ui-block-a{
+        width: 72%;
+
+      }
+      .ui-block-b{
+        width: 28%;
+        text-align: right;
+      }
+      .custom-item-name-cls {
+        font-size: 15px;
+        font-weight: bold;
+        color: #272224;
+      }
+      .custom-item-count-cls{
+        color: #999999;
+        font-weight: normal;
+        font-size: 13px;
+      }
+      .custom-item-category-cls{
+        span {
+          display: block;
+          float: right;
+          font-weight: 500;
+          font-size: small;
+          border-radius: .3125em;
+          padding: .1em .5em 0 .5em;
+          line-height: initial;
+          color: #22A572;
+          border: 1px solid #22A572;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+  .custom-item-want{
+    border-bottom: 1px solid #E0E0E0;
+    border-top: 1px solid #E0E0E0;
+    padding: 0em;
+    margin-top: 1em;
+    .ui-grid-a {
+      line-height: 30px;
+      padding: 0em 1em;
+      .ui-block-a{
+        width: 80%;
+      }
+      .ui-block-b{
+        width: 20%;
+        text-align: right;
+      }
+    }
+    .want-content{
+      margin: 0 1em;
+      border-bottom: 1px solid #E0E0E0;
+      padding-bottom: 1em;
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .want-title{
+      font-size: 15px;
+      font-weight: bold;
+      color: #272224;
+    }
+    .userinfo{
+      padding-top: .5em;
+      padding-bottom: .5em;
+      font-size: 12px;
+      img{
+        width: 2em;
+        vertical-align: middle;
+        border-radius: 1em;
+      }
+      span{
+        background-color: #197EEE;
+        padding: 0.5em .5em;
+        color: #ffffff;
+        font-size: 12px;
+        border: 0;
+        display: inline-block;
+        line-height: 1;
+        border-radius: .3125em;
+      }
+    }
+  }
+}

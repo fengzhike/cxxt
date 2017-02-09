@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script type="text/javascript" src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script type="text/javascript" src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script type="text/javascript" src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+	<script type="text/javascript" src="resource/js/user/blanceDetail.js?__rver=2015061211"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="blanceDetail">
+	<div data-role="header" >
+		<a class="ui-btn backBtn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a> 
+		<h1>账户明细</h1>
+	</div>
+	<div data-role="content">
+		
+	</div>
+	<!-- 账单详情模版 -->
+	<script id="blanceDetail-tpl" type="text/html">
+		<div class="sec1 sec font-gray ">
+			<div><span>交易状态：</span><span class="striking-1">_tpl-status</span></div>
+			<div><span>创建时间：</span><span class="font-black-1">_tpl-creTime</span></div>
+		</div>
+		<div class="vItemTable align-side sec sec2">
+			<div href="#" class="vTr"><span class="vTh">交易金额</span><span class="vTd">+_tpl-money</span></div>
+			<div href="#" class="vTr"><span class="vTh">交易总额</span><span class="vTd">+_tpl-totalMoney</span></div>
+			<div href="#" class="vTr"><span class="vTh">-服务费</span><span class="vTd">-_tpl-charge</span></div>
+		</div>
+		<div action="orderDetail" class="sec sec3 ui-corner-all arrow-right-margin" 
+			param="userType=2&serviceOwnID=_tpl-serviceOwnId">
+			<div class="left-block">
+				<img src="_tpl-picUrl">
+			</div>
+			<div class="right-row">
+				<div class="ellipsis">_tpl-title</div>
+			</div>
+		</div>
+	</script>
+	<!-- 账单详情模版 -->
+</div>
+</body>
+</html>

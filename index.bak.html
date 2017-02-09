@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>创新学堂</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="resource/images/course-icon-96.png">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="shortcut icon" href="resource/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+    <link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+    <script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+    <!--<script src="resource/js/urming.min.js?__rver=2015061211"></script>-->
+    <script src="resource/js/urming.min.js?__v=4"></script>
+    <script src="resource/js/system/startpage.js?__rver=2015061211"></script>
+    <script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+
+</head>
+<body class="custom-body-cls" >
+<div data-role="page" id="startpage" noRightTopMenu>
+    <div data-role="header" class="vHeader">
+        <a data-iconpos="right" data-role="button" class="toCitylist" data-icon="carat-d" title="Home">北京</a>
+        <h1>
+            创新学堂
+            <!--<a class="title-logo"></a>-->
+        </h1>
+        <div id="top-right-menu-area">
+            <a class="icon-btn btn-pos-top icon-user-center" action="user-center">我的</a>
+            <a class="icon-btn btn-pos-top icon-message" action="menu-message"><span id="startPage_msg_num"></span>消息</a>
+            <a class="icon-btn btn-pos-top icon-publish" action="menu-publish">发布</a>
+        </div>
+    </div><!-- /header -->
+    <div data-role="content" class="custom-content-cls">
+        <div class="v-input-search">
+            <a data-type="search" id="filter-shortcut">搜索服务、人才或需求</a>
+        </div>
+        <div class="bannerAdPics">
+        </div>
+
+        <div class="ui-grid-c edu-project-grid">z
+            <div class="sec-tip font-black">未名讲堂</div>
+            <div class="ui-block-a" edu-item="course">
+                <div style="background-image: url(resource/images/course.png)">
+                    <span>课程</span>
+                </div>
+            </div>
+            <div class="ui-block-d" edu-item="activity">
+                <div style="background-image: url(resource/images/activity.png)">
+                    <span>活动</span>
+                </div>
+            </div>
+            <div class="ui-block-b" edu-item="teachers_students">
+                <div style="background-image: url(resource/images/teachers_students.png)">
+                    <span>师生</span>
+                </div>
+            </div>
+            <div class="ui-block-c" edu-item="want">
+                <div style="background-image: url(resource/images/want.png)">
+                    <span>问答</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="sec-tip font-black">有名市场</div>
+        <div class="ui-grid-b catSvrs">
+        </div>
+        <div class="sec-tip font-black">热门人才</div>
+        <ul data-role="listview" data-theme="c" class="list-items"  id="hot-users">
+        </ul>
+        <div class="download-con ui-footer-fixed" style="display:none">
+            <div class="download-logo"></div>
+            <div class="alogo">
+                <p class="client-name">创新学堂客户端</p>
+
+                <!--<p class="client-logon">找对人 ● 做成事</p>-->
+            </div>
+            <div class="open_now">
+                <a data-role="button" data-ajax="false" link="./download.html">立即下载</a>
+            </div>
+            <div class="close-btn-con close-btn">
+                X
+            </div>
+        </div>
+    </div>
+    <!-- /content-->
+    <script type="text/html" id="catSvrs_tpl">
+        <div class="ui-block-a">
+            <div class="catSvr" style="background-image: url(_tpl-0.imageUrl)" param='{"catId":"_tpl-0.category.id","categoryId":"_tpl-0.id"}'> _tpl-0.categoryName</div>
+        </div>
+        <div class="ui-block-b">
+            <div class="catSvr" style="background-image: url(_tpl-1.imageUrl)" param='{"catId":"_tpl-1.category.id","categoryId":"_tpl-1.id"}'> _tpl-1.categoryName</div>
+        </div>
+        <div class="ui-block-c">
+            <div class="catSvr" style="background-image: url(_tpl-2.imageUrl)" param='{"catId":"_tpl-2.category.id","categoryId":"_tpl-2.id"}'> _tpl-2.categoryName</div>
+        </div>
+        <div class="ui-block-a">
+            <div class="catSvr" style="background-image: url(_tpl-3.imageUrl)" param='{"catId":"_tpl-3.category.id","categoryId":"_tpl-3.id"}'> _tpl-3.categoryName</div>
+        </div>
+        <div class="ui-block-b">
+            <div class="catSvr" style="background-image: url(_tpl-4.imageUrl)" param='{"catId":"_tpl-4.category.id","categoryId":"_tpl-4.id"}'> _tpl-4.categoryName</div>
+        </div>
+        <div class="ui-block-c">
+            <div class="catSvr catSvr-more">更多服务</div>
+        </div>
+    </script>
+    <script id="user_item_tpl" type="text/html">
+        <li class="custom-item-li-cls userItem" data-icon="false" data-userid="_tpl-id">
+            <a class="custom-item-cls vbt vr ui-link">
+                <img src="_tpl-img">
+                <div class="">
+                    <div class="vTitle ellipsis">
+                        <span class="username">_tpl-userName</span>
+                        <span class="mark sex _tpl-sex"></span>
+                        <span class="mark _tpl-idcardValidated _tpl-userType"></span>
+                        <span class="mark _tpl-isMoneyGuaranteed"></span>
+                        <div class="user-prvalue">_tpl-prvalue</div>
+                    </div>
+                    <div class="user-tags">
+                        _tpl-tag
+                    </div></div></a></li>
+    </script>
+</div><!-- /page-->
+</body>
+
+</body>
+</html>

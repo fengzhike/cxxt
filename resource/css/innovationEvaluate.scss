@@ -1,0 +1,36 @@
+#innovationEvaluate{
+  height:100%;
+  padding: 0px;
+  background-image: url("../images/innovationEvaluate/innovationEvaluate-bg.jpg");
+  background-size: 100% 100%;
+  .ui-content{
+    height: 100%;
+    padding: 0em;
+    .submit{
+      position: absolute;
+      bottom: 13%;
+      border-style: hidden;
+      width: 100%;
+      height: 10%;
+    }
+    .innovationEvaluateExplain{
+      position: absolute;
+      bottom: 7%;
+      border-style: hidden;
+      width: 100%;
+      height: 5%;
+      text-align: center;
+      color: #197eee;
+      font-weight: bold;
+    }
+    .footer{
+      position: absolute;
+      bottom: 2%;
+      border-style: hidden;
+      width: 100%;
+      height: 5%;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+}

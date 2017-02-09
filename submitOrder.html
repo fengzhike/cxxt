@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script type="text/javascript" src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script type="text/javascript" src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script type="text/javascript" src="resource/js/service/submitOrder.js?__rver=2015061211"></script>
+	<script type="text/javascript" src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="submitOrder">
+	<div data-role="header" >
+		<h1>提交订单</h1>
+		<a class="ui-btn ui-icon-back navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+	</div>
+	<div data-role="content">
+	<div>
+		<ul data-role="listview" id="subOrderView">
+			<li id="orderSvrName">初始化...</li>
+			<li>单价<div class="orderItem" id="orderUnitPrice">￥<span>100.00</span></div></li>
+			<li>
+				<div class="ui-grid-a" id="changeOrderNumGrid">
+					<div class="ui-block-a">
+						数量
+					</div>
+					<div class="ui-block-b">
+						<div class="orderItem" id="changeOrderCount">	
+							<div class="ui-grid-b">
+								<div class="ui-block-a">
+									<button type="text" id="orderReduceBtn"></button>
+								</div>
+								<div class="ui-block-b">
+									<input id ="orderNum" type="number" value="1" maxlength="2"/>
+								</div>
+								<div class="ui-block-c">
+									<button type="text" id="orderAddBtn"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>总价<div class="orderItem payMoney" id="orderTotalPrice">￥100.00</div></li>
+			<li>匿名<div class="orderItem"><input type="checkbox" name="isAnonymous" id="isAnonymous"></div></li>
+		</ul>
+	</div>
+	<div class="vItemTable" style="margin-top: 2em;display: none">
+		<a class="vTr vbt vr ui-link">
+			<div class="vTh" style="left: 2em;">投资限制：</div>
+			<div class="vTd"></div>
+		</a>
+		<a class="vTr vbt vr ui-link" style="display: none" id="minSingleSaleCount">
+			<div class="vTh" style="left: 2em;">最低购股数量：</div>
+			<div class="vTd">X股</div>
+		</a>
+		<a class="vTr vbt vr ui-link" style="display: none" id="maxSingleSaleCount">
+			<div class="vTh" style="left: 2em;">最多购股数量：</div>
+			<div class="vTd">X股</div>
+		</a>
+	</div>
+	<a id="submitOrderBtn" class="vbt submit">提交订单</a>
+</div>
+</div>
+
+</body>
+</html>

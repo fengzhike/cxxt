@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <title>创新学堂</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1"/>
+    <link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+    <script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+    <script src="resource/js/urming.min.js?__rver=2015061211"></script>
+    <script src="resource/js/user/validateBankCard.js?__rver=2015061211"></script>
+    <script src="resource/js/common/validCard.js?__rver=2015061211"></script>
+    <script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="validateBankCard">
+    <div data-role="header" class="vrHeader">
+        <a class="ui-btn backBtn ui-icon-back ui-btn-icon-notext">返回</a>
+
+        <h1>银行卡认证</h1>
+    </div>
+    <div data-role="content">
+        <div class="font-gray">身份认证后，您的名字旁将显示认证徽标，会提高用户对您的信任程度。如:</div>
+        <h3>李小明<span class="mark validateBankCardOK"></span></h3>
+
+        <div class="inputCtr phone" style="display:none;"><input type="text"></div>
+        <div class="vForm fieldContainer">
+            <input type="text" name="realname" maxlength="20" class="realname" placeholder="姓名">
+            <input type="text" name="creditCardNumber" maxlength="100" placeholder="银行卡号">
+            <input type="text" class="toSelectBank vbt" name="bank" placeholder="开户银行" readonly>
+            <input type="text" name="bankCity" class="bankCity" maxlength="100" placeholder="开户城市" readonly>
+            <input type="text" name="subBranch" class="subBranch" placeholder="所在支行" readonly>
+            <input type="text" name="verifyCode" data-format="number"  maxlength="6" placeholder="短信验证码">
+        </div>
+        <a class="vbt verifyCode sendCode enable">发送验证码</a>
+        <a class="vbt submit">提交</a>
+    </div>
+    <script id="confirm_card" type="text/html">
+        <div id="confirm_card_box">
+            <div class="card-info-item">
+                <span class="vc">姓名：</span>
+                <span class="vt">_tpl-realname</span>
+            </div>
+            <div class="card-info-item">
+                <span class="vc">银行卡号：</span>
+                <span class="vt">_tpl-creditCardNumber</span>
+            </div>
+            <div class="card-info-item">
+                <span class="vc">开户银行：</span>
+                <span class="vt">_tpl-bank</span>
+            </div>
+            <div class="card-info-item _tpl-cls">
+                <span class="vc">开户城市：</span>
+                <span class="vt">_tpl-bankCity</span>
+            </div>
+            <div class="card-info-item _tpl-cls">
+                <span class="vc">所在支行：</span>
+                <span class="vt">_tpl-subBranch</span>
+            </div>
+            <div class="vc">
+                银行卡信息确认无误后，我们会在24小时内往您的银行账户打入一笔随机金额。填写正确这笔金额，就可以完成银行认证了。
+            </div>
+        </div>
+    </script>
+    <script id="submit_money_tpl" type="text/html">
+        <div id="submit_money_page" class="ui-page fullScreen vChild">
+            <div class="ui-header ui-bar-inherit">
+                <a action="back" class="ui-btn vBack ui-icon-back ui-btn-icon-notext ui-btn-left">返回</a>
+
+                <h1 class="ui-title" role="heading" aria-level="1">提交验证金额</h1>
+            </div>
+            <div class="content">
+                <div class="vItemTable layout-1 _tpl-cardCls">
+                    <div class="vTr text-left">
+                        <div class="vTh">银行卡号</div>
+                        _tpl-creditCardNumber
+                    </div>
+                    <div class="vTr">
+                        <div class="vTh">开户银行</div>
+                        _tpl-bank
+                    </div>
+                    <div class="vTr">
+                        <div class="vTh">所在支行</div>
+                        _tpl-subBranch
+                    </div>
+                </div>
+                <div class="vForm ui-corner-all">
+                    <div class="field money">
+                        <div class="label">验证金额</div>
+                        <div class="ui-input-text ui-body-inherit ui-corner-all ui-shadow-inset">
+                            <input id="submit_money_val" maxlength="4" data-format="decimal" type="number"
+                                   placeholder="请输入银行卡中收到的金额">
+                        </div>
+                        <span class="font-gray field-unit"> 元</span>
+                    </div>
+                    <div class="comment1 font-gray _tpl-firstCls">
+                        有名网已向您填写的银行卡账户打入一笔验证金用以确认其准确性，请依照您银行卡账户收到的金额填写完成银行卡认证！您只有2次输入机会，未到账前请勿随意输入。<br/>
+                        如果您的信息填写有误或超过24小时还未收到打款金额，请联系创新学堂客服：<br/>
+                        <span class="font-blue">010-59433195</span>
+                    </div>
+                    <div class="comment2 font-gray _tpl-secondCls">
+                        有名网已向您填写的银行卡账户打入一笔验证金用以确认其准确性，请依照您银行卡账户收到的金额填写完成银行卡认证！您只有最后一次输入机会，未到账前请勿随意输入。<br/>
+                        如果您的信息填写有误或超过24小时还未收到打款金额，点击重新认证，注意您还有最后一次认证机会哦！
+                    </div>
+                </div>
+                <span class="btn1 notSubmit" action="submitMoney">提交金额</span>
+                <span class="btn7 _tpl-secondCls" action="reEdit">重新认证</span>
+                <br/>
+
+                <div class="font-gray">
+                    <span class="font-red1">注：</span>打款金额可以通过网银在线查询，也可以拨打银行热线或者柜台查询。
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="valid_result_tpl" type="text/html">
+        <div id="valid_result_page" class="ui-page fullScreen vChild">
+            <div class="content">
+                <div>
+                    <div class="icon-checkround _tpl-symbolCls">_tpl-symbol</div>
+                    <p>_tpl-msg</p></div>
+                    <div>
+                        <span action="back" class="btn8 ui-corner-all">点击返回</span>
+                        <span action="reEdit"  class="btn9 ui-corner-all _tpl-bShowCls">重新认证</span>
+                    </div>
+            </div>
+        </div>
+    </script>
+</div>
+</body>
+</html>

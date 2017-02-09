@@ -1,0 +1,11 @@
+#waitList .ui-content{
+	padding:0;
+}
+#waitList .list1 .actionBtn {
+	margin-top: -1em;
+	display: inline-block;
+}
+#waitList  .buyNum{
+	position:absolute;
+	right:1em;
+}

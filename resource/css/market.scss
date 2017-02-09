@@ -1,0 +1,237 @@
+#market {
+  .catSvr{
+    padding: .5em 1em 3.25em .86em;
+    color: #ffffff;
+    background-repeat:no-repeat;
+    background-position:90% 2em;
+    background-size:2.5em 2.5em;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  .catSvrs>div:nth-child(1) .catSvr{
+    background-color: #4677ff;
+  }
+  .catSvrs>div:nth-child(2) .catSvr{
+    background-color: #2db5ef;
+  }
+  .catSvrs>div:nth-child(3) .catSvr{
+    background-color:#8d6fff;
+  }
+  .catSvrs>div:nth-child(4) .catSvr{
+    background-color:#49c049;
+  }
+  .catSvrs>div:nth-child(5) .catSvr{
+    background-color: #ff7f6a;
+  }
+  .catSvrs>div:nth-child(6) .catSvr{
+    background-color: #468cff;
+  }
+  .catSvrs>div:nth-child(7) .catSvr{
+    background-color: #468cff;
+  }
+  .catSvrs>div:nth-child(8) .catSvr{
+    background-color: #468cff;
+  }
+  .catSvrs>div:nth-child(9) .catSvr{
+    background-color: #468cff;
+  }
+  .catSvr-more{
+    background-image: url(../images/more-services.png);
+  }
+  .ui-grid-b.catSvrs{
+    padding: 0 .3125em;
+  }
+  .ui-grid-b.catSvrs>div{
+    padding: .2em .2em;
+  }
+  .v-tabs{
+    text-align: center;
+    font-size: 16px;
+  }
+  .v-tab{
+    padding: 10px 0;
+    &.sel {
+      border-bottom: 4px solid #197eee;
+    }
+  }
+  .svr {
+    padding-left: 100px;
+    //border-radius: ;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    &:first-child{
+      border-top: 1px solid #ddd;
+    }
+  }
+  .svr .img_wrap{
+    position: absolute;
+    left:10px;
+    height:50px;
+    overflow: hidden;
+    div{
+      display: table-cell;
+      vertical-align:middle;
+      text-align: center;
+      width:80px;
+    }
+  }
+  .svr img{
+    width:80px;
+    border:none;
+    vertical-align:middle;
+  }
+  .catSvr .icon:before{
+    margin-left: .5em;
+  }
+  .price-color{
+    color: #57b1d6;
+  }
+  .imgSliderBtns{
+    background-color: transparent;
+  }
+  .s-title{
+    font-size: 14px;
+    color: #727272;
+    //line-height: 32px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    //padding-right: 100px;
+  }
+  .s-content {
+    color: #a2a2a2;
+    line-height: 1.4;
+  }
+  .slide-txt {
+    font-size: 14px;
+    padding-left: 5px;
+    text-align: left;
+    box-sizing: border-box;
+    color: #fff;
+    bottom: 4px;
+    position: absolute;
+    width: 100%;
+    max-width: 100%;
+    background-color: rgba(0,0,0,0.4);
+  }
+  .icon{
+    display: inline-block;
+    width: 1.5em;
+    height: 1em;
+    text-align: left;
+    &:before{
+      content: '';
+      margin-top: -.25em;
+
+      display: inline-block;
+      width: 1.5em;
+      height: 1.5em;
+      position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &.icon-watch:before {
+      background-image: url(../images/watch-num.png);
+      width: 1em;
+      height: 1em;
+      margin-top: .1em;
+    }
+  }
+  $opacity-time:.1s;
+  .s-center-cat .icon-btn,
+  .catSvr{
+    -webkit-transition: opacity $opacity-time;
+    -moz-transition: opacity $opacity-time;
+    -ms-transition: opacity $opacity-time;
+    -o-transition: opacity $opacity-time;
+    transition: opacity $opacity-time;
+    &:active{
+      opacity: .6;
+    }
+  }
+  .svr.hot-want{
+    padding-left: 0;
+  }
+  .ui-grid-d{
+    >div{
+      text-align: center;
+      font-size: 12px;
+      margin-top:15px;
+      >div{
+        width:3rem;
+        margin-bottom: 4px;
+        img{
+          width:1.5rem;
+          height:1.5rem;
+        }
+      }
+    }
+  }
+  .ui-grid-c{
+    font-size: 12px;
+    text-align: center;
+    >div{
+      >div{
+        margin-bottom: 4px;
+      }
+      margin-top: 15px;
+    }
+    img{
+      width:1.5rem;
+      height:1.5rem;
+
+    }
+  }
+  .ui-header{
+    background-color: #fff;
+    padding-top:10px;
+    border:none;
+    .ui-icon-back{
+      background-color: #fff;
+      z-index: 999;
+    }
+    .ui-icon-back:after{
+      padding-top:15px;
+      background-color: #fff;
+      background-image: url("../images/dingbu_fanhuianniu1.png");
+      background-size: contain;
+    }
+  }
+  header{
+
+    font-weight: normal;
+    position:relative;
+    padding:4px 0;
+    .ui-grid-a{
+      width:6em;
+      margin:0 auto;
+
+      .v-tab{
+        margin:0;
+        padding:4px 0;
+        color: #197eee;
+        border:1px solid #197eee;
+
+      }
+      .v-tab.sel{
+        background: #197eee;
+
+        color:#FFF;
+
+      }
+      .v-tab:nth-child(1){
+        border-radius: 6px 0 0 6px;
+        border-right: none;
+      }
+      .v-tab:nth-child(2){
+        border-radius:  0 6px 6px 0 ;
+        border-left: none;
+      }
+
+    }
+
+
+  }
+}

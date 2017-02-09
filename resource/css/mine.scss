@@ -1,0 +1,30 @@
+#mine .btn-grp-1>.icon-btn:before{
+  height:30px;
+}
+#mine .btn-grp-1{
+  padding:.3em 0;
+  background-color:white;
+  border-bottom:1px solid #ccc;
+  text-align: center;
+}
+#mine .btn-grp-1,#mine .myBalance{
+  color: #999999;
+}
+#mine .btn-grp-1 .num{
+  color: #197EEE;
+  font-size: 1.5em;
+}
+#mine .btn-grp-1>a:not(:last-child){
+  border-right:1px solid #ccc;
+}
+#mine .myInfo .vbt.icon-right:after{
+  margin-top: -44px;
+}
+#mine .sec:not(:first-child){
+  margin-top:1em;
+}
+#mine .signoutDiv,#mine .signInDiv{
+  border-bottom: 1px solid #ccc;
+  border-width: 0 0 1px;
+  padding-left: .5em;
+}

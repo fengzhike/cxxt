@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="addQuestion" noRightTopMenu>
+    <script>
+        var $oHtml = $('#addQuestion').parent().parent();
+        var iW = $('#addQuestion').width();
+        $oHtml.css('font-size',iW/16)
+    </script>
+	<div data-role="header" class="pub_header" >
+		<a class="ui-btn abortPublish    ui-btn-icon-notext"> </a>
+		<h1></h1>
+        <p class="submit">发布</p>
+	</div>
+	<div data-role="content">
+		<div class="vForm-1">
+            <ul class="add_form">
+                <li class="clearFix">
+                    <div class="title_l service_name_l"><strong>标 题</strong></div>
+                    <div class="con_r wantName">
+                        <input type="text" class="serviceName"   id="publish_title" placeholder="2~30字"/>
+                    </div>
+                </li>
+                <li class="clearFix">
+                    <div class="title_l" ><strong>分 类</strong></div>
+                    <div class="con_r cat toSelCategories">
+                        <div class="vCt">请选择</div>
+
+                    </div>
+                </li>
+                <li class="clearFix ">
+                    <div class="title_l"><strong>赏 金</strong></div>
+                    <div class="con_r  unit price">
+                        <input id="price" type="number" maxlength="12" placeholder="仅限数字">
+                        <span class="title_r">元</span>
+                    </div>
+                </li>
+                <li class="  clearFix ">
+                    <div class="title_l"><strong>描 述</strong></div>
+                    <textarea  id="wantDesc" cols="30" rows="10" placeholder="请描述您的问题，增强效果！10字以上哦"></textarea>
+                    <a id="toAddLink" style="padding: 0.5em 0.5em 0.5em 1.5em;background-image: url('resource/images/link.png');background-repeat: no-repeat;background-position: 0.2em center;background-size: 1.2em 1.2em;">插入链接</a>
+                </li>
+                <li>
+                    <div class="cameraCtr">
+                        <div class="camera">
+                            <div class="take-pic-ctr">
+                                <canvas class="camera-compress"></canvas>
+                            </div>
+                            <div id="cameraContainer">
+                                <a id="cameraBtn">
+                                    <div id="cameraBtn-desc">添加图片</div>
+                                </a>
+                                <input id="take-pic" type="file" accept="image/png,image/jpeg" capture="camera">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+           <!-- <div class="submit_wrap">
+                <p class="submit">确定发布</p>
+            </div>-->
+			<!--
+			<a class="line vbt vr icon-right cat toSelCategories">
+				<div class="vLabel">分&nbsp;&nbsp;&nbsp;&nbsp;类<em>|</em></div>
+				<div class="vCt ellipsis"></div>
+			</a>
+			<div class="line">
+				<div class="vLabel">赏&nbsp;&nbsp;&nbsp;&nbsp;金<em>|</em></div>
+				<div class="inputCtr price">
+					<input id="price" type="number" oninput="viewJs.priceInput(this);" maxlength="6">
+				</div>
+				<span class="price-unit">元</span>
+			</div>
+			<div id="" style="border: 1px solid #ccc;padding: 0.5em;background-color: white;">
+			<textarea id="wantDesc" style="padding: 5px;" rows="3" cols="20" maxlength="1000" placeholder="请输入问题"></textarea>
+			<a id="toAddLink" style="padding: 0.5em 0.5em 0.5em 1.5em;background-image: url('resource/images/link.png');background-repeat: no-repeat;background-position: 0.2em center;background-size: 1.2em 1.2em;">插入链接</a>
+			</div>-->
+            <!--<div class="line message_show">
+                <div class="vLabel">信息展示<em>|</em></div>
+                <div class="inputCtr">
+                    <label><input type="checkbox" value="0" name="message_show"  id="show_check"> 仅同学可见</label>
+                </div>
+            </div>-->
+			<!--<div class="cameraCtr">
+				<div class="camera">
+					<div class="take-pic-ctr">
+						<canvas class="camera-compress"></canvas>
+
+					</div>
+					<div id="cameraContainer">
+						<a id="cameraBtn">
+							<div id="cameraBtn-desc">添加图片</div>
+						</a>
+						<input id="take-pic" type="file" accept="image/png,image/jpeg" capture="camera">
+					</div>
+				</div>
+			</div>-->
+			<!--<a class="vbt submit" style="margin-top:20px;">提交</a>-->
+
+		</div>
+	</div>
+	<script id="addLinkDescTpl" type="text/html">
+		<div id="toAddDescLink" class="ui-page fullScreen vChild" >
+			<div data-role="header" role="banner" class="ui-header ui-bar-inherit">
+				<a class="ui-btn ui-icon-back ui-btn-icon-notext ui-btn-left cancel-add-link" >返回</a>
+				<h1 class="ui-title" role="heading" aria-level="1">描述</h1>
+				<a class="ui-btn add-link ui-btn-right">确定</a>
+			</div>
+			<div class="content" style="padding: 1em">
+				<div class="vItemTable layout-2 vForm">
+					<div class="vTr">
+						<div class="vTh" style="width: 6.7em;">链接名称</div>
+						<input type="text" class="lnk-name" autofocus placeholder="请输入链接名称" maxlength="500">
+					</div>
+					<div class="vTr">
+						<div class="vTh " style="width: 6.7em;">链接地址</div>
+						<input type="text" class="lnk-value"  placeholder="请输入链接地址" maxlength="500">
+					</div>
+				</div>
+			</div>
+		</div>
+	</script>
+</div>
+
+</body>
+</html>

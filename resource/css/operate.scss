@@ -1,0 +1,15 @@
+#operateByTeacher{
+  .ui-content{
+    padding: 0px;
+    >img{
+      width: 100%;
+    }
+    .submit{
+      position: absolute;
+      bottom: 3em;
+      border-style: hidden;
+      width: 100%;
+      height: 15%;
+    }
+  }
+}

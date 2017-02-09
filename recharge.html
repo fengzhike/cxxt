@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script type="text/javascript" src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script type="text/javascript" src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script type="text/javascript" src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+	<script type="text/javascript" src="resource/js/user/recharge.js?__rver=2015061211"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="recharge">
+	<div data-role="header" >
+		<a class="ui-btn backBtn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a> 
+		<h1>充值</h1>
+	</div>
+	<div data-role="content">
+		<form autocomplete="off" class="vItemTable layout-2 vForm" id="recharge-form" style="margin-bottom: 1em;">
+			<input style="display: none"name="cardId">
+			<input style="display: none"name="secretKey">
+			<div class="vTr" style="padding: 0 0 0 4em;">
+				<div class="vTh" style="width:5em;">卡号</div>
+
+				<input type="text" autocomplete="off" value=""disableautocomplete name="cardId" autofocus placeholder="请输入充值卡号" maxlength="120">
+			</div>
+			<div class="vTr" style="padding: 0 0 0 4em;">
+
+				<div class="vTh " style="width:5em;">密码</div>
+				<input type="password" name="secretKey" value=""disableautocomplete autocomplete="off" placeholder="请输入充值密码" maxlength="120">
+			</div>
+		</form>
+		<br/>
+		<a class="vbt submit rechargeBtn">确认充值</a>
+	</div>
+</div>
+</body>
+</html>

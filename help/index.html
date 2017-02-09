@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8" />
+    <title>框用户反馈-热门问题列表</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0,target-densitydpi=medium-dpi"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta content="email=no" name="format-detection" />
+    <meta http-equiv="Cache-control" content="no-cache" />
+    <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/gmu.css"/>
+    <script type="text/javascript" src="js/loadCss.js"></script>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/gmu.min.js"></script>
+    <script type="text/javascript" src="js/iscroll.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <style type="text/css">
+        body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, table, th, td {margin:0; padding:0;}
+        body {font-family:arial;overflow: hidden;width:100%;}
+        .feedback {position: relative;text-align: center;}
+        a:link {text-decoration:none;color:#000;background-color:#fff !important;}
+        a:visited,
+        a:hover,
+        a:active {
+            text-decoration:none;color:#000;background-color:#fff !important;}
+        .hot_question{text-align: left;padding-left: 12px;font-weight: normal;font-size: 14px;color: #666;}
+        .data-list{
+            margin: 0;
+            border-bottom: 1px solid #e4e4e4;
+            box-sizing: border-box;
+            background-color: #ececec;
+        }
+        .data-list li{display: block !important;background-size: 20px 20px;height: 48px;line-height: 47px;box-sizing: border-box;font-size: 15px;border-bottom: 1px solid #e4e4e4;
+            border-top: 1px solid #e4e4e4;
+            color: #000;
+            margin-top: 9px;
+        }
+        .data-list li:active{background: rgba(0, 0, 0, 0.05);}
+        .data-list li:last-child {border-bottom: none;}
+        .data-list li a{
+            display: -webkit-box;
+            display: box;text-decoration: none;
+            background: none;
+            color: #000;font-weight: normal;background-color: #FFF !important;
+            padding: 0;
+            padding-left: 15px;
+            box-sizing: border-box;
+        }
+        .data-list li a div{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;box-sizing: border-box;
+            color: #333;
+        }
+        .data-list .jt {
+            margin-right: 15px;
+            margin-left: 3px;
+            width: 18px;
+            height: 46px;
+            background-size: 14px 8px;
+            display: block;
+        }
+        #section{
+            position: absolute;
+            left: 0;
+            bottom: 0px;
+            width: 100%;
+            top: 171px;
+            overflow: hidden;
+            margin-bottom: 0px !important;
+            background-color: #ececec;
+        }
+        .uphead{position:absolute;z-index:100;padding-bottom: 9px;width:100%;}
+        .uphead_shadow{
+            -webkit-box-shadow: 0 1px 6px #e6e5e5;
+            box-shadow: 0 1px 6px #e6e5e5;width:100%;}
+        .shadow{height: 47px;position: absolute;top: 0;box-sizing: border-box;}
+        .active{background: rgba(0, 0, 0, 0.05);}
+
+        .sub-list {
+            margin: 0;
+            border: none;
+            background: #fff;
+            padding: 0 15px;
+        }
+        .sub-list li {
+            margin: 0;
+            font-weight: 400;
+            border-top: none;
+            height: auto;
+            /*margin-top: 14px;*/
+        }
+        .sub-list li:first-child {
+            margin-top: 0;
+            border-top: 0;
+        }
+        .close {
+            overflow:  hidden;
+            height: 0;
+            -webkit-transition: all 2s; /* Safari 和 Chrome */
+            -moz-transition: all 2s; /* Firefox 4 */
+            -o-transition: all 2s; /* Opera */
+            transition: all 2s;
+        }
+        .open {
+            height: auto;
+            -webkit-transition: height 2s; /* Safari 和 Chrome */
+            -moz-transition: height 2s; /* Firefox 4 */
+            -o-transition: height 2s; /* Opera */
+            transition: height 2s;
+        }
+
+        .main-title {
+            font-size: 15px;
+            color: #333;
+            line-height: 30px;
+            padding-top: 14px;
+            font-weight: 700;
+        }
+        .sub-title {
+            font-size: 12px;
+            color: #999;
+            line-height: 25px;
+            padding-bottom: 14px;
+        }
+        .down {
+            background: no-repeat 0 url(img/classify-down.png);
+        }
+        .up {
+            background: no-repeat 0 url(img/classify-up.png);
+        }
+    </style>
+</head>
+<body>
+<section id="section">
+    <ul class="data-list" id="parent-list">
+        <li class="parent-li">
+            <a class="faq-question">
+                <div style="-webkit-box-flex:1;">关于创新学堂</div>
+                <div class="jt down"></div>
+            </a>
+        </li>
+        <ul class="sub-list close">
+            <li hf="about.html">
+                <div class="main-title">使用创新学堂能做什么?</div>
+                <div class="sub-title">创新学堂是面向学生创新创业教育的互联网实训平台应用</div>
+            </li>
+            <li hf="about.html">
+                <div class="main-title">使用创新学堂是否收费?</div>
+                <div class="sub-title">创新学堂对学生用户不收取管理服务费...</div>
+            </li>
+            <li hf="about.html">
+                <div class="main-title">如何注册创新学堂帐号?</div>
+                <div class="sub-title">点击【我的】，进入【我的】页面，点击上方【登录】...</div>
+            </li>
+            <li hf="about.html">
+                <div class="main-title">个人能力（PR）值是什么?</div>
+                <div class="sub-title">PR值是指用户在某服务标签下的个人能力值...</div>
+            </li>
+            <li hf="about.html">
+                <div class="main-title">什么是经营绩效指标?</div>
+                <div class="sub-title">绩效指标包括当月收入，累计收入...</div>
+            </li>
+            <li hf="about.html">
+                <div class="main-title">什么是五色思维评价?</div>
+                <div class="sub-title">五色思维是生命思维，批判思维，美学思维...</div>
+            </li>
+
+        </ul>
+        <li class="parent-li">
+            <a class="faq-question">
+                <div style="-webkit-box-flex:1;">创新学堂操作</div>
+                <div class="jt down"></div>
+            </a>
+        </li>
+        <ul class="sub-list close">
+            <li hf="operatoer.html">
+                <div class="main-title">如何发布信息?</div>
+                <div class="sub-title">点击【发布】，选择发布的类别...</div>
+            </li>
+            <li hf="operatoer.html">
+                <div class="main-title">如何听课与查阅课程资?</div>
+                <div class="sub-title">点击首页【课程】板块，即可按分类查阅课程视频...</div>
+            </li>
+            <li hf="operatoer.html">
+                <div class="main-title">信息发布后还能修改信息吗?</div>
+                <div class="sub-title">服务发行后，可在【我的】-【我的发布】中...</div>
+            </li>
+            <li hf="operatoer.html">
+                <div class="main-title">信息发布后是否还能退市?</div>
+                <div class="sub-title">可以，服务卖出后，可在【我的】—【我的发布】...</div>
+            </li>
+            <li hf="operatoer.html">
+                <div class="main-title">如何进行信息搜索?</div>
+                <div class="sub-title">点击【首页】选择左上角的搜索类别...</div>
+            </li>
+            <li hf="operatoer.html">
+                <div class="main-title">如何在有名市场进行交易?</div>
+                <div class="sub-title">首先查找到服务，决定交易后点击【立即购买】...</div>
+            </li>
+            <li hf="operatoer.html">
+                <div class="main-title">服务被购买后还能修改价格吗?</div>
+                <div class="sub-title">服务发布之后，若与买家沟通后需要针对价格进行修改...</div>
+            </li>
+        </ul>
+        <li class="parent-li">
+            <a class="faq-question">
+                <div style="-webkit-box-flex:1;">账户管理</div>
+                <div class="jt down"></div>
+            </a>
+        </li>
+        <ul class="sub-list close">
+            <li hf="account-help.html">
+                <div class="main-title">如何进行个人认证?</div>
+                <div class="sub-title">点击【我的】-【账号管理】-【身份认证】...</div>
+            </li>
+            <li hf="account-help.html">
+                <div class="main-title">如何进行机构认证?</div>
+                <div class="sub-title">点击【我的】-【账号管理】-【身份认证】...</div>
+            </li>
+            <li hf="account-help.html">
+                <div class="main-title">如何添加更新个人信息?</div>
+                <div class="sub-title">点击【我的】-【账号管理】...</div>
+            </li>
+            <li hf="account-help.html">
+                <div class="main-title">微信和手机两个账户如何绑定?</div>
+                <div class="sub-title">点击【我的】-【账号管理】-【绑定手机】...</div>
+            </li>
+
+        </ul>
+    </ul>
+    <div class="ui-refresh-down"></div>
+</section>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.shadow').width($('.data-list').width());
+        var myScroll = '';
+        initScroll();
+        $('.sub-list li, #legend').tap(function(){
+//             window.help.clickOnAndroid($(this).attr('hf'));
+           window.location.href = $(this).attr('hf');
+        });
+        var co = 0;
+        document.addEventListener('touchmove',function(){
+            if(co == 0){
+                $('.data-list li .shadow').removeClass('active');
+                co = 1;
+            }
+        }, false);
+        $('.parent-li').tap(function () {
+            var ul = $(this).next();
+            if (ul.hasClass('close')) {
+                ul.removeClass('close').addClass('open');
+                $(this).find('.jt').removeClass('down').addClass('up');
+                myScroll.refresh();
+            }
+            else {
+                ul.removeClass('open').addClass('close');
+                $(this).find('.jt').removeClass('up').addClass('down');
+                myScroll.refresh();
+            }
+        })
+        function initScroll(){
+            $("section").css('top', '0px');
+            myScroll = new iScroll('section', {
+                onBeforeScrollMove:function(){
+                    if($('.data-list').offset().top < $('.uphead').height() - 1)
+                        $('.uphead').addClass('uphead_shadow');
+                    else
+                        $('.uphead').removeClass('uphead_shadow');
+                },
+                onScrollEnd:function(){
+                    if($('.data-list').offset().top >= $('.uphead').height() - 1)
+                        $('.uphead').removeClass('uphead_shadow');
+                }
+            })
+            // $("section").iScroll({
+            //     onBeforeScrollMove:function(){
+            //         if($('.data-list').offset().top < $('.uphead').height() - 1)
+            //             $('.uphead').addClass('uphead_shadow');
+            //         else
+            //             $('.uphead').removeClass('uphead_shadow');
+            //     },
+            //     onScrollEnd:function(){
+            //     if($('.data-list').offset().top >= $('.uphead').height() - 1)
+            //         $('.uphead').removeClass('uphead_shadow');
+            //     }
+            // });
+        }
+
+        function resetScroll() {
+            myScroll = new iScroll('section');
+        }
+
+        function toMyFaqList(){
+            var url = '/?m=Web&a=getnmylist'+getAllParams();
+            window.location.href = url;
+        }
+    });
+
+</script>
+
+</body>
+</html>

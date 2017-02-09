@@ -1,0 +1,113 @@
+#betalogo.wrapper {
+    display: inline-block;
+/*     width: 310px;
+    height: 100px; */
+    vertical-align: top;
+    margin: 1em 1.5em 2em 0;
+    cursor: pointer;
+    position: fixed;
+	
+	z-index:9999;
+/*     font-family: Tahoma, Arial; */
+    -webkit-perspective: 4000px;
+       -moz-perspective: 4000px;
+        -ms-perspective: 4000px;
+         -o-perspective: 4000px;
+	perspective: 4000px;
+	zoom:.45;
+	/* top:10px; */
+/* 	left:50%;
+	margin-left:-155px; */
+	top:50%;
+	left:10px;
+}
+#betalogo .item {
+    height: 100px;
+      -webkit-transform-style: preserve-3d;
+         -moz-transform-style: preserve-3d;
+          -ms-transform-style: preserve-3d;
+           -o-transform-style: preserve-3d;
+              transform-style: preserve-3d;
+      -webkit-transition: -webkit-transform .6s;
+         -moz-transition: -moz-transform .6s;
+          -ms-transition: -ms-transform .6s;
+           -o-transition: -o-transform .6s;
+              transition: transform .6s;
+  }
+#betalogo .item.showInfo {
+      -webkit-transform: translateZ(-50px) rotateX(95deg);
+         -moz-transform: translateZ(-50px) rotateX(95deg);
+          -ms-transform: translateZ(-50px) rotateX(95deg);
+           -o-transform: translateZ(-50px) rotateX(95deg);
+              transform: translateZ(-50px) rotateX(95deg);
+    }
+#betalogo .item.showInfo .logo {
+        box-shadow: none;
+        border-radius: 15px;
+
+      }
+#betalogo .item.showInfo .information {
+        box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+        border-radius: 3px;
+		opacity:1;
+      }
+#betalogo .item .logo {
+      display: inline-block;
+/* 	  width:310px; */
+/* 	  height:100px; */
+/* 	  background:url('') left center no-repeat; */
+      position: absolute;
+      top: 0;
+      border-radius: 3px;
+      box-shadow: 0px 3px 8px rgba(0,0,0,0.3);
+      -webkit-transform: translateZ(50px);
+         -moz-transform: translateZ(50px);
+          -ms-transform: translateZ(50px);
+           -o-transform: translateZ(50px);
+              transform: translateZ(50px);
+      -webkit-transition: all .6s;
+         -moz-transition: all .6s;
+          -ms-transition: all .6s;
+           -o-transition: all .6s;
+              transition: all .6s;
+      
+    }
+#betalogo .item .information {
+      display: block;
+      position: absolute;
+      top: 0;
+/*       height: 80px; */
+      width: 290px;
+      text-align: left;
+      border-radius: 15px;
+      padding: 10px;
+      font-size: 12px;
+  /*     text-shadow: 1px 1px 1px rgba(255,255,255,0.5); */
+      box-shadow: none;
+      background: rgb(236,241,244);
+      background: -moz-linear-gradient(top,  rgba(236,241,244,1) 0%, rgba(190,202,217,1) 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(236,241,244,1)), color-stop(100%,rgba(190,202,217,1)));
+      background: -webkit-linear-gradient(top,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+      background: -o-linear-gradient(top,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+      background: -ms-linear-gradient(top,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+      background: linear-gradient(to bottom,  rgba(236,241,244,1) 0%,rgba(190,202,217,1) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecf1f4', endColorstr='#becad9',GradientType=0 );
+      -webkit-transform: rotateX(-90deg) translateZ(50px);
+         -moz-transform: rotateX(-90deg) translateZ(50px);
+          -ms-transform: rotateX(-90deg) translateZ(50px);
+           -o-transform: rotateX(-90deg) translateZ(50px);
+              transform: rotateX(-90deg) translateZ(50px);
+      -webkit-transition: all .6s;
+         -moz-transition: all .6s;
+          -ms-transition: all .6s;
+           -o-transition: all .6s;
+              transition: all .6s;
+	opacity:0;
+      
+}
+#betalogo .information strong {
+        display: block;
+ /*        margin: .2em 0 .5em 0;
+        font-size: 20px;
+        font-family: "Oleo Script"; */
+      }

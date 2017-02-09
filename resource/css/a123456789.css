@@ -1,0 +1,7 @@
+#form {
+  text-align: center; }
+
+#list li {
+  float: left;
+  width: 25%;
+  background: yellow; }

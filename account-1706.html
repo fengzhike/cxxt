@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script type="text/javascript" src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script type="text/javascript" src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script type="text/javascript" src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+	<script type="text/javascript" src="resource/js/user/account.js?__rver=2015061211"></script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="account" to-verify-type="unknown">
+	<div data-role="header" >
+		<a class="ui-btn backBtn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a> 
+		<h1>账户管理</h1>
+	</div>
+	<div data-role="content">
+		<div class="sec sec1">
+			<a class="vbt vr icon-right icon-left toMoneyGuarantee" child="validateBankCard">银行卡认证</a>
+			<a class="vbt vr icon-right icon-left toVerifyUser" child="verifyUser"><span class="to-verify-person">身份</span><span class="to-verify-enterprise">资质</span>认证</a>
+			<a class="vbt vr icon-right icon-left toUpdateUserInfo" child="updateInfo">修改基本信息</a>
+			<a class="vbt vr icon-right icon-left toChangePassword" child="changePwd">修改密码</a>
+		</div>
+		<div class="sec sec2">
+			<a class="vbt vr icon-right icon-left toRecharge" child="recharge">充值</a>
+			<a class="vbt vr icon-right icon-left toWithdraw" child="withdraw">提现</a>
+			<a class="vbt vr icon-right icon-left toAccountDetails" child="accountDetails">账户明细</a>
+		</div>
+		<a class="vbt submit logoutBtn">退出</a>
+	</div>
+</div>
+</body>
+</html>

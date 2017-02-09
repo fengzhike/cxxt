@@ -1,0 +1,99 @@
+body {
+    font-family: arial;
+    width: 100%;
+    margin: 0px;
+}
+section {
+    padding: 15px;
+}
+.q-title {
+    font-size: 15px;
+    color: #333;
+    font-weight: 700;
+}
+.q-content {
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+}
+.q-btn {
+    height: 40px;
+    background-color: #e4e4e4;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12.5px;
+    color: #3385ff;
+    margin-bottom: 15px;
+}
+.q-img {
+    text-align: center;
+    margin-top: 15px;
+}
+.q-img img {
+    border: 1px solid #999;
+    max-width: 100%;
+}
+.close {
+    height: 0px;
+    overflow: hidden;
+    -webkit-transition: height 1s;
+    transition: height 1s;
+}
+.open {
+    height: auto;
+    -webkit-transition: height 1s;
+    transition: height 1s;
+}
+
+/*=========*/
+.qust {
+    display: block;
+    margin: 20px auto;
+    margin-top: 0;
+    padding-top: 12px;
+    border-top: 1px dashed #ccc;
+}
+.qa-select {
+    box-sizing: border-box;
+    padding-top: 12px;
+    line-height: 30px;
+    position: relative;
+}
+.qa-select a {
+    color: #fff;
+    text-align: center;
+    display: block;
+    border: none;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    box-sizing: border-box;
+}
+#solved,
+#solved:visited,
+#solved:hover,
+#solved:active {
+    background-color: #6cbe3f;
+    text-decoration: none;
+    color: #fff;
+}
+#nsolved,
+#nsolved:visited,
+#nsolved:hover,
+#nsolved:active {
+    background-color: #0083f3;
+    text-decoration: none;
+    color: #fff;
+}
+.solved-click {
+    background-color: #66b43c !important;
+}
+.nsolved-click {
+    background-color: #007ce7 !important;
+}
+.qust-tit {
+    font-size: 14px;
+    color: #333;
+}

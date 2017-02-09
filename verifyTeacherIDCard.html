@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="verifyTeacherIDCard">
+	<div data-role="header"  class="vrHeader">
+		<a	class="ui-btn backBtn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a> 
+		<h1>师资认证</h1>
+	</div>
+	<div data-role="content">
+		<div class="font-gray">
+			<span class="">完成教师师资认证后，您可通过创新港平台进行自助开设课程，并获得师资认证专有徽标。</span>
+		</div>
+		<div class="vForm-3 fieldContainer">
+			<input type="text" placeholder="姓名" maxlength="40" name="name">
+			<input type="text" placeholder="身份证号" maxlength="18" name="number">
+		</div>
+		<div class="vForm-3 fieldContainer">
+			<input type="text" placeholder="所在单位" maxlength="40" name="institution">
+			<input type="text" placeholder="职位（职称）" maxlength="18" name="duties">
+			<input type="text" placeholder="工作年限" maxlength="10" name="workingLife">
+		</div>
+		<textarea rows="8" class="content" maxlength="500" placeholder="请填写您500字内的个人简历（必填）"></textarea>
+		<!--
+		<div class="cameraCtr">
+			<div class="camera">
+				<div class="take-pic-ctr">
+					<canvas class="camera-compress"></canvas>
+
+				</div>
+				<div id="cameraContainer">
+					<a id="cameraBtn">
+						<div id="cameraBtn-desc">添加图片</div>
+					</a>
+					<input id="take-pic" type="file" accept="image/png,image/jpeg" capture="camera">
+				</div>
+			</div>
+		</div>
+		-->
+		<a class="vbt submit">提交</a>
+	</div>
+</div>
+</body>
+</html>

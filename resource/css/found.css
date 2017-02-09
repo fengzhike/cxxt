@@ -1,0 +1,98 @@
+#found .tab-bar {
+  height: 3em;
+  line-height: 3em;
+  color: #6e6e6e; }
+  #found .tab-bar div[action="tab"] {
+    position: relative; }
+    #found .tab-bar div[action="tab"] .remind {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      background: red;
+      border-radius: 5px;
+      right: 20%;
+      top: .4em;
+      /*box-shadow:1px 1px  4px #f00,-1px -1px  4px #f00;*/ }
+  #found .tab-bar .sel {
+    color: #197eee; }
+
+#found .custom-item-service {
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+  padding: 0em;
+  margin-top: 1em; }
+  #found .custom-item-service > div:first-child {
+    height: 200px;
+    overflow: hidden; }
+  #found .custom-item-service img {
+    width: 100%;
+    vertical-align: middle;
+    height: auto; }
+  #found .custom-item-service .ui-grid-a {
+    line-height: 30px;
+    padding: 0em 1em; }
+    #found .custom-item-service .ui-grid-a .ui-block-a {
+      width: 72%; }
+    #found .custom-item-service .ui-grid-a .ui-block-b {
+      width: 28%;
+      text-align: right; }
+    #found .custom-item-service .ui-grid-a .custom-item-name-cls {
+      font-size: 15px;
+      font-weight: bold;
+      color: #272224; }
+    #found .custom-item-service .ui-grid-a .custom-item-count-cls {
+      color: #999999;
+      font-weight: normal;
+      font-size: 13px; }
+    #found .custom-item-service .ui-grid-a .custom-item-category-cls span {
+      display: block;
+      float: right;
+      font-weight: 500;
+      font-size: small;
+      border-radius: .3125em;
+      padding: .1em .5em 0 .5em;
+      line-height: initial;
+      color: #22A572;
+      border: 1px solid #22A572;
+      margin-top: 4px; }
+
+#found .custom-item-want {
+  border-bottom: 1px solid #E0E0E0;
+  border-top: 1px solid #E0E0E0;
+  padding: 0em;
+  margin-top: 1em; }
+  #found .custom-item-want .ui-grid-a {
+    line-height: 30px;
+    padding: 0em 1em; }
+    #found .custom-item-want .ui-grid-a .ui-block-a {
+      width: 80%; }
+    #found .custom-item-want .ui-grid-a .ui-block-b {
+      width: 20%;
+      text-align: right; }
+  #found .custom-item-want .want-content {
+    margin: 0 1em;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 1em;
+    font-size: 14px;
+    line-height: 20px; }
+  #found .custom-item-want .want-title {
+    font-size: 15px;
+    font-weight: bold;
+    color: #272224; }
+  #found .custom-item-want .userinfo {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    font-size: 12px; }
+    #found .custom-item-want .userinfo img {
+      width: 2em;
+      vertical-align: middle;
+      border-radius: 1em; }
+    #found .custom-item-want .userinfo span {
+      background-color: #197EEE;
+      padding: 0.5em .5em;
+      color: #ffffff;
+      font-size: 12px;
+      border: 0;
+      display: inline-block;
+      line-height: 1;
+      border-radius: .3125em; }

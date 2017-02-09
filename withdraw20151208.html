@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+	<script src="resource/js/user/withdraw.js?__rver=2015061211"></script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="withdraw">
+	<link href="resource/css/withdraw.css" rel="stylesheet">
+	<div data-role="header"  class="vrHeader">
+		<a class="ui-btn backBtn ui-icon-back ui-btn-icon-notext">返回</a> 
+		<h1>提现</h1>
+	</div>
+	<div data-role="content">
+		<div class="tip-line">提现</div>
+		<div class="vForm">
+			<div class="vItemTable ">
+				<div class="vTr">
+					<div class="vTh with-v-line">提现金额</div>
+					<div class="vTd">
+						<div class="inputCtr withdraw-money">
+							<input type="text" placeholder="请输入提现金额">
+							<div class="right-text">元</div>
+						</div>
+					</div>
+				</div>
+				<div class="vTr">
+					<div class="vTh">余额</div>
+					<div class="vTd balance ">
+					</div>
+				</div>
+				<div class="vTr">
+					<div class="vTh">可提现金额</div>
+					<div class="vTd withdraw">
+					</div>
+					<div class="remind-btn"></div>
+					<div class="remind-mess">您的账户余额中创业基金部分未达到提现要求，如需全部提取请参考帮助中的创业基金提现说明</div>
+				</div>
+				<div class="vTr">
+					<div class="vTh">预计到账时间</div>
+					<div class="vTd">
+						3个工作日内
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tip-line">账户信息</div>
+		<div class="vItemTable accountInfo">
+		</div>
+		<div class="tip-line font-gray"><small><span class="font-red1">注：</span>如果银行卡号不正确，请联系创新学堂客服人员<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系电话：010-59433195<br>
+			</small>
+		</div>
+		<a class="vbt submit">确认提现</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

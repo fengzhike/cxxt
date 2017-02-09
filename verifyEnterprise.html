@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="verifyEnterprise">
+	<div data-role="header"  class="vrHeader">
+		<a	class="ui-btn backBtn navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a> 
+		<h1>公众号认证</h1>
+	</div>
+	<div data-role="content">
+		<div class="font-gray">
+			<span class="">公众号身份信息认证后，您的公众号名称旁将显示认证徽标，会提高用户对您的信任程度。</span>
+		</div>
+		<div class="vForm-3 fieldContainer">
+			<input type="text" placeholder="公众号名称" maxlength="40" name="name">
+			<input type="text" placeholder="公众号性质" maxlength="18" name="institutionProperty">
+		</div>
+		<div class="vForm-3 fieldContainer">
+			<input type="text" placeholder="公众号联系人姓名" maxlength="40" name="contactRealname">
+			<input type="text" placeholder="请输入图片验证码" class="vForm-securityCode" maxlength="4" name=""><img class=""/>
+			<input type="text" placeholder="请输入手机号" class="phone" name="" data-format="alphanumeric" maxlength="11" oninput="viewJs.onPhoneInput(this);"><a class="vbt sendCode">获取验证码</a>
+			<input type="text" data-format="number" maxlength="6" name="verifyCode" placeholder="请输入短信验证码">
+			<input type="text" placeholder="公众号联系邮箱" maxlength="50" name="contactEmail">
+			<input type="text" placeholder="公众号联系地址（选填）" maxlength="100" name="contactAddress">
+		</div>
+		<textarea rows="8" class="content" maxlength="500" placeholder="公众号介绍（选填）"></textarea>
+		<div class="securityCode" style="display: none">
+			<input type="text">
+			<img class=""/>
+		</div>
+		<div class="phone" style="display: none">
+			<input type="text">
+		</div>
+		<!--
+		<div class="cameraCtr">
+			<div class="camera">
+				<div class="take-pic-ctr">
+					<canvas class="camera-compress"></canvas>
+
+				</div>
+				<div id="cameraContainer">
+					<a id="cameraBtn">
+						<div id="cameraBtn-desc">添加图片</div>
+					</a>
+					<input id="take-pic" type="file" accept="image/png,image/jpeg" capture="camera">
+				</div>
+			</div>
+		</div>
+		-->
+		<a class="vbt submit">提交</a>
+	</div>
+</div>
+</body>
+</html>

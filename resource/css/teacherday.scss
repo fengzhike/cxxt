@@ -1,0 +1,197 @@
+#teacherday,#teacherdayShare,#teacherdayReceive{
+  height:100%;
+  background-size:100% ;
+  >div{
+    height:100%;
+    padding: 0em;
+  }
+  .content{
+    position: absolute;
+    top: 80vw;
+    width: 70%;
+    padding-left: 15%;
+    .ui-btn{
+      margin-top: 4%;
+      background-color: #DA3232;
+      font-size: 5vw;
+      color: #fff;
+      border-width: 0px;
+      text-align: center;
+      padding: 0.5em 0em 0.5em 0em;
+      border-radius: 2em;
+    }
+    >span{
+      text-align: center;
+      color: white;
+      font-size: 1em;
+      padding-top: 5em;
+      display: block;
+      width: 100%;
+    }
+  }
+  .footer{
+    height: 40%;
+    font-size: 4vw;
+    >span{
+      width: 80%;
+      text-align:center;
+      display: block;
+      position: absolute;
+      color: white;
+      padding-left: 10%;
+    }
+    >span:nth-child(1){
+      bottom: 6%;
+      color: #E36034;
+    }
+    >span:nth-child(2){
+      bottom: 2%;
+      font-family: "Î¢ÈíÑÅºÚ";
+      font-size: .2em;
+      color: #734A20;
+    }
+  }
+  .vTr{
+    margin-top: 4%;
+    border-radius: 2em;
+    padding: 1.5vw;
+    height: 8vw;
+    opacity: 0.8;
+    >div{
+      border-radius: 2em;
+      >input{
+        font-size: 4.0vw;
+      }
+      >input::-webkit-input-placeholder{
+        color: #875A23;
+      }
+    }
+  }
+  .bless{
+    height: 18vw;
+    border-radius: 1em;
+    >textarea{
+      height: 15vw;
+      font-size: 4.0vw;
+      border-radius: 2em;
+    }
+    >textarea::-webkit-input-placeholder{
+      color: #875A23;
+    }
+    >span{
+      float: right;
+      padding-right: 2vw;
+      font-size: 2.0vw;
+      color: #875A23;
+    }
+  }
+  .bless-view{
+    background-color: #fff;
+    border-radius: 1em;
+    color: #4D0E16;
+    font-size: 4vw;
+    padding:2vw 2vw 5vw 2vw;
+    margin-top: 4%;
+    >span{
+    }
+    .from{
+      float: right;
+    }
+    .teachername,.wxname{
+      color: #DA3035;
+      padding:0 1vw;
+    }
+    .bless{
+      display: block;
+    }
+  }
+  #share{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 80%;
+    height: 60vh;
+    padding: 40vh 10% 0% 10%;
+    background-color: black;
+    color: #FFF;
+    opacity: 0.7;
+    z-index:1001;
+  }
+  .dlgPop-box{
+    top: 20%;
+    height: 40%;
+    padding: 0em;
+    background-color: transparent;
+    .dialog-content{
+      height: 100%;
+      background-size: 100% 100%;
+      background-image:url(../images/present/dialog-content.png) ;
+      .dialog-mess{
+        text-align:center;
+        padding-top: 10%;
+        line-height: 150%;
+        color: white;
+      }
+    }
+    .dialog-goto-edu{
+      position: absolute;
+      bottom: 2em;
+      width: 100%;
+      >a{
+        margin: 0 auto;
+        background-image:url(../images/present/button.png) ;
+        background-size: 100% 100%;
+        font-size: 1.5em;
+        color: #d81d1c;
+        background-color: transparent;
+        border-width: 0px;
+        text-align: center;
+        padding:1.0em 0em 1.2em 0em;
+      }
+    }
+    .explain-content{
+      background-image:none ;
+      background-color: white;
+      height: 90%;
+      border-radius: 10px;
+      overflow-y:auto;
+      .dialog-mess{
+        padding-top: 0;
+        text-align:left;
+        padding:1em 10%;
+        color: #0F0F0F;
+      }
+    }
+    .dialog-close{
+      height: 10%;
+      width: 100%;
+      >span{
+        height: 2.5em;
+        width: 2.5em;
+        display: block;
+        position: absolute;
+        right: .5em;
+        background-color: white;
+        border-radius: 100px;
+        color: #0F0F0F;
+      }
+      .close::before {
+        font-size: 1.7em;
+        content: "\2716";
+      }
+    }
+  }
+  .dlgPop-explain{
+    top: 15%;
+    height: 65%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #teacherday {
+    .dlgPop-box {
+      width: 90%;
+      margin-left: 5%
+    }
+  }
+}

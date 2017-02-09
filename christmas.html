@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="christmas">
+	<link href="resource/css/christmas.css" rel="stylesheet">
+	<div data-role="content">
+		<div class="christmas-form">
+			<div class="field-contain">
+				<input type="text" validItem="school" placeholder="请输入所在学校" maxlength="20" data-clear-btn="true" id="school" name="school" class="enter">
+			</div>
+			<div id="match_school_list" style="display: none"></div>
+			<a class="vbt submit ui-link">提交</a>
+			<div class="christmasExplain">活动说明</div>
+		</div>
+		<div class="explain">本活动最终解释权归创新学堂所有</div>
+		<div class="copyright ui-grid-b">
+			<div class="ui-block-a"><img src="resource/images/christmas/copyright1.jpg"></div>
+			<div class="ui-block-b"><img src="resource/images/christmas/copyright2.jpg"></div>
+			<div class="ui-block-c"><img src="resource/images/christmas/copyright3.jpg"></div>
+		</div>
+	</div>
+	<script id="match_school_tpl"type="text/html">
+		<a class="school-item vbt vr">_tpl-name</a>
+	</script>
+</div>
+</body>
+</html>

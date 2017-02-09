@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+	<script src="resource/js/search/searchResult.js?__rver=2015061211"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="services">
+	<link rel="stylesheet" href="resource/css/searchResult.css?__rver=2015061211">
+	<div data-role="header" >
+	<!-- 	<div> -->
+			<a class="ui-btn ui-icon-back navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+			<h1 class="vt">
+				<div class="vrGrp">
+					<div class="rItem sel" tab="services">服务</div><div class="rItem" tab="users">人才</div><div class="rItem" tab="wants">需求</div><!--<div class="rItem" tab="question">问题</div> --><div class="rItem" tab="answer">答案</div>
+				</div>
+			</h1>
+			<!-- <a href="#" data-role="button" data-iconpos="notext" data-icon="search" class="toSearchPage">搜索</a> -->
+
+	</div>
+	<div data-role="content">
+		<div data-role="navbar"  class="sort-bar">
+			<ul>
+				<li><a class="ui-link ui-btn ui-btn-a ui-icon-carat-d ui-btn-icon-right ui-nodisc-icon" id="servicesAreaBtn">全部</a></li>
+				<li><a class="ui-link ui-btn ui-btn-a ui-icon-carat-d ui-btn-icon-right ui-nodisc-icon" id="servicesCatBtn">全部分类</a></li>
+				<li><a class="ui-link ui-btn ui-btn-a ui-icon-carat-d ui-btn-icon-right ui-nodisc-icon" id="servicesSortBtn">默认排序</a></li>
+			</ul>
+		</div>
+		<div class="btn-active-arrow" id="btn-active-pos-arrow"><div class="position-arrow"></div></div>
+       <div class="searchTips">当前搜索：<span>XXXX</span></div>
+		<!--<div>-->
+			<ul data-role="listview" data-theme="c" class="list-items">
+			</ul>
+		<!--</div>-->
+        <div id="result_not_found_container" class="not_found_container">
+            <div class="not-found-icon"></div>
+            <!--<div id="result_not_found_tip" class="not_found_tip"></div>-->
+            <!--<a id="result_not_found_publish" class="vbt submit">发布相关需求</a>-->
+        </div>
+	</div>
+    <script id="paper_tpl" type="text/html">
+        <div class="div_paper">
+        <a class="btn3 ui-corner-all pagePre btn-page _tpl-hasPre"  data-page-num="_tpl-pagePre" action="pageNav">上一页</a>
+        <span class="pager-current">_tpl-pageCurrentTotal</span>
+        <a class="btn3 ui-corner-all pageNext btn-page _tpl-hasNext" data-page-num="_tpl-pageNext" action="pageNav">下一页</a>
+         </div>
+    </script>
+    <script id="searchResult_service_item_tpl" type="text/html">
+        <li class="custom-item-li-cls" data-icon="false" data-svrid="_tpl-id">
+            <a class="custom-item-cls vbt vr ui-link">
+                <div>
+                    <img src="_tpl-img">
+                </div>
+                <div>
+                    <div class="custom-item-name-cls">
+                        _tpl-serviceName
+                    </div>
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a custom-item-price-cls" style="width: 65%;">_tpl-newPrice</div>
+                        <div class="ui-block-b custom-item-username-cls"style="width: 35%;">_tpl-username</div>
+                        <div class="ui-block-a custom-item-count-cls"><img src="resource/images/watch-num.png" style="width: 16px;height: 16px;margin: -5px 3px 0px 2px;">_tpl-realViewCount</div>
+                        <div class="ui-block-b custom-item-distance-cls">_tpl-distance</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </script>
+    <script id="searchResult_crowdfunding_item_tpl" type="text/html">
+        <li class="custom-crowdfunding-item-li-cls" data-icon="false" data-svrid="_tpl-id">
+            <div class="crowdfunding-top">
+                <img src="_tpl-img">
+                <div class="crowdfunding-bg"></div>
+                <div class="crowdfunding-content">
+                    <div class="complete-endTime" data-endTime="_tpl-endTime" data-completeTotalMoney="_tpl-completeTotalMoney" data-totalMoney="_tpl-totalMoney">
+                        <span>_tpl-endTimeShow</span><!--<br>
+                        <span>可购人数：_tpl-number</span>-->
+                    </div>
+                    <div class="complete-rate"><canvas class="process" width="80px" height="80px">_tpl-completionRate%</canvas></div>
+                    <div class="complete-total-money">已获资金：<span>_tpl-completeTotalMoney</span>元</div>
+                </div>
+            </div>
+            <div class="crowdfunding-bottom">
+                <span>_tpl-name</span>
+                <span>支持人数：_tpl-buyerCount</span>
+            </div>
+        </li>
+    </script>
+    <script id="searchResult_user_item_tpl" type="text/html">
+        <li class="custom-item-li-cls userItem" data-icon="false" data-userid="_tpl-id">
+            <a class="custom-item-cls vbt vr ui-link">
+                <img src="_tpl-img">
+                <div class="">
+                    <div class="vTitle ellipsis">
+                        <span class="username">_tpl-userName</span>
+                        <span class="mark sex _tpl-sex"></span>
+                        <span class="mark _tpl-idcardValidated _tpl-userType"></span>
+                            <!--
+                        <span class="mark _tpl-isMoneyGuaranteed"></span>
+                        -->
+                        <div class="user-prvalue">_tpl-prvalue</div>
+                    </div>
+                    <div class="user-enterprise">
+                        _tpl-institutionUserName
+                    </div>
+                    <div class="user-tags">
+                        _tpl-tag
+                    </div>
+                </div>
+            </a>
+        </li>
+     </script>
+     <script id="searchResult_question_item_tpl" type="text/html">
+        <li class="custom-item-li-cls wantItem" data-icon="false" data-wantid="_tpl-id">
+            <div class="question_content">
+                <p class="wantName">_tpl-wantName</p>
+                <nav class="question_tag_time clearFix">
+                    <span class="question_tag">_tpl-categoryName</span>
+                    <span class="price font-gray custom-item-price-cls">_tpl-price</span>
+                    <time class="question_time">_tpl-creTime</time>
+                </nav>
+            </div>
+            <div class="question_footer clearFix">
+                <div class="user-info" data-userid="100059">
+                    <img src="_tpl-profileImageUrl" alt="">      
+                    <span class="userName">_tpl-username</span>
+                </div>
+                <div class="repaly">
+                    <div class="r_wrap"><span class="r_num ">_tpl-distance</span></div>
+                    <div class="r_wrap"><span class="answer">_tpl-replay</span></div>
+                </div>
+            </div>
+        </li>
+     </script>
+    <script id="searchResult_want_item_tpl" type="text/html">
+        <li class="custom-item-li-cls wantItem" data-icon="false" data-wantid="_tpl-id">
+            <a class="vbt vr ui-link"><div>
+                <span class="wantName">_tpl-wantName</span>
+                <span class="userName">_tpl-username</span><div>
+                <span class="price font-gray custom-item-price-cls">预算：_tpl-price</span>
+                <span class="distance font-gray">_tpl-distance</span></div></div></a></li>
+     </script>
+</div>
+</body>
+</html>

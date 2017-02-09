@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+
+
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/js/user/changePwd.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="changePwd">
+	<div data-role="header">
+		<a class="ui-btn backBtn navigateBackBtn ui-icon-back ui-btn-icon-notext" >返回</a>
+		<h1>修改密码</h1>
+<!-- 		<a data-role="button" id="changePwdBtn">完成</a> -->
+	</div>
+	<div data-role="content">
+		<!--<div class="vForm-3 fieldContainer">-->
+			<!--<input type="password" class="oldPassword" autofocus placeholder="请输入原密码" maxlength="20">-->
+			<!--<input type="password" class="newPassword" placeholder="请输入新密码" maxlength="20">-->
+            <!--<input type="password" class="repeatPassword" placeholder="请再一次输入新密码" maxlength="20">-->
+		<!--</div>-->
+        <div class="vItemTable layout-2 vForm">
+            <div class="vTr">
+                <div class="vTh">原密码</div>
+                <input type="password" class="oldPassword" autofocus placeholder="请输入原密码" maxlength="20">
+            </div>
+            <div class="vTr">
+                <div class="vTh ">新密码</div>
+                <input type="password" class="newPassword" data-format="alphanumeric" placeholder="请输入新密码" maxlength="20">
+            </div>
+            <div class="vTr">
+                <div class="vTh ">确认密码</div>
+                <input type="password" class="repeatPassword" data-format="alphanumeric" placeholder="请再一次输入新密码" maxlength="20">
+            </div>
+        </div>
+		<a class="vbt submit" id="changePwdBtn">提交</a>
+	</div>
+	
+</div>
+</body>
+</html>

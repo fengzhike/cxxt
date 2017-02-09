@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<title>创新学堂</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,  minimum-scale=1, maximum-scale=1,user-scalable=no"> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta content="black" name="apple-mobile-web-app-status-bar-style" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" type="text/css" href="resource/lib/custom/jquery.mobile.custom.theme.min.css?aa=1" />
+	<link rel="stylesheet" href="resource/css/main.css?__rver=2015061211">
+	<script src="resource/lib/js/jquery-2.1.1.min.js"></script>
+	<script src="resource/js/urming.min.js?__rver=2015061211"></script>
+	<script src="resource/lib/custom/jquery.mobile.custom.min.js"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?eeccb6c699d01b329ba444ce8eb42b89";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+</head>
+<body class="custom-body-cls">
+<div data-role="page" id="doSearchSvr" noRightTopMenu>
+	<style>
+		#doSearchSvr .ui-input-search {
+			margin: 0 3.8em 0 48px;
+			border-radius: .3125em;
+			border-color: #fff;
+		}
+		#doSearchSvr .ui-input-search input{
+			font-size: 12px;
+			line-height: 24px;
+			padding-top: 6.4px;
+			padding-bottom: 6.4px;
+			padding-left: 5px;
+		}
+		#doSearchSvr .ui-header{
+			padding-top: .5em;
+			padding-bottom: .5em;
+		}
+		#searchFilterBtn{
+			height: 53px;
+			font-size:17px;
+			line-height: 53px;
+			color:#ffffff;
+			font-weight:normal;
+		}
+		#searchFilterBtn{
+			padding-right:.8em;padding-left:.8em;position: absolute;
+		}
+
+		#doSearchSvr .around {
+			font-size: 14px;
+		}
+		#doSearchSvr .around .ui-btn{
+			padding-right:.5em;
+			padding-left:.5em;
+		}
+	</style>
+	    <!-- TODO -->
+	<div data-role="header" >
+		<!---->
+		<a class="ui-btn ui-icon-back navigateBackBtn ui-icon-back ui-btn-icon-notext">返回</a>
+		<a class="menu-btn ui-link search_menu" style="display: none">课程</a>
+		<div id="category_menu" data-role="collapsible">
+			<ul data-role="listview" class="cat-lst ui-listview">
+				<li><a class="selCategory" catid="3" >课程</a></li>
+				<li><a class="selCategory" catid="4" >活动</a></li>
+				<li><a class="selCategory" catid="1" >服务</a></li>
+				<li><a class="selCategory" catid="2" >需求</a></li>
+				<li><a class="selCategory" catid="-1" >人才</a></li>
+				<li><a class="selCategory" catid="-3" >师资</a></li>
+				<li><a class="selCategory" catid="-2" >公众号</a></li>
+				<li><a class="selCategory" catid="-2" isGroup = '1' >项目号</a></li>
+				<li><a class="selCategory" catid="5" >问题</a></li>
+			</ul>
+		</div>
+		<input name="keyword" id="keyword" maxlength="40" autofocus type="search" placeholder="搜索课程">
+		<a  data-role="button" id="searchFilterBtn" catid="3" class="ui-link ui-btn">取消</a>
+	</div>
+	<div data-role="content">
+		<!--
+		<div class="title">周围的</div>
+		<div class="ui-grid-b around">
+			<div class="ui-block-a">
+			<a class="ui-link ui-btn ui-shadow ui-corner-all" searchKind="course">课程</a>
+			</div>
+			<div class="ui-block-b">
+			<a class="ui-link ui-btn ui-shadow ui-corner-all" searchKind="services">服务</a>
+			</div>
+			<div class="ui-block-c">
+			<a class="ui-link ui-btn ui-shadow ui-corner-all" searchKind="recruit">招聘</a>
+			</div>
+			<div class="ui-block-a">
+			<a class="ui-link ui-btn ui-shadow ui-corner-all" searchKind="activity">活动</a>
+			</div>
+			<div class="ui-block-b">
+			<a class="ui-link ui-btn ui-shadow ui-corner-all" searchKind="wants">需求</a>
+			</div>
+			<div class="ui-block-c">
+			<a class="ui-link ui-btn ui-shadow ui-corner-all" searchKind="users">人才</a>
+			</div>
+			<div class="ui-block-a">
+			<a class="ui-link ui-btn ui-shadow ui-corner-all" searchKind="question">问答</a>
+			</div>
+		</div>
+
+		<div class="title search_hot">热门服务</div>
+		<div class="ui-grid-b around">
+			<div class="ui-block-a"><a class="ui-link ui-btn ui-btn-a ui-shadow ui-corner-all catItem" data-categoryid="96">创业项目</a></div>
+			<div class="ui-block-b"><a class="ui-link ui-btn ui-btn-a ui-shadow ui-corner-all catItem" data-categoryid="98">众筹让股</a></div>
+			<div class="ui-block-c"><a class="ui-link ui-btn ui-btn-a ui-shadow ui-corner-all catItem" data-categoryid="42">创意设计</a></div>
+			<div class="ui-block-a"><a class="ui-link ui-btn ui-btn-a ui-shadow ui-corner-all catItem" data-categoryid="17">生活服务</a></div>
+			<div class="ui-block-b"><a class="ui-link ui-btn ui-btn-a ui-shadow ui-corner-all catItem" data-categoryid="32">健康管理</a></div>
+		</div>
+
+		<div class="title search_hot">热门搜索</div>
+		<div class="ui-grid-b around">
+			<div class="ui-block-a">
+				<a class="ui-link ui-btn ui-btn-a ui-shadow ui-corner-all hotItem">创业基础</a>
+			</div>
+			<div class="ui-block-b">
+				<a class="ui-link ui-btn ui-btn-a ui-shadow ui-corner-all hotItem">创业实践</a>
+			</div>
+			<div class="ui-block-c">
+				<a class="ui-link ui-btn ui-btn-a ui-shadow ui-corner-all hotItem">互联网+</a>
+			</div>
+		</div>
+		-->
+        <div id="quick_search_tip">
+        </div>
+	</div>
+</div>
+</body>
+</html>
